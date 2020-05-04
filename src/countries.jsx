@@ -20,6 +20,7 @@ export default class Countries extends Component {
         };
 
         var countriesList = new List('countries', options);
+        countriesList.sort('confirmedTotal', { order: "desc" });
     }
 
     render() {
@@ -27,7 +28,7 @@ export default class Countries extends Component {
 
         return (
             <Container id="countries">
-                <table className="table table-hover table-condensed">
+                <table className="table table-condensed table-hover">
                     <thead>
                         <tr>
                             <th><input className="search" placeholder="Filter" /></th>
