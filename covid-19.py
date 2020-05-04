@@ -16,9 +16,9 @@ recovered_data = []
 coordinates_data = []
 
 MAPPING = [
-    {'input': 'confirmed_global.csv', 'object': confirmed_data, 'json': 'data/confirmed.json'},
-    {'input': 'deaths_global.csv', 'object': deaths_data, 'json': 'data/deaths.json'},
-    {'input': 'recovered_global.csv', 'object': recovered_data, 'json': 'data/recovered.json'}
+    {'input': 'confirmed_global.csv', 'object': confirmed_data, 'json': 'src/data/confirmed.json'},
+    {'input': 'deaths_global.csv', 'object': deaths_data, 'json': 'src/data/deaths.json'},
+    {'input': 'recovered_global.csv', 'object': recovered_data, 'json': 'src/data/recovered.json'}
 ]
 
 
