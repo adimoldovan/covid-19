@@ -2,58 +2,27 @@ import React, { Component } from 'react';
 import DataService from './data-service';
 import { Container, Card, CardDeck, Row, Col } from 'react-bootstrap'
 import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart } from 'recharts';
+import Utils from './utils';
 
 export default class Country extends Component {
     constructor(props) {
         super(props);
-        const { params } = this.props.match
-
-        var summaryData = DataService.getCountriesSummaryData();
-        this.countrySummaryData = summaryData.find(c => c.name === params.countryName);
-
-        this.confirmed = this.countrySummaryData.confirmed.total
-        this.closed = this.countrySummaryData.recovered.total + this.countrySummaryData.deaths.total
-        this.active = this.confirmed - this.closed
-        this.recovered = this.countrySummaryData.recovered.total
-        this.dead = this.countrySummaryData.deaths.total
-
-        this.activeRate = (this.active / this.confirmed * 100).toFixed(1);
-        this.recoveredRateTotal = (this.recovered / this.confirmed * 100).toFixed(1);
-        this.recoveredRateClosed = (this.recovered / this.closed * 100).toFixed(1);
-        this.deathRateTotal = (this.dead / this.confirmed * 100).toFixed(1);
-        this.deathRateClosed = (this.dead / this.closed * 100).toFixed(1);
-
-
-
-        var rawTimelineData = DataService.getCountriesTimelineData().find(c => c.name === params.countryName);
-
-        this.timeline = Object.keys(rawTimelineData.confirmed).map(function (key) {
-            return {
-                date: key,
-                confirmedTotal: rawTimelineData.confirmed[key].total,
-                confirmedNew: rawTimelineData.confirmed[key].new,
-                recoveredTotal: rawTimelineData.recovered[key].total,
-                recoveredNew: rawTimelineData.recovered[key].new,
-                deathsTotal: rawTimelineData.deaths[key].total,
-                deathsNew: rawTimelineData.deaths[key].new,
-                active: rawTimelineData.confirmed[key].total - (rawTimelineData.recovered[key].total + rawTimelineData.deaths[key].total),
-                closed: rawTimelineData.recovered[key].total + rawTimelineData.deaths[key].total
-            };
-        });
-
-        console.log(this.timeline);
-
-        this.confirmedColor = "#ffc658";
-        this.recoveredColor = "#82ca9d";
-        this.deathsColor = "#1c1c1c";
-        this.activeColor = "#fca085";
-        this.closedColor = "#8884d8";
+        const { params } = this.props.match;
+        this.countryName = params.countryName;
     }
     render() {
+        var data = DataService.getCountryData(this.countryName);
+
+        var activeRate = (data.summary.active.total / data.summary.confirmed.total * 100).toFixed(1);
+        var recoveredRateTotal = (data.summary.recovered.total / data.summary.confirmed.total * 100).toFixed(1);
+        var recoveredRateClosed = (data.summary.recovered.total / data.summary.closed.total * 100).toFixed(1);
+        var deathRateTotal = (data.summary.deaths.total / data.summary.confirmed.total * 100).toFixed(1);
+        var deathRateClosed = (data.summary.deaths.total / data.summary.closed.total * 100).toFixed(1);
+
         return (
             <Container>
                 <Row className="justify-content-between header">
-                    <Col className="text-left"><h1>{this.countrySummaryData.name}</h1></Col>
+                    <Col className="text-left"><h1>{this.countryName}</h1></Col>
                     <Col className="text-right"><a href="#/">All countries</a></Col>
                 </Row>
                 <hr />
@@ -63,11 +32,11 @@ export default class Country extends Component {
                             <Card.Header>Confirmed</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {this.confirmed}<br />&nbsp;<br />&nbsp;
+                                    {data.summary.confirmed.total}<br />&nbsp;<br />&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <BarChart data={this.timeline} style={{ margin: "0 auto" }}>
-                                        <Bar name="confirmedNew" type="monotone" dataKey="confirmedNew" stroke={this.confirmedColor} />
+                                    <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Bar name="confirmedNew" type="monotone" dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
                                     </BarChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -76,11 +45,11 @@ export default class Country extends Component {
                             <Card.Header>Active</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {this.active}<br /><small className="text-muted">{this.activeRate}% out of total</small><br />&nbsp;
+                                    {data.summary.active.total}<br /><small className="text-muted">{activeRate}% out of total</small><br />&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <AreaChart data={this.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="active" fill={this.activeColor} stroke="none" />
+                                    <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Area name="active" type="monotone" dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -89,11 +58,11 @@ export default class Country extends Component {
                             <Card.Header>Recovered</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {this.recovered}<br /><small className="text-muted">{this.recoveredRateTotal}% out of total</small><br /><small className="text-muted">{this.recoveredRateClosed}% out of closed</small>
+                                    {data.summary.recovered.total}<br /><small className="text-muted">{recoveredRateTotal}% out of total</small><br /><small className="text-muted">{recoveredRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <AreaChart data={this.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="recoveredTotal" fill={this.recoveredColor} stroke="none" />
+                                    <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Area name="active" type="monotone" dataKey="recoveredTotal" fill={Utils.RECOVERED_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -102,11 +71,11 @@ export default class Country extends Component {
                             <Card.Header>Deceased</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {this.dead}<br /><small className="text-muted">{this.deathRateTotal}% out of total</small><br /><small className="text-muted">{this.deathRateClosed}% out of closed</small>
+                                    {data.summary.deaths.total}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <BarChart data={this.timeline} style={{ margin: "0 auto" }}>
-                                        <Bar name="active" type="monotone" dataKey="deathsNew" fill={this.deathsColor} stroke="none" />
+                                    <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Bar name="active" type="monotone" dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
                                     </BarChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -118,14 +87,14 @@ export default class Country extends Component {
                         <Card.Header>Total cases</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                <ComposedChart data={this.timeline} style={{ margin: "0 auto" }}>
+                                <ComposedChart data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
-                                    <Line name="total active" type="monotone" dataKey="active" stroke={this.activeColor} />
+                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
+                                    <Line name="total active" type="monotone" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
                                 </ComposedChart>
                             </ResponsiveContainer>
                         </Card.Body>
@@ -134,36 +103,36 @@ export default class Country extends Component {
                         <Card.Header>Daily cases</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                <BarChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <BarChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Bar name="confirmed" type="monotone" dataKey="confirmedNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
-                                    <Bar name="recovered" type="monotone" dataKey="recoveredNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.recoveredColor} />
-                                    <Bar name="deceased" type="monotone" dataKey="deathsNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.deathsColor} />
+                                    <Bar name="confirmed" type="monotone" dataKey="confirmedNew" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
+                                    <Bar name="recovered" type="monotone" dataKey="recoveredNew" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.RECOVERED_COLOR} />
+                                    <Bar name="deceased" type="monotone" dataKey="deathsNew" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
                                 </BarChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
-                                <BarChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <BarChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Bar name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
+                                    <Bar name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
                                 </BarChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
-                                <LineChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke={this.confirmedColor} />
-                                    <Line name="new recovered cases" type="monotone" dataKey="recoveredNew" stroke={this.recoveredColor} />
+                                    <Line name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
+                                    <Line name="new recovered cases" type="monotone" dataKey="recoveredNew" stroke={Utils.RECOVERED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                         </Card.Body>
@@ -172,37 +141,37 @@ export default class Country extends Component {
                         <Card.Header>Active vs closed cases</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                <AreaChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <AreaChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Area name="active" type="monotone" dataKey="active" stackId="1" stroke="none" fillOpacity={0.5} fill={this.activeColor} />
-                                    <Area name="closed (recovered + deceased)" type="monotone" dataKey="closed" stackId="1" stroke="none" fillOpacity={0.5} fill={this.closedColor} />
+                                    <Area name="active" type="monotone" dataKey="activeTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.ACTIVE_COLOR} />
+                                    <Area name="closed (recovered + deceased)" type="monotone" dataKey="closedTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.CLOSED_COLOR} />
                                 </AreaChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
-                                <LineChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="active" type="monotone" dataKey="active" stroke={this.activeColor} />
-                                    <Line name="closed (recovered + deaths)" type="monotone" dataKey="closed" stroke={this.closedColor} />
+                                    <Line name="active" type="monotone" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
+                                    <Line name="closed (recovered + deaths)" type="monotone" dataKey="closedTotal" stroke={Utils.CLOSED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
-                                <AreaChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }} stackOffset="expand">
+                                <AreaChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }} stackOffset="expand">
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Area name="total active" type="monotone" dataKey="active" stackId="1" stroke="none" fillOpacity={0.5} fill={this.activeColor} />
-                                    <Area name="total recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.recoveredColor} />
-                                    <Area name="total deaths" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.deathsColor} />
+                                    <Area name="total active" type="monotone" dataKey="activeTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.ACTIVE_COLOR} />
+                                    <Area name="total recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.RECOVERED_COLOR} />
+                                    <Area name="total deaths" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
                                 </AreaChart>
                             </ResponsiveContainer>
                         </Card.Body>
@@ -211,25 +180,25 @@ export default class Country extends Component {
                         <Card.Header>Cases outcome</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                <LineChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }}>
+                                <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke={this.deathsColor} />
-                                    <Line name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1"stroke={this.recoveredColor} />
+                                    <Line name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke={Utils.DECEASED_COLOR} />
+                                    <Line name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke={Utils.RECOVERED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
-                                <AreaChart width={730} height={250} data={this.timeline} style={{ margin: "0 auto" }} stackOffset="expand">
+                                <AreaChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }} stackOffset="expand">
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Area name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.recoveredColor} />
-                                    <Area name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.deathsColor} />
+                                    <Area name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.RECOVERED_COLOR} />
+                                    <Area name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
                                 </AreaChart>
                             </ResponsiveContainer>
                         </Card.Body>
