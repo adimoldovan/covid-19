@@ -49,7 +49,7 @@ export default class Countries extends Component {
                         {
                             this.state.countries.map((country, index) =>
                                 <tr key={index}>
-                                    <td className="text-left name"><a href={"#/" + country.name} target="_blank">{country.name}</a></td>
+                                    <td className="text-left name"><a href={"#/" + country.name} target="_blank" rel="noopener noreferrer">{country.name}</a></td>
                                     <td className="text-right confirmedTotal">{country.confirmed.total}</td>
                                     <td className="text-right confirmedNew">{country.confirmed.new}</td>
                                     <td className="text-right deathsTotal">{country.deaths.total}</td>
@@ -60,7 +60,7 @@ export default class Countries extends Component {
                         }
                     </tbody>
                 </table>
-
+                <div>Data source: <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a></div>
             </Container>
         )
     }

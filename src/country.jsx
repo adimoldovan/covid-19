@@ -9,7 +9,7 @@ export default class Country extends Component {
         const { params } = this.props.match
 
         var summaryData = DataService.getCountriesSummaryData();
-        this.countrySummaryData = summaryData.find(c => c.name == params.countryName);
+        this.countrySummaryData = summaryData.find(c => c.name === params.countryName);
         console.log(this.countrySummaryData);
     }
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer } from 'recharts';
+import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line } from 'recharts';
 import DataService from './data-service';
 import { Container } from 'react-bootstrap';
 
@@ -8,7 +8,7 @@ export default class Charts extends Component {
         super(props);
 
         var rawTimelineData = DataService.getCountriesTimelineData();
-        var timeline = rawTimelineData.find(c => c.name == props.countryName);
+        var timeline = rawTimelineData.find(c => c.name === props.countryName);
         console.log(timeline);
         console.log(timeline.confirmed);
 
@@ -46,22 +46,34 @@ export default class Charts extends Component {
                         <YAxis />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend />
-                        <Area type="monotone" dataKey="confirmedTotal" stroke={this.confirmedColor} fillOpacity={0.5} fill={this.confirmedColor} />
+                        <Legend verticalAlign="top" height={36}/>
+                        <Area name="confirmed cases" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
                     </AreaChart>
                 </ResponsiveContainer>
-                <h3>Daily</h3>
+                <h3>Daily mixed</h3>
                 <ResponsiveContainer height={250}>
                     <BarChart width={730} height={250} data={this.data} style={{ margin: "0 auto" }}>
                         <XAxis dataKey="date" />
                         <YAxis />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend />
-                        <Bar type="monotone" dataKey="confirmedNew" stackId="1" stroke={this.confirmedColor} fillOpacity={0.5} fill={this.confirmedColor} />
-                        <Bar type="monotone" dataKey="recoveredNew" stackId="1" stroke={this.recoveredColor} fillOpacity={0.5} fill={this.recoveredColor} />
-                        <Bar type="monotone" dataKey="deathsNew" stackId="1" stroke={this.deathsColor} fillOpacity={0.5} fill={this.deathsColor} />
-                    </BarChart></ResponsiveContainer>
+                        <Legend verticalAlign="top" height={36}/>
+                        <Bar name="new confirmed" type="monotone" dataKey="confirmedNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
+                        <Bar name="new recovered" type="monotone" dataKey="recoveredNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.recoveredColor} />
+                        <Bar name="new deaths" type="monotone" dataKey="deathsNew" stackId="1" stroke="none" fillOpacity={0.5} fill={this.deathsColor} />
+                    </BarChart>
+                </ResponsiveContainer>
+                <h3>Daily new confirmed cases</h3>
+                <ResponsiveContainer height={250}>
+                    <BarChart width={730} height={250} data={this.data} style={{ margin: "0 auto" }}>
+                        <XAxis dataKey="date" />
+                        <YAxis />
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <Tooltip />
+                        <Legend verticalAlign="top" height={36}/>
+                        <Bar name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke="none" fillOpacity={0.5} fill={this.confirmedColor} />
+                    </BarChart>
+                </ResponsiveContainer>
                 <h3>Active vs closed cases</h3>
                 <ResponsiveContainer height={250}>
                     <AreaChart width={730} height={250} data={this.data} style={{ margin: "0 auto" }}>
@@ -69,10 +81,11 @@ export default class Charts extends Component {
                         <YAxis />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend />
-                        <Area type="monotone" dataKey="active" stackId="1" stroke={this.activeColor} fillOpacity={0.5} fill={this.activeColor} />
-                        <Area type="monotone" dataKey="closed" stackId="1" stroke={this.closedColor} fillOpacity={0.5} fill={this.closedColor} />
-                    </AreaChart></ResponsiveContainer>
+                        <Legend verticalAlign="top" height={36}/>
+                        <Area name="active" type="monotone" dataKey="active" stackId="1" stroke="none" fillOpacity={0.5} fill={this.activeColor} />
+                        <Area name="closed (recovered + deaths)" type="monotone" dataKey="closed" stackId="1" stroke="none" fillOpacity={0.5} fill={this.closedColor} />
+                    </AreaChart>
+                </ResponsiveContainer>
                 <h3>Stacked active, recovered and deaths</h3>
                 <ResponsiveContainer height={250}>
                     <AreaChart width={730} height={250} data={this.data} style={{ margin: "0 auto" }} stackOffset="expand">
@@ -80,11 +93,24 @@ export default class Charts extends Component {
                         <YAxis />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend />
-                        <Area type="monotone" dataKey="active" stackId="1" stroke={this.activeColor} fillOpacity={0.5} fill={this.activeColor} />
-                        <Area type="monotone" dataKey="recoveredTotal" stackId="1" stroke={this.recoveredColor} fillOpacity={0.5} fill={this.recoveredColor} />
-                        <Area type="monotone" dataKey="deathsTotal" stackId="1" stroke={this.deathsColor} fillOpacity={0.5} fill={this.deathsColor} />
-                    </AreaChart></ResponsiveContainer>
+                        <Legend verticalAlign="top" height={36}/>
+                        <Area name="total active" type="monotone" dataKey="active" stackId="1" stroke="none" fillOpacity={0.5} fill={this.activeColor} />
+                        <Area name="total recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.recoveredColor} />
+                        <Area name="total deaths" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={this.deathsColor} />
+                    </AreaChart>
+                </ResponsiveContainer>
+                <h3>New confirmed vs new recoveries</h3>
+                <ResponsiveContainer height={250}>
+                    <LineChart width={730} height={250} data={this.data} style={{ margin: "0 auto" }}>
+                        <XAxis dataKey="date" />
+                        <YAxis />
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <Tooltip />
+                        <Legend verticalAlign="top" height={36}/>
+                        <Line name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke={this.confirmedColor} />
+                        <Line name="new recovered cases" type="monotone" dataKey="recoveredNew" stroke={this.recoveredColor} />
+                    </LineChart>
+                </ResponsiveContainer>
             </Container>
         )
     }
