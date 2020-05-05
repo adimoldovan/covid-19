@@ -41,14 +41,14 @@ export default class Countries extends Component {
         var colors = ['red', 'blue', 'green', 'black', 'orange', 'brown', 'blueviolet'];
 
 
-        var chartCountries = ['China', 'Romania', 'Italy', 'Spain', 'Germany', 'France']
+        var chartCountries = ['Spain', 'Italy', 'France', 'Germany', 'China', 'Romania']
         var confirmedTimeline = DataService.getConfirmedTimelines(chartCountries);
 
         return (
             <Container>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>COVID-19</h1></Col>
-                    <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19">data source</a></Col>
+                    <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener noreferrer">data source</a></Col>
                 </Row>
                 <hr />
                 <Container id="summary">
@@ -83,17 +83,16 @@ export default class Countries extends Component {
                     <Card>
                         <Card.Header>Total cases</Card.Header>
                         <Card.Body>
-                            <ResponsiveContainer height={800}>
+                            <ResponsiveContainer height={500}>
                                 <LineChart data={confirmedTimeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
-                                    {/* <CartesianAxis y={1000, 10000, 100000}/> */}
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
                                     {
                                         chartCountries.map((country, index) =>
-                                            <Line key={index} dataKey={country} legendType="square" dot={false} activeDot={true} stroke={colors[index]} />
+                                            <Line key={index} dataKey={country} legendType="square" dot={false} strokeWidth="3" activeDot={true} stroke={colors[index]} />
                                         )
                                     }
                                 </LineChart>
@@ -105,13 +104,15 @@ export default class Countries extends Component {
                     <table className="table table-condensed table-hover">
                         <thead>
                             <tr>
-                                <th><input className="search" placeholder="Filter" /></th>
+                                <th colSpan="3"><input className="search" placeholder="Filter" /></th>
                                 <th colSpan="2">Confirmed</th>
                                 <th colSpan="2">Deaths</th>
                                 <th colSpan="2">Recovered</th>
                             </tr>
                             <tr>
                                 <td className="sort" data-sort="name">Country <FontAwesomeIcon icon={faSort} /></td>
+                                <td></td>
+                                <td></td>
                                 <td className="text-right sort" data-sort="confirmedTotal">Total <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="confirmedNew">New <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="deathsTotal">Total <FontAwesomeIcon icon={faSort} /></td>
@@ -125,6 +126,20 @@ export default class Countries extends Component {
                                 data.map((country, index) =>
                                     <tr key={index}>
                                         <td className="text-left name"><a href={"#/" + country.name} target="_blank" rel="noopener noreferrer">{country.name}</a></td>
+                                        <td>
+                                            {/* <ResponsiveContainer height={50}>
+                                                <BarChart data={country.timeline} style={{ margin: "0 auto" }}>
+                                                    <Bar dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
+                                                </BarChart>
+                                            </ResponsiveContainer> */}
+                                        </td>
+                                        <td>
+                                            {/* <ResponsiveContainer height={50}>
+                                                <BarChart data={country.timeline} style={{ margin: "0 auto" }}>
+                                                    <Bar dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
+                                                </BarChart>
+                                            </ResponsiveContainer> */}
+                                        </td>
                                         <td className="text-right confirmedTotal">{country.summary.confirmed.total}</td>
                                         <td className="text-right confirmedNew">{country.summary.confirmed.new}</td>
                                         <td className="text-right deathsTotal">{country.summary.deaths.total}</td>

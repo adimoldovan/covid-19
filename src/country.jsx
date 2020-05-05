@@ -29,10 +29,10 @@ export default class Country extends Component {
                 <Container id="summary">
                     <CardDeck>
                         <Card>
-                            <Card.Header>Confirmed</Card.Header>
+                            <Card.Header style={{ backgroundColor: Utils.CONFIRMED_COLOR, color: "#333" }}>Confirmed</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {data.summary.confirmed.total}<br />&nbsp;<br />&nbsp;
+                                    {Utils.formattedNumber(data.summary.confirmed.total)}<br />&nbsp;<br />&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
@@ -42,10 +42,10 @@ export default class Country extends Component {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>Active</Card.Header>
+                            <Card.Header style={{ backgroundColor: Utils.ACTIVE_COLOR, color: "#333" }}>Active</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {data.summary.active.total}<br /><small className="text-muted">{activeRate}% out of total</small><br />&nbsp;
+                                    {Utils.formattedNumber(data.summary.active.total)}<br /><small className="text-muted">{activeRate}% out of total</small><br />&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
@@ -55,10 +55,10 @@ export default class Country extends Component {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>Recovered</Card.Header>
+                            <Card.Header style={{ backgroundColor: Utils.RECOVERED_COLOR, color: "#333" }}>Recovered</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {data.summary.recovered.total}<br /><small className="text-muted">{recoveredRateTotal}% out of total</small><br /><small className="text-muted">{recoveredRateClosed}% out of closed</small>
+                                    {Utils.formattedNumber(data.summary.recovered.total)}<br /><small className="text-muted">{recoveredRateTotal}% out of total</small><br /><small className="text-muted">{recoveredRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
@@ -68,10 +68,10 @@ export default class Country extends Component {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>Deceased</Card.Header>
+                            <Card.Header style={{ backgroundColor: Utils.DECEASED_COLOR, color: "#fff" }}>Deceased</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {data.summary.deaths.total}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
+                                    {Utils.formattedNumber(data.summary.deaths.total)}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
@@ -94,7 +94,7 @@ export default class Country extends Component {
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
                                     <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
-                                    <Line name="total active" type="monotone" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
+                                    <Line name="total active" dot={false} dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} strokeWidth="2" />
                                 </ComposedChart>
                             </ResponsiveContainer>
                         </Card.Body>
@@ -131,8 +131,8 @@ export default class Country extends Component {
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="new confirmed cases" type="monotone" dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
-                                    <Line name="new recovered cases" type="monotone" dataKey="recoveredNew" stroke={Utils.RECOVERED_COLOR} />
+                                    <Line name="new confirmed cases" dot={false} strokeWidth="3" dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
+                                    <Line name="new recovered cases" dot={false} strokeWidth="3" dataKey="recoveredNew" stroke={Utils.RECOVERED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                         </Card.Body>
@@ -158,8 +158,8 @@ export default class Country extends Component {
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="active" type="monotone" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
-                                    <Line name="closed (recovered + deaths)" type="monotone" dataKey="closedTotal" stroke={Utils.CLOSED_COLOR} />
+                                    <Line name="active" dot={false} strokeWidth="3" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
+                                    <Line name="closed (recovered + deaths)" dot={false} strokeWidth="3" dataKey="closedTotal" stroke={Utils.CLOSED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
@@ -186,8 +186,8 @@ export default class Country extends Component {
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
-                                    <Line name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke={Utils.DECEASED_COLOR} />
-                                    <Line name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke={Utils.RECOVERED_COLOR} />
+                                    <Line name="deceased" dot={false} strokeWidth="3" dataKey="deathsTotal" stackId="1" stroke={Utils.DECEASED_COLOR} />
+                                    <Line name="recovered" dot={false} strokeWidth="3" dataKey="recoveredTotal" stackId="1" stroke={Utils.RECOVERED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>

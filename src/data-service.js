@@ -79,7 +79,7 @@ export default class DataService {
             });
         });
 
-        console.log(data);
+        // console.log(data);
         return data;
     }
 }
