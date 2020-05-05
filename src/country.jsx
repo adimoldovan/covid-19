@@ -159,7 +159,7 @@ export default class Country extends Component {
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />
                                     <Line name="active" dot={false} strokeWidth="3" dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
-                                    <Line name="closed (recovered + deaths)" dot={false} strokeWidth="3" dataKey="closedTotal" stroke={Utils.CLOSED_COLOR} />
+                                    <Line name="closed (recovered + deceased)" dot={false} strokeWidth="3" dataKey="closedTotal" stroke={Utils.CLOSED_COLOR} />
                                 </LineChart>
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
@@ -171,7 +171,7 @@ export default class Country extends Component {
                                     <Legend verticalAlign="top" height={36} />
                                     <Area name="total active" type="monotone" dataKey="activeTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.ACTIVE_COLOR} />
                                     <Area name="total recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.RECOVERED_COLOR} />
-                                    <Area name="total deaths" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
+                                    <Area name="total deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
                                 </AreaChart>
                             </ResponsiveContainer>
                         </Card.Body>
