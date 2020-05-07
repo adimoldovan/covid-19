@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DataService from './data-service';
 import { Container, Card, CardDeck, Row, Col } from 'react-bootstrap'
-import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart } from 'recharts';
+import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart, PieChart, Pie } from 'recharts';
 import Utils from './utils';
 
 export default class Country extends Component {
@@ -19,6 +19,11 @@ export default class Country extends Component {
         var deathRateTotal = (data.summary.deaths.total / data.summary.confirmed.total * 100).toFixed(1);
         var deathRateClosed = (data.summary.deaths.total / data.summary.closed.total * 100).toFixed(1);
 
+        var outcomeData = [
+            { name: "Recovered", value: data.summary.recovered.total },
+            { name: "Deceased", value: data.summary.deaths.total }
+        ]
+
         return (
             <Container>
                 <Row className="justify-content-between header">
@@ -35,9 +40,9 @@ export default class Country extends Component {
                                     {Utils.formattedNumber(data.summary.confirmed.total)}<br />&nbsp;<br />&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Bar name="confirmedNew" type="monotone" dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
-                                    </BarChart>
+                                    <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Area name="confirmedNew" type="monotone" dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR} />
+                                    </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
                         </Card>
@@ -62,7 +67,7 @@ export default class Country extends Component {
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="recoveredTotal" fill={Utils.RECOVERED_COLOR} stroke="none" />
+                                        <Area name="active" type="monotone" dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -74,9 +79,9 @@ export default class Country extends Component {
                                     {Utils.formattedNumber(data.summary.deaths.total)}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
-                                    <BarChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Bar name="active" type="monotone" dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
-                                    </BarChart>
+                                    <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
+                                        <Area name="active" type="monotone" dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
+                                    </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
                         </Card>
@@ -180,7 +185,16 @@ export default class Country extends Component {
                         <Card.Header>Cases outcome</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
+                                {/* <PieChart>
+                                    <Pie
+                                        data={outcomeData}
+                                        labelLine={false}
+                                        outerRadius={80}
+                                        dataKey="value">
+                                    
+                                    </Pie>
+                                </PieChart> */}
+                                {/* <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />
@@ -188,7 +202,8 @@ export default class Country extends Component {
                                     <Legend verticalAlign="top" height={36} />
                                     <Line name="deceased" dot={false} strokeWidth="3" dataKey="deathsTotal" stackId="1" stroke={Utils.DECEASED_COLOR} />
                                     <Line name="recovered" dot={false} strokeWidth="3" dataKey="recoveredTotal" stackId="1" stroke={Utils.RECOVERED_COLOR} />
-                                </LineChart>
+                                </LineChart> */}
+
                             </ResponsiveContainer>
                             <ResponsiveContainer height={250}>
                                 <AreaChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }} stackOffset="expand">

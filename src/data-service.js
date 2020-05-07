@@ -51,12 +51,14 @@ export default class DataService {
                 deathsTotal: countryDeaths.timeline[key].total,
                 recoveredNew: countryRecovered.timeline[key].new,
                 recoveredTotal: countryRecovered.timeline[key].total,
+                closedNew: countryDeaths.timeline[key].new + countryRecovered.timeline[key].new,
                 closedTotal: countryDeaths.timeline[key].total + countryRecovered.timeline[key].total,
+                activeNew: countryConfirmed.timeline[key].new - (countryDeaths.timeline[key].new + countryRecovered.timeline[key].new),
                 activeTotal: countryConfirmed.timeline[key].total - (countryDeaths.timeline[key].total + countryRecovered.timeline[key].total)
             };
         });
 
-        // console.log(countryData)
+        console.log(countryData)
         return countryData;
     }
 
