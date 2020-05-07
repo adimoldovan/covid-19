@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DataService from './data-service';
 import { Container, Card, CardDeck, Row, Col } from 'react-bootstrap'
-import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart, PieChart, Pie } from 'recharts';
+import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart, PieChart, Pie, Cell } from 'recharts';
 import Utils from './utils';
 
 export default class Country extends Component {
@@ -23,6 +23,22 @@ export default class Country extends Component {
             { name: "Recovered", value: data.summary.recovered.total },
             { name: "Deceased", value: data.summary.deaths.total }
         ]
+
+        const RADIAN = Math.PI / 180;
+        const renderCustomizedLabel = ({
+            cx, cy, midAngle, innerRadius, outerRadius, percent, index,
+        }) => {
+            const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+            const x = cx + radius * Math.cos(-midAngle * RADIAN);
+            const y = cy + radius * Math.sin(-midAngle * RADIAN);
+            console.log(x)
+
+            return (
+                <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+                    {`${(percent * 100).toFixed(0)}%`}
+                </text>
+            );
+        };
 
         return (
             <Container>
@@ -185,36 +201,19 @@ export default class Country extends Component {
                         <Card.Header>Cases outcome</Card.Header>
                         <Card.Body>
                             <ResponsiveContainer height={250}>
-                                {/* <PieChart>
+                                <PieChart>
+                                    <Tooltip />
+                                    <Legend verticalAlign="top" height={36} />
                                     <Pie
-                                        data={outcomeData}
                                         labelLine={false}
+                                        label={renderCustomizedLabel}
                                         outerRadius={80}
-                                        dataKey="value">
-                                    
+                                        data={outcomeData}
+                                        dataKey="value" >
+                                        <Cell key={`cell-0`} fill={Utils.RECOVERED_COLOR} />
+                                        <Cell key={`cell-1`} fill={Utils.DECEASED_COLOR} />
                                     </Pie>
-                                </PieChart> */}
-                                {/* <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>
-                                    <XAxis dataKey="date" />
-                                    <YAxis />
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <Tooltip />
-                                    <Legend verticalAlign="top" height={36} />
-                                    <Line name="deceased" dot={false} strokeWidth="3" dataKey="deathsTotal" stackId="1" stroke={Utils.DECEASED_COLOR} />
-                                    <Line name="recovered" dot={false} strokeWidth="3" dataKey="recoveredTotal" stackId="1" stroke={Utils.RECOVERED_COLOR} />
-                                </LineChart> */}
-
-                            </ResponsiveContainer>
-                            <ResponsiveContainer height={250}>
-                                <AreaChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }} stackOffset="expand">
-                                    <XAxis dataKey="date" />
-                                    <YAxis />
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <Tooltip />
-                                    <Legend verticalAlign="top" height={36} />
-                                    <Area name="recovered" type="monotone" dataKey="recoveredTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.RECOVERED_COLOR} />
-                                    <Area name="deceased" type="monotone" dataKey="deathsTotal" stackId="1" stroke="none" fillOpacity={0.5} fill={Utils.DECEASED_COLOR} />
-                                </AreaChart>
+                                </PieChart>
                             </ResponsiveContainer>
                         </Card.Body>
                     </Card>
