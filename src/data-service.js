@@ -3,10 +3,11 @@ import recoveredData from './data/recovered.json';
 import deathsData from './data/deaths.json';
 
 export default class DataService {
-    static getCountriesVerboseData() {
+    static getVerboseData() {
         var data = confirmedData.map(function (obj) {
             return DataService.getCountryData(obj.country);
         });
+        
         return data;
     }
 
@@ -58,7 +59,7 @@ export default class DataService {
             };
         });
 
-        console.log(countryData)
+        // console.log(countryData)
         return countryData;
     }
 

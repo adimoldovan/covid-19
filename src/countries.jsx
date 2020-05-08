@@ -6,13 +6,9 @@ import List from 'list.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort } from '@fortawesome/free-solid-svg-icons';
 import Utils from './utils';
-import { AreaChart, XAxis, YAxis, CartesianGrid, Area, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, LineChart, Line, ComposedChart, CartesianAxis } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area, ComposedChart } from 'recharts';
 
 export default class Countries extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         var options = {
             valueNames: ['name', 'confirmedTotal', 'confirmedNew', 'deathsTotal', 'deathsNew', 'recoveredTotal', 'recoveredNew']
@@ -23,20 +19,15 @@ export default class Countries extends Component {
     }
 
     render() {
-        var data = DataService.getCountriesVerboseData()
-        var totalConfirmed = 0;
-        var totalActive = 0;
-        var totalRecovered = 0;
-        var totalDeceased = 0;
-        var totalClosed = 0;
+        var data = DataService.getVerboseData()
+        var world = data.find(c => c.name === 'World');
+        data.pop(world);
 
-        Object.keys(data).map(function (key) {
-            totalConfirmed = totalConfirmed + data[key].summary.confirmed.total;
-            totalRecovered = totalRecovered + data[key].summary.recovered.total;
-            totalDeceased = totalDeceased + data[key].summary.deaths.total;
-            totalClosed = totalClosed + data[key].summary.closed.total;
-            totalActive = totalActive + data[key].summary.active.total;
-        });
+        var activeRate = (world.summary.active.total / world.summary.confirmed.total * 100).toFixed(1);
+        var recoveredRateTotal = (world.summary.recovered.total / world.summary.confirmed.total * 100).toFixed(1);
+        var recoveredRateClosed = (world.summary.recovered.total / world.summary.closed.total * 100).toFixed(1);
+        var deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
+        var deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
         var colors = ['red', 'blue', 'green', 'black', 'orange', 'brown', 'blueviolet'];
 
@@ -56,25 +47,53 @@ export default class Countries extends Component {
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.CONFIRMED_COLOR, color: "#333" }}>Confirmed</Card.Header>
                             <Card.Body>
-                                <Card.Title>{Utils.formattedNumber(totalConfirmed)}</Card.Title>
+                                <Card.Title>
+                                    {Utils.formattedNumber(world.summary.confirmed.total)}<br />&nbsp;<br />&nbsp;
+                                </Card.Title>
+                                <ResponsiveContainer height={30}>
+                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
+                                        <Area dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR} />
+                                    </AreaChart>
+                                </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.ACTIVE_COLOR, color: "#333" }}>Active</Card.Header>
                             <Card.Body>
-                                <Card.Title>{Utils.formattedNumber(totalActive)}</Card.Title>
+                                <Card.Title>
+                                    {Utils.formattedNumber(world.summary.active.total)}<br /><small className="text-muted">{activeRate}% out of total</small><br />&nbsp;
+                                </Card.Title>
+                                <ResponsiveContainer height={30}>
+                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
+                                        <Area dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none" />
+                                    </AreaChart>
+                                </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.RECOVERED_COLOR, color: "#333" }}>Recovered</Card.Header>
                             <Card.Body>
-                                <Card.Title>{Utils.formattedNumber(totalRecovered)}</Card.Title>
+                                <Card.Title>
+                                    {Utils.formattedNumber(world.summary.recovered.total)}<br /><small className="text-muted">{recoveredRateTotal}% out of total</small><br /><small className="text-muted">{recoveredRateClosed}% out of closed</small>
+                                </Card.Title>
+                                <ResponsiveContainer height={30}>
+                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
+                                        <Area dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none" />
+                                    </AreaChart>
+                                </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.DECEASED_COLOR, color: "#fff" }}>Deceased</Card.Header>
                             <Card.Body>
-                                <Card.Title>{Utils.formattedNumber(totalDeceased)}</Card.Title>
+                                <Card.Title>
+                                    {Utils.formattedNumber(world.summary.deaths.total)}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
+                                </Card.Title>
+                                <ResponsiveContainer height={30}>
+                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
+                                        <Area dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
+                                    </AreaChart>
+                                </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                     </CardDeck>
@@ -83,8 +102,19 @@ export default class Countries extends Component {
                     <Card>
                         <Card.Header>Total cases</Card.Header>
                         <Card.Body>
-                            <ResponsiveContainer height={500}>
-                                <LineChart data={confirmedTimeline} style={{ margin: "0 auto" }}>
+                            <ResponsiveContainer height={250}>
+                                <ComposedChart data={world.timeline} style={{ margin: "0 auto" }} fontSize={10}>
+                                    <XAxis dataKey="date" />
+                                    <YAxis />
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <Tooltip />
+                                    <Legend verticalAlign="top" height={36} />
+                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
+                                    <Line name="total active" dot={false} dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} strokeWidth="2" />
+                                </ComposedChart>
+                            </ResponsiveContainer>
+                            <ResponsiveContainer height={300}>
+                                <LineChart data={confirmedTimeline} style={{ margin: "0 auto" }} fontSize={10}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
                                     <CartesianGrid strokeDasharray="3 3" />

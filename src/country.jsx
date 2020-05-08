@@ -57,7 +57,7 @@ export default class Country extends Component {
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="confirmedNew" type="monotone" dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR} />
+                                        <Area dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR} />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -70,7 +70,7 @@ export default class Country extends Component {
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none" />
+                                        <Area dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -83,7 +83,7 @@ export default class Country extends Component {
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none" />
+                                        <Area dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -96,7 +96,7 @@ export default class Country extends Component {
                                 </Card.Title>
                                 <ResponsiveContainer height={50}>
                                     <AreaChart data={data.timeline} style={{ margin: "0 auto" }}>
-                                        <Area name="active" type="monotone" dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
+                                        <Area dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
