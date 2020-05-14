@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  deploy-gh-pages:
+    docker:
+      - image: circleci/python:3-node
+    steps:
+      - checkout
+      - run:
+          name: "Fetch latest data"
+          command: python covid-19.py
+      - run:
+          name: "Deploy to GH pages"
+          command: npm run deploy
