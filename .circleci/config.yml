@@ -2,6 +2,10 @@ version: 2.1
 
 jobs:
   deploy-gh-pages:
+    filters:
+      branches:
+        only:
+          - master
     docker:
       - image: circleci/python:3-node
     steps:
@@ -14,7 +18,7 @@ jobs:
           command: python covid-19.py
       - run:
           name: "Deploy to GH pages"
-          command: | 
+          command: |
             git config --global user.email "ci@example.com"
             git config --global user.name "CI agent"
             npm install
@@ -29,9 +33,5 @@ workflows:
     triggers:
       - schedule:
           cron: "30 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
     jobs:
       - deploy-gh-pages
