@@ -2,9 +2,6 @@ version: 2.1
 
 jobs:
   deploy-gh-pages:
-    branches:
-      ignore:
-        - gh-pages
     docker:
       - image: circleci/python:3-node
     steps:
@@ -26,11 +23,19 @@ jobs:
 workflows:
   commit:
     jobs:
-      - deploy-gh-pages
+      - deploy-gh-pages:
+          filters:
+            branches:
+              only:
+                - master
 
   daily:
     triggers:
       - schedule:
           cron: "30 0 * * *"
     jobs:
-      - deploy-gh-pages
+      - deploy-gh-pages:
+          filters:
+            branches:
+              only:
+                - master
