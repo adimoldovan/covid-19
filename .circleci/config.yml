@@ -12,3 +12,19 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: npm run deploy
+
+workflows:
+  #   commit:
+  #     jobs:
+  #       - deploy-gh-pages
+
+  daily:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - deploy-gh-pages
