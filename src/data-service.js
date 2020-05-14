@@ -75,9 +75,10 @@ export default class DataService {
             }
         });
 
-        countries.map(function (countryName) {
+
+        countries.forEach(function (countryName) {
             var confirmedTimeline = confirmedData.find(c => c.country === countryName);
-            data.map(function (obj) {
+            data.forEach(function (obj) {
                 obj[countryName] = confirmedTimeline.timeline[obj.date].total;
             });
         });
