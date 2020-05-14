@@ -12,6 +12,8 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: | 
+            git config --global user.email "ci@example.com"
+            git config --global user.name "CI agent"
             npm install
             npm run deploy
 
