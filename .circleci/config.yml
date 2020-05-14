@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: circleci/python:3-node
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f5:6f:87:54:ce:8c:42:69:18:23:85:36:84:ed:e3:9e"
       - checkout
       - run:
           name: "Fetch latest data"
