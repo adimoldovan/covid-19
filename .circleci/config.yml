@@ -11,7 +11,9 @@ jobs:
           command: python covid-19.py
       - run:
           name: "Deploy to GH pages"
-          command: npm run deploy
+          command: | 
+            npm install
+            npm run deploy
 
 workflows:
   commit:
