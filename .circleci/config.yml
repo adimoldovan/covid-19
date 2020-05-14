@@ -14,9 +14,9 @@ jobs:
           command: npm run deploy
 
 workflows:
-  #   commit:
-  #     jobs:
-  #       - deploy-gh-pages
+  commit:
+    jobs:
+      - deploy-gh-pages
 
   daily:
     triggers:
