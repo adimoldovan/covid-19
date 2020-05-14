@@ -33,9 +33,9 @@ workflows:
     triggers:
       - schedule:
           cron: "30 0 * * *"
-    jobs:
-      - deploy-gh-pages:
           filters:
             branches:
               only:
                 - master
+    jobs:
+      - deploy-gh-pages
