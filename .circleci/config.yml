@@ -37,7 +37,7 @@ jobs:
 workflows:
   commit:
     jobs:
-      - push-new-data:
+      - deploy-gh-pages:
           filters:
             branches:
               only:
