@@ -10,20 +10,34 @@ jobs:
             - "f5:6f:87:54:ce:8c:42:69:18:23:85:36:84:ed:e3:9e"
       - checkout
       - run:
+          name: "Deploy to GH pages"
+          command: |
+            git config user.email "ci@example.com"
+            git config user.name "CI agent"
+            npm install
+            npm run deploy
+  push-new-data:
+    docker:
+      - image: circleci/python:3-node
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f5:6f:87:54:ce:8c:42:69:18:23:85:36:84:ed:e3:9e"
+      - checkout
+      - run:
           name: "Fetch latest data"
           command: python covid-19.py
       - run:
-          name: "Deploy to GH pages"
+          name: "Push changes to master"
           command: |
-            git config --global user.email "ci@example.com"
-            git config --global user.name "CI agent"
-            npm install
-            npm run deploy
+            git config user.email "ci@example.com"
+            git config user.name "CI agent"
+            sh push-latest-data.sh
 
 workflows:
   commit:
     jobs:
-      - deploy-gh-pages:
+      - push-new-data:
           filters:
             branches:
               only:
@@ -38,4 +52,4 @@ workflows:
               only:
                 - master
     jobs:
-      - deploy-gh-pages
+      - push-new-data
