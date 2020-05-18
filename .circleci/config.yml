@@ -39,7 +39,7 @@ workflows:
               only:
                 - master
 
-  daily:
+  daily-update:
     triggers:
       - schedule:
           cron: "0 4 * * *"
