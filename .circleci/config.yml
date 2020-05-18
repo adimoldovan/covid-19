@@ -12,8 +12,6 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: |
-            git config user.email "ci@example.com"
-            git config user.name "CI agent"
             npm install
             npm run deploy
   push-new-data:
@@ -30,8 +28,6 @@ jobs:
       - run:
           name: "Push changes to master"
           command: |
-            git config user.email "ci@example.com"
-            git config user.name "CI agent"
             sh push-latest-data.sh
 
 workflows:
