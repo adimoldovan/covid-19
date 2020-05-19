@@ -13,7 +13,8 @@ jobs:
           name: "Deploy to GH pages"
           command: |
             npm install
-            npm run deploy
+            PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run deploy
+
   push-new-data:
     docker:
       - image: circleci/python:3-node
@@ -42,7 +43,7 @@ workflows:
   daily-update:
     triggers:
       - schedule:
-          cron: "0 4 * * *"
+          cron: "0 5 * * *"
           filters:
             branches:
               only:
