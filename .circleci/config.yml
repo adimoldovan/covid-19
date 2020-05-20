@@ -29,7 +29,8 @@ jobs:
       - run:
           name: "Push changes to master"
           command: |
-            git config user 'CD Pipeline <cd@trashmail.com>'
+            git config username 'CD Pipeline'
+            git config email 'cd@trashmail.com'
             sh push-latest-data.sh
 
 workflows:
