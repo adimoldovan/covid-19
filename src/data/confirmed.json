@@ -2,9 +2,9 @@
   {
     "country": "Afghanistan",
     "total": {
-      "total": 9216,
-      "new": 540,
-      "growth": 0.06
+      "total": 9998,
+      "new": 782,
+      "growth": 0.08
     },
     "timeline": {
       "2020-01-22": {
@@ -616,14 +616,19 @@
         "total": 9216,
         "new": 540,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 9998,
+        "new": 782,
+        "growth": 0.08
       }
     }
   },
   {
     "country": "Albania",
     "total": {
-      "total": 981,
-      "new": 12,
+      "total": 989,
+      "new": 8,
       "growth": 0.01
     },
     "timeline": {
@@ -1236,14 +1241,19 @@
         "total": 981,
         "new": 12,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 989,
+        "new": 8,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Algeria",
     "total": {
-      "total": 7918,
-      "new": 190,
+      "total": 8113,
+      "new": 195,
       "growth": 0.02
     },
     "timeline": {
@@ -1855,6 +1865,11 @@
       "2020-05-22": {
         "total": 7918,
         "new": 190,
+        "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 8113,
+        "new": 195,
         "growth": 0.02
       }
     }
@@ -2476,15 +2491,20 @@
         "total": 762,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 762,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Angola",
     "total": {
-      "total": 60,
-      "new": 2,
-      "growth": 0.03
+      "total": 61,
+      "new": 1,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -3096,6 +3116,11 @@
         "total": 60,
         "new": 2,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 61,
+        "new": 1,
+        "growth": 0.02
       }
     }
   },
@@ -3716,14 +3741,19 @@
         "total": 25,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 25,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Argentina",
     "total": {
-      "total": 10649,
-      "new": 718,
+      "total": 11353,
+      "new": 704,
       "growth": 0.07
     },
     "timeline": {
@@ -4336,14 +4366,19 @@
         "total": 10649,
         "new": 718,
         "growth": 0.07
+      },
+      "2020-05-23": {
+        "total": 11353,
+        "new": 704,
+        "growth": 0.07
       }
     }
   },
   {
     "country": "Armenia",
     "total": {
-      "total": 5928,
-      "new": 322,
+      "total": 6302,
+      "new": 374,
       "growth": 0.06
     },
     "timeline": {
@@ -4956,14 +4991,19 @@
         "total": 5928,
         "new": 322,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 6302,
+        "new": 374,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Australia",
     "total": {
-      "total": 7099,
-      "new": 4,
+      "total": 7114,
+      "new": 15,
       "growth": 0.0
     },
     "timeline": {
@@ -5576,14 +5616,19 @@
         "total": 7099,
         "new": 4,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 7114,
+        "new": 15,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Austria",
     "total": {
-      "total": 16436,
-      "new": 32,
+      "total": 16486,
+      "new": 50,
       "growth": 0.0
     },
     "timeline": {
@@ -6196,14 +6241,19 @@
         "total": 16436,
         "new": 32,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 16486,
+        "new": 50,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Azerbaijan",
     "total": {
-      "total": 3855,
-      "new": 106,
+      "total": 3982,
+      "new": 127,
       "growth": 0.03
     },
     "timeline": {
@@ -6816,15 +6866,20 @@
         "total": 3855,
         "new": 106,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 3982,
+        "new": 127,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Bahamas",
     "total": {
-      "total": 97,
-      "new": 0,
-      "growth": 0.0
+      "total": 100,
+      "new": 3,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -7436,15 +7491,20 @@
         "total": 97,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 100,
+        "new": 3,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Bahrain",
     "total": {
-      "total": 8414,
-      "new": 240,
-      "growth": 0.03
+      "total": 8802,
+      "new": 388,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -8056,14 +8116,19 @@
         "total": 8414,
         "new": 240,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 8802,
+        "new": 388,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Bangladesh",
     "total": {
-      "total": 30205,
-      "new": 1694,
+      "total": 32078,
+      "new": 1873,
       "growth": 0.06
     },
     "timeline": {
@@ -8676,15 +8741,20 @@
         "total": 30205,
         "new": 1694,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 32078,
+        "new": 1873,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Barbados",
     "total": {
-      "total": 90,
-      "new": 0,
-      "growth": 0.0
+      "total": 92,
+      "new": 2,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -9296,14 +9366,19 @@
         "total": 90,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 92,
+        "new": 2,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Belarus",
     "total": {
-      "total": 34303,
-      "new": 932,
+      "total": 35244,
+      "new": 941,
       "growth": 0.03
     },
     "timeline": {
@@ -9916,15 +9991,20 @@
         "total": 34303,
         "new": 932,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 35244,
+        "new": 941,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Belgium",
     "total": {
-      "total": 56511,
-      "new": 276,
-      "growth": 0.0
+      "total": 56810,
+      "new": 299,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -10536,6 +10616,11 @@
         "total": 56511,
         "new": 276,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 56810,
+        "new": 299,
+        "growth": 0.01
       }
     }
   },
@@ -11156,15 +11241,20 @@
         "total": 135,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 135,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Bhutan",
     "total": {
-      "total": 21,
-      "new": 0,
-      "growth": 0.0
+      "total": 24,
+      "new": 3,
+      "growth": 0.14
     },
     "timeline": {
       "2020-01-22": {
@@ -11776,15 +11866,20 @@
         "total": 21,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 24,
+        "new": 3,
+        "growth": 0.14
       }
     }
   },
   {
     "country": "Bolivia",
     "total": {
-      "total": 5579,
-      "new": 392,
-      "growth": 0.08
+      "total": 5915,
+      "new": 336,
+      "growth": 0.06
     },
     "timeline": {
       "2020-01-22": {
@@ -12396,14 +12491,19 @@
         "total": 5579,
         "new": 392,
         "growth": 0.08
+      },
+      "2020-05-23": {
+        "total": 5915,
+        "new": 336,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Bosnia and Herzegovina",
     "total": {
-      "total": 2372,
-      "new": 22,
+      "total": 2391,
+      "new": 19,
       "growth": 0.01
     },
     "timeline": {
@@ -13016,15 +13116,20 @@
         "total": 2372,
         "new": 22,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 2391,
+        "new": 19,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Brazil",
     "total": {
-      "total": 330890,
-      "new": 20803,
-      "growth": 0.07
+      "total": 347398,
+      "new": 16508,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -13636,6 +13741,11 @@
         "total": 330890,
         "new": 20803,
         "growth": 0.07
+      },
+      "2020-05-23": {
+        "total": 347398,
+        "new": 16508,
+        "growth": 0.05
       }
     }
   },
@@ -14256,14 +14366,19 @@
         "total": 141,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 141,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Bulgaria",
     "total": {
-      "total": 2372,
-      "new": 41,
+      "total": 2408,
+      "new": 36,
       "growth": 0.02
     },
     "timeline": {
@@ -14876,6 +14991,11 @@
         "total": 2372,
         "new": 41,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 2408,
+        "new": 36,
+        "growth": 0.02
       }
     }
   },
@@ -14883,7 +15003,7 @@
     "country": "Burkina Faso",
     "total": {
       "total": 814,
-      "new": 2,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -15496,14 +15616,19 @@
         "total": 814,
         "new": 2,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 814,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Cabo Verde",
     "total": {
-      "total": 362,
-      "new": 6,
+      "total": 371,
+      "new": 9,
       "growth": 0.02
     },
     "timeline": {
@@ -16116,15 +16241,20 @@
         "total": 362,
         "new": 6,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 371,
+        "new": 9,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Cambodia",
     "total": {
-      "total": 123,
-      "new": 0,
-      "growth": 0.0
+      "total": 124,
+      "new": 1,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -16736,6 +16866,11 @@
         "total": 123,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 124,
+        "new": 1,
+        "growth": 0.01
       }
     }
   },
@@ -16743,8 +16878,8 @@
     "country": "Cameroon",
     "total": {
       "total": 4400,
-      "new": 112,
-      "growth": 0.03
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -17356,14 +17491,19 @@
         "total": 4400,
         "new": 112,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 4400,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Canada",
     "total": {
-      "total": 83947,
-      "new": 1205,
+      "total": 85151,
+      "new": 1204,
       "growth": 0.01
     },
     "timeline": {
@@ -17976,15 +18116,20 @@
         "total": 83947,
         "new": 1205,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 85151,
+        "new": 1204,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Central African Republic",
     "total": {
-      "total": 479,
-      "new": 43,
-      "growth": 0.1
+      "total": 552,
+      "new": 73,
+      "growth": 0.15
     },
     "timeline": {
       "2020-01-22": {
@@ -18596,15 +18741,20 @@
         "total": 479,
         "new": 43,
         "growth": 0.1
+      },
+      "2020-05-23": {
+        "total": 552,
+        "new": 73,
+        "growth": 0.15
       }
     }
   },
   {
     "country": "Chad",
     "total": {
-      "total": 611,
-      "new": 23,
-      "growth": 0.04
+      "total": 648,
+      "new": 37,
+      "growth": 0.06
     },
     "timeline": {
       "2020-01-22": {
@@ -19216,15 +19366,20 @@
         "total": 611,
         "new": 23,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 648,
+        "new": 37,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Chile",
     "total": {
-      "total": 61857,
-      "new": 4276,
-      "growth": 0.07
+      "total": 65393,
+      "new": 3536,
+      "growth": 0.06
     },
     "timeline": {
       "2020-01-22": {
@@ -19836,14 +19991,19 @@
         "total": 61857,
         "new": 4276,
         "growth": 0.07
+      },
+      "2020-05-23": {
+        "total": 65393,
+        "new": 3536,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "China",
     "total": {
-      "total": 84081,
-      "new": 18,
+      "total": 84084,
+      "new": 3,
       "growth": 0.0
     },
     "timeline": {
@@ -20456,15 +20616,20 @@
         "total": 84081,
         "new": 18,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 84084,
+        "new": 3,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Colombia",
     "total": {
-      "total": 19131,
-      "new": 801,
-      "growth": 0.04
+      "total": 20177,
+      "new": 1046,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -21076,15 +21241,20 @@
         "total": 19131,
         "new": 801,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 20177,
+        "new": 1046,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Congo (Brazzaville)",
     "total": {
-      "total": 469,
-      "new": 0,
-      "growth": 0.0
+      "total": 487,
+      "new": 18,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -21696,15 +21866,20 @@
         "total": 469,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 487,
+        "new": 18,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "Congo (Kinshasa)",
     "total": {
-      "total": 1945,
-      "new": 110,
-      "growth": 0.06
+      "total": 2025,
+      "new": 80,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -22316,14 +22491,19 @@
         "total": 1945,
         "new": 110,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 2025,
+        "new": 80,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "Costa Rica",
     "total": {
-      "total": 911,
-      "new": 8,
+      "total": 918,
+      "new": 7,
       "growth": 0.01
     },
     "timeline": {
@@ -22936,15 +23116,20 @@
         "total": 911,
         "new": 8,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 918,
+        "new": 7,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Cote d'Ivoire",
     "total": {
-      "total": 2341,
-      "new": 40,
-      "growth": 0.02
+      "total": 2366,
+      "new": 25,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -23556,6 +23741,11 @@
         "total": 2341,
         "new": 40,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 2366,
+        "new": 25,
+        "growth": 0.01
       }
     }
   },
@@ -23563,7 +23753,7 @@
     "country": "Croatia",
     "total": {
       "total": 2243,
-      "new": 6,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -24175,6 +24365,11 @@
       "2020-05-22": {
         "total": 2243,
         "new": 6,
+        "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 2243,
+        "new": 0,
         "growth": 0.0
       }
     }
@@ -24796,15 +24991,20 @@
         "total": 712,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 712,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Cuba",
     "total": {
-      "total": 1916,
-      "new": 8,
-      "growth": 0.0
+      "total": 1931,
+      "new": 15,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -25416,6 +25616,11 @@
         "total": 1916,
         "new": 8,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1931,
+        "new": 15,
+        "growth": 0.01
       }
     }
   },
@@ -25423,7 +25628,7 @@
     "country": "Cyprus",
     "total": {
       "total": 927,
-      "new": 4,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -26036,14 +26241,19 @@
         "total": 927,
         "new": 4,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 927,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Czechia",
     "total": {
-      "total": 8813,
-      "new": 59,
+      "total": 8890,
+      "new": 77,
       "growth": 0.01
     },
     "timeline": {
@@ -26656,15 +26866,20 @@
         "total": 8813,
         "new": 59,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 8890,
+        "new": 77,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Denmark",
     "total": {
-      "total": 11428,
-      "new": 48,
-      "growth": 0.0
+      "total": 11487,
+      "new": 59,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -27276,6 +27491,11 @@
         "total": 11428,
         "new": 48,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 11487,
+        "new": 59,
+        "growth": 0.01
       }
     }
   },
@@ -27283,8 +27503,8 @@
     "country": "Djibouti",
     "total": {
       "total": 2270,
-      "new": 223,
-      "growth": 0.11
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -27896,15 +28116,20 @@
         "total": 2270,
         "new": 223,
         "growth": 0.11
+      },
+      "2020-05-23": {
+        "total": 2270,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Dominican Republic",
     "total": {
-      "total": 13989,
-      "new": 332,
-      "growth": 0.02
+      "total": 14422,
+      "new": 433,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -28516,14 +28741,19 @@
         "total": 13989,
         "new": 332,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 14422,
+        "new": 433,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Ecuador",
     "total": {
-      "total": 35828,
-      "new": 522,
+      "total": 36258,
+      "new": 430,
       "growth": 0.01
     },
     "timeline": {
@@ -29136,14 +29366,19 @@
         "total": 35828,
         "new": 522,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 36258,
+        "new": 430,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Egypt",
     "total": {
-      "total": 15786,
-      "new": 783,
+      "total": 16513,
+      "new": 727,
       "growth": 0.05
     },
     "timeline": {
@@ -29756,14 +29991,19 @@
         "total": 15786,
         "new": 783,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 16513,
+        "new": 727,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "El Salvador",
     "total": {
-      "total": 1725,
-      "new": 85,
+      "total": 1819,
+      "new": 94,
       "growth": 0.05
     },
     "timeline": {
@@ -30376,6 +30616,11 @@
         "total": 1725,
         "new": 85,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 1819,
+        "new": 94,
+        "growth": 0.05
       }
     }
   },
@@ -30383,8 +30628,8 @@
     "country": "Equatorial Guinea",
     "total": {
       "total": 960,
-      "new": 57,
-      "growth": 0.06
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -30996,6 +31241,11 @@
         "total": 960,
         "new": 57,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 960,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -31616,15 +31866,20 @@
         "total": 39,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 39,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Estonia",
     "total": {
-      "total": 1807,
-      "new": 7,
-      "growth": 0.0
+      "total": 1821,
+      "new": 14,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -32236,15 +32491,20 @@
         "total": 1807,
         "new": 7,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1821,
+        "new": 14,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Eswatini",
     "total": {
-      "total": 225,
-      "new": 5,
-      "growth": 0.02
+      "total": 238,
+      "new": 13,
+      "growth": 0.06
     },
     "timeline": {
       "2020-01-22": {
@@ -32856,15 +33116,20 @@
         "total": 225,
         "new": 5,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 238,
+        "new": 13,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Ethiopia",
     "total": {
-      "total": 433,
-      "new": 34,
-      "growth": 0.09
+      "total": 494,
+      "new": 61,
+      "growth": 0.14
     },
     "timeline": {
       "2020-01-22": {
@@ -33476,6 +33741,11 @@
         "total": 433,
         "new": 34,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 494,
+        "new": 61,
+        "growth": 0.14
       }
     }
   },
@@ -34096,15 +34366,20 @@
         "total": 18,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 18,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Finland",
     "total": {
-      "total": 6537,
-      "new": 44,
-      "growth": 0.01
+      "total": 6568,
+      "new": 31,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -34716,14 +34991,19 @@
         "total": 6537,
         "new": 44,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 6568,
+        "new": 31,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "France",
     "total": {
-      "total": 182015,
-      "new": 64,
+      "total": 182036,
+      "new": 21,
       "growth": 0.0
     },
     "timeline": {
@@ -35336,15 +35616,20 @@
         "total": 182015,
         "new": 64,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 182036,
+        "new": 21,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Gabon",
     "total": {
-      "total": 1728,
-      "new": 161,
-      "growth": 0.1
+      "total": 1934,
+      "new": 206,
+      "growth": 0.12
     },
     "timeline": {
       "2020-01-22": {
@@ -35956,6 +36241,11 @@
         "total": 1728,
         "new": 161,
         "growth": 0.1
+      },
+      "2020-05-23": {
+        "total": 1934,
+        "new": 206,
+        "growth": 0.12
       }
     }
   },
@@ -35963,8 +36253,8 @@
     "country": "Gambia",
     "total": {
       "total": 25,
-      "new": 1,
-      "growth": 0.04
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -36576,15 +36866,20 @@
         "total": 25,
         "new": 1,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 25,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Georgia",
     "total": {
-      "total": 723,
-      "new": 2,
-      "growth": 0.0
+      "total": 728,
+      "new": 5,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -37196,14 +37491,19 @@
         "total": 723,
         "new": 2,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 728,
+        "new": 5,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Germany",
     "total": {
-      "total": 179710,
-      "new": 689,
+      "total": 179986,
+      "new": 276,
       "growth": 0.0
     },
     "timeline": {
@@ -37816,15 +38116,20 @@
         "total": 179710,
         "new": 689,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 179986,
+        "new": 276,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Ghana",
     "total": {
-      "total": 6486,
-      "new": 217,
-      "growth": 0.03
+      "total": 6617,
+      "new": 131,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -38436,15 +38741,20 @@
         "total": 6486,
         "new": 217,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 6617,
+        "new": 131,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Greece",
     "total": {
-      "total": 2874,
-      "new": 21,
-      "growth": 0.01
+      "total": 2876,
+      "new": 2,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -39056,15 +39366,20 @@
         "total": 2874,
         "new": 21,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 2876,
+        "new": 2,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Guatemala",
     "total": {
-      "total": 2743,
-      "new": 231,
-      "growth": 0.09
+      "total": 3054,
+      "new": 311,
+      "growth": 0.11
     },
     "timeline": {
       "2020-01-22": {
@@ -39676,15 +39991,20 @@
         "total": 2743,
         "new": 231,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 3054,
+        "new": 311,
+        "growth": 0.11
       }
     }
   },
   {
     "country": "Guinea",
     "total": {
-      "total": 3067,
-      "new": 0,
-      "growth": 0.0
+      "total": 3176,
+      "new": 109,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -40296,6 +40616,11 @@
         "total": 3067,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 3176,
+        "new": 109,
+        "growth": 0.04
       }
     }
   },
@@ -40916,15 +41241,20 @@
         "total": 127,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 127,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Haiti",
     "total": {
-      "total": 812,
-      "new": 78,
-      "growth": 0.11
+      "total": 865,
+      "new": 53,
+      "growth": 0.07
     },
     "timeline": {
       "2020-01-22": {
@@ -41536,6 +41866,11 @@
         "total": 812,
         "new": 78,
         "growth": 0.11
+      },
+      "2020-05-23": {
+        "total": 865,
+        "new": 53,
+        "growth": 0.07
       }
     }
   },
@@ -42156,6 +42491,11 @@
         "total": 12,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 12,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -42163,8 +42503,8 @@
     "country": "Honduras",
     "total": {
       "total": 3477,
-      "new": 273,
-      "growth": 0.09
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -42776,14 +43116,19 @@
         "total": 3477,
         "new": 273,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 3477,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Hungary",
     "total": {
-      "total": 3678,
-      "new": 37,
+      "total": 3713,
+      "new": 35,
       "growth": 0.01
     },
     "timeline": {
@@ -43396,14 +43741,19 @@
         "total": 3678,
         "new": 37,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 3713,
+        "new": 35,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Iceland",
     "total": {
-      "total": 1803,
-      "new": 0,
+      "total": 1804,
+      "new": 1,
       "growth": 0.0
     },
     "timeline": {
@@ -44016,15 +44366,20 @@
         "total": 1803,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1804,
+        "new": 1,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "India",
     "total": {
-      "total": 124794,
-      "new": 6568,
-      "growth": 0.06
+      "total": 131423,
+      "new": 6629,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -44636,15 +44991,20 @@
         "total": 124794,
         "new": 6568,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 131423,
+        "new": 6629,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Indonesia",
     "total": {
-      "total": 20796,
-      "new": 634,
-      "growth": 0.03
+      "total": 21745,
+      "new": 949,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -45256,15 +45616,20 @@
         "total": 20796,
         "new": 634,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 21745,
+        "new": 949,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Iran",
     "total": {
-      "total": 131652,
-      "new": 2311,
-      "growth": 0.02
+      "total": 133521,
+      "new": 1869,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -45876,15 +46241,20 @@
         "total": 131652,
         "new": 2311,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 133521,
+        "new": 1869,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Iraq",
     "total": {
-      "total": 3964,
-      "new": 87,
-      "growth": 0.02
+      "total": 4272,
+      "new": 308,
+      "growth": 0.08
     },
     "timeline": {
       "2020-01-22": {
@@ -46496,14 +46866,19 @@
         "total": 3964,
         "new": 87,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 4272,
+        "new": 308,
+        "growth": 0.08
       }
     }
   },
   {
     "country": "Ireland",
     "total": {
-      "total": 24506,
-      "new": 115,
+      "total": 24582,
+      "new": 76,
       "growth": 0.0
     },
     "timeline": {
@@ -47116,14 +47491,19 @@
         "total": 24506,
         "new": 115,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 24582,
+        "new": 76,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Israel",
     "total": {
-      "total": 16690,
-      "new": 7,
+      "total": 16712,
+      "new": 22,
       "growth": 0.0
     },
     "timeline": {
@@ -47736,14 +48116,19 @@
         "total": 16690,
         "new": 7,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 16712,
+        "new": 22,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Italy",
     "total": {
-      "total": 228658,
-      "new": 652,
+      "total": 229327,
+      "new": 669,
       "growth": 0.0
     },
     "timeline": {
@@ -48356,15 +48741,20 @@
         "total": 228658,
         "new": 652,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 229327,
+        "new": 669,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Jamaica",
     "total": {
-      "total": 544,
-      "new": 10,
-      "growth": 0.02
+      "total": 550,
+      "new": 6,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -48976,15 +49366,20 @@
         "total": 544,
         "new": 10,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 550,
+        "new": 6,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Japan",
     "total": {
-      "total": 16513,
-      "new": 89,
-      "growth": 0.01
+      "total": 16536,
+      "new": 23,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -49596,15 +49991,20 @@
         "total": 16513,
         "new": 89,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 16536,
+        "new": 23,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Jordan",
     "total": {
-      "total": 700,
-      "new": 16,
-      "growth": 0.02
+      "total": 704,
+      "new": 4,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -50216,6 +50616,11 @@
         "total": 700,
         "new": 16,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 704,
+        "new": 4,
+        "growth": 0.01
       }
     }
   },
@@ -50223,8 +50628,8 @@
     "country": "Kazakhstan",
     "total": {
       "total": 7919,
-      "new": 685,
-      "growth": 0.09
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -50836,15 +51241,20 @@
         "total": 7919,
         "new": 685,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 7919,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Kenya",
     "total": {
-      "total": 1161,
-      "new": 52,
-      "growth": 0.05
+      "total": 1192,
+      "new": 31,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -51456,14 +51866,19 @@
         "total": 1161,
         "new": 52,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 1192,
+        "new": 31,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Korea, South",
     "total": {
-      "total": 11165,
-      "new": 23,
+      "total": 11190,
+      "new": 25,
       "growth": 0.0
     },
     "timeline": {
@@ -52076,14 +52491,19 @@
         "total": 11165,
         "new": 23,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 11190,
+        "new": 25,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Kuwait",
     "total": {
-      "total": 19564,
-      "new": 955,
+      "total": 20464,
+      "new": 900,
       "growth": 0.05
     },
     "timeline": {
@@ -52696,15 +53116,20 @@
         "total": 19564,
         "new": 955,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 20464,
+        "new": 900,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Kyrgyzstan",
     "total": {
-      "total": 1350,
-      "new": 37,
-      "growth": 0.03
+      "total": 1365,
+      "new": 15,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -53316,15 +53741,20 @@
         "total": 1350,
         "new": 37,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 1365,
+        "new": 15,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Latvia",
     "total": {
-      "total": 1030,
-      "new": 5,
-      "growth": 0.0
+      "total": 1046,
+      "new": 16,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -53936,15 +54366,20 @@
         "total": 1030,
         "new": 5,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1046,
+        "new": 16,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Lebanon",
     "total": {
-      "total": 1086,
-      "new": 62,
-      "growth": 0.06
+      "total": 1097,
+      "new": 11,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -54556,15 +54991,20 @@
         "total": 1086,
         "new": 62,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 1097,
+        "new": 11,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Liberia",
     "total": {
-      "total": 249,
-      "new": 9,
-      "growth": 0.04
+      "total": 255,
+      "new": 6,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -55176,6 +55616,11 @@
         "total": 249,
         "new": 9,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 255,
+        "new": 6,
+        "growth": 0.02
       }
     }
   },
@@ -55796,14 +56241,19 @@
         "total": 82,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 82,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Lithuania",
     "total": {
-      "total": 1604,
-      "new": 11,
+      "total": 1616,
+      "new": 12,
       "growth": 0.01
     },
     "timeline": {
@@ -56416,14 +56866,19 @@
         "total": 1604,
         "new": 11,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 1616,
+        "new": 12,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Luxembourg",
     "total": {
-      "total": 3981,
-      "new": 1,
+      "total": 3990,
+      "new": 9,
       "growth": 0.0
     },
     "timeline": {
@@ -57036,15 +57491,20 @@
         "total": 3981,
         "new": 1,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 3990,
+        "new": 9,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Madagascar",
     "total": {
-      "total": 448,
-      "new": 43,
-      "growth": 0.11
+      "total": 488,
+      "new": 40,
+      "growth": 0.09
     },
     "timeline": {
       "2020-01-22": {
@@ -57656,14 +58116,19 @@
         "total": 448,
         "new": 43,
         "growth": 0.11
+      },
+      "2020-05-23": {
+        "total": 488,
+        "new": 40,
+        "growth": 0.09
       }
     }
   },
   {
     "country": "Malaysia",
     "total": {
-      "total": 7137,
-      "new": 78,
+      "total": 7185,
+      "new": 48,
       "growth": 0.01
     },
     "timeline": {
@@ -58276,15 +58741,20 @@
         "total": 7137,
         "new": 78,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 7185,
+        "new": 48,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Maldives",
     "total": {
-      "total": 1274,
-      "new": 58,
-      "growth": 0.05
+      "total": 1313,
+      "new": 39,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -58896,15 +59366,20 @@
         "total": 1274,
         "new": 58,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 1313,
+        "new": 39,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Malta",
     "total": {
-      "total": 600,
-      "new": 1,
-      "growth": 0.0
+      "total": 609,
+      "new": 9,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -59516,15 +59991,20 @@
         "total": 600,
         "new": 1,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 609,
+        "new": 9,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Mauritania",
     "total": {
-      "total": 200,
+      "total": 227,
       "new": 27,
-      "growth": 0.16
+      "growth": 0.14
     },
     "timeline": {
       "2020-01-22": {
@@ -60136,6 +60616,11 @@
         "total": 200,
         "new": 27,
         "growth": 0.16
+      },
+      "2020-05-23": {
+        "total": 227,
+        "new": 27,
+        "growth": 0.14
       }
     }
   },
@@ -60756,14 +61241,19 @@
         "total": 332,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 332,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Mexico",
     "total": {
-      "total": 62527,
-      "new": 2960,
+      "total": 65856,
+      "new": 3329,
       "growth": 0.05
     },
     "timeline": {
@@ -61376,14 +61866,19 @@
         "total": 62527,
         "new": 2960,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 65856,
+        "new": 3329,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Moldova",
     "total": {
-      "total": 6847,
-      "new": 143,
+      "total": 6994,
+      "new": 147,
       "growth": 0.02
     },
     "timeline": {
@@ -61996,15 +62491,20 @@
         "total": 6847,
         "new": 143,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 6994,
+        "new": 147,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Monaco",
     "total": {
-      "total": 97,
-      "new": 0,
-      "growth": 0.0
+      "total": 98,
+      "new": 1,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -62616,6 +63116,11 @@
         "total": 97,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 98,
+        "new": 1,
+        "growth": 0.01
       }
     }
   },
@@ -62623,8 +63128,8 @@
     "country": "Mongolia",
     "total": {
       "total": 141,
-      "new": 1,
-      "growth": 0.01
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -63236,6 +63741,11 @@
         "total": 141,
         "new": 1,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 141,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -63856,15 +64366,20 @@
         "total": 324,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 324,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Morocco",
     "total": {
-      "total": 7332,
-      "new": 121,
-      "growth": 0.02
+      "total": 7406,
+      "new": 74,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -64476,15 +64991,20 @@
         "total": 7332,
         "new": 121,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 7406,
+        "new": 74,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Namibia",
     "total": {
-      "total": 19,
+      "total": 20,
       "new": 1,
-      "growth": 0.06
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -65096,14 +65616,19 @@
         "total": 19,
         "new": 1,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 20,
+        "new": 1,
+        "growth": 0.05
       }
     }
   },
   {
     "country": "Nepal",
     "total": {
-      "total": 516,
-      "new": 59,
+      "total": 584,
+      "new": 68,
       "growth": 0.13
     },
     "timeline": {
@@ -65716,14 +66241,19 @@
         "total": 516,
         "new": 59,
         "growth": 0.13
+      },
+      "2020-05-23": {
+        "total": 584,
+        "new": 68,
+        "growth": 0.13
       }
     }
   },
   {
     "country": "Netherlands",
     "total": {
-      "total": 45088,
-      "new": 188,
+      "total": 45265,
+      "new": 177,
       "growth": 0.0
     },
     "timeline": {
@@ -66335,6 +66865,11 @@
       "2020-05-22": {
         "total": 45088,
         "new": 188,
+        "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 45265,
+        "new": 177,
         "growth": 0.0
       }
     }
@@ -66953,6 +67488,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 1504,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 1504,
         "new": 0,
         "growth": 0.0
@@ -67576,14 +68116,19 @@
         "total": 279,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 279,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Niger",
     "total": {
-      "total": 937,
-      "new": 13,
+      "total": 943,
+      "new": 6,
       "growth": 0.01
     },
     "timeline": {
@@ -68196,15 +68741,20 @@
         "total": 937,
         "new": 13,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 943,
+        "new": 6,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Nigeria",
     "total": {
-      "total": 7261,
-      "new": 245,
-      "growth": 0.03
+      "total": 7526,
+      "new": 265,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -68816,14 +69366,19 @@
         "total": 7261,
         "new": 245,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 7526,
+        "new": 265,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "North Macedonia",
     "total": {
-      "total": 1921,
-      "new": 23,
+      "total": 1941,
+      "new": 20,
       "growth": 0.01
     },
     "timeline": {
@@ -69436,14 +69991,19 @@
         "total": 1921,
         "new": 23,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 1941,
+        "new": 20,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Norway",
     "total": {
-      "total": 8332,
-      "new": 23,
+      "total": 8346,
+      "new": 14,
       "growth": 0.0
     },
     "timeline": {
@@ -70056,14 +70616,19 @@
         "total": 8332,
         "new": 23,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 8346,
+        "new": 14,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Oman",
     "total": {
-      "total": 6794,
-      "new": 424,
+      "total": 7257,
+      "new": 463,
       "growth": 0.07
     },
     "timeline": {
@@ -70676,15 +71241,20 @@
         "total": 6794,
         "new": 424,
         "growth": 0.07
+      },
+      "2020-05-23": {
+        "total": 7257,
+        "new": 463,
+        "growth": 0.07
       }
     }
   },
   {
     "country": "Pakistan",
     "total": {
-      "total": 50694,
-      "new": 2603,
-      "growth": 0.05
+      "total": 52437,
+      "new": 1743,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -71296,15 +71866,20 @@
         "total": 50694,
         "new": 2603,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 52437,
+        "new": 1743,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Panama",
     "total": {
-      "total": 10267,
-      "new": 151,
-      "growth": 0.01
+      "total": 10577,
+      "new": 310,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -71916,6 +72491,11 @@
         "total": 10267,
         "new": 151,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 10577,
+        "new": 310,
+        "growth": 0.03
       }
     }
   },
@@ -72536,15 +73116,20 @@
         "total": 8,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 8,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Paraguay",
     "total": {
-      "total": 838,
-      "new": 2,
-      "growth": 0.0
+      "total": 850,
+      "new": 12,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -73156,15 +73741,20 @@
         "total": 838,
         "new": 2,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 850,
+        "new": 12,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Peru",
     "total": {
-      "total": 111698,
-      "new": 2929,
-      "growth": 0.03
+      "total": 115754,
+      "new": 4056,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -73776,14 +74366,19 @@
         "total": 111698,
         "new": 2929,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 115754,
+        "new": 4056,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "Philippines",
     "total": {
-      "total": 13597,
-      "new": 163,
+      "total": 13777,
+      "new": 180,
       "growth": 0.01
     },
     "timeline": {
@@ -74396,14 +74991,19 @@
         "total": 13597,
         "new": 163,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 13777,
+        "new": 180,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Poland",
     "total": {
-      "total": 20619,
-      "new": 476,
+      "total": 20931,
+      "new": 312,
       "growth": 0.02
     },
     "timeline": {
@@ -75016,14 +75616,19 @@
         "total": 20619,
         "new": 476,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 20931,
+        "new": 312,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Portugal",
     "total": {
-      "total": 30200,
-      "new": 288,
+      "total": 30471,
+      "new": 271,
       "growth": 0.01
     },
     "timeline": {
@@ -75636,15 +76241,20 @@
         "total": 30200,
         "new": 288,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 30471,
+        "new": 271,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Qatar",
     "total": {
-      "total": 40481,
-      "new": 1830,
-      "growth": 0.05
+      "total": 42213,
+      "new": 1732,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -76256,14 +76866,19 @@
         "total": 40481,
         "new": 1830,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 42213,
+        "new": 1732,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "Romania",
     "total": {
-      "total": 17712,
-      "new": 127,
+      "total": 17857,
+      "new": 145,
       "growth": 0.01
     },
     "timeline": {
@@ -76876,14 +77491,19 @@
         "total": 17712,
         "new": 127,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 17857,
+        "new": 145,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Russia",
     "total": {
-      "total": 326448,
-      "new": 8894,
+      "total": 335882,
+      "new": 9434,
       "growth": 0.03
     },
     "timeline": {
@@ -77496,15 +78116,20 @@
         "total": 326448,
         "new": 8894,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 335882,
+        "new": 9434,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Rwanda",
     "total": {
-      "total": 321,
-      "new": 1,
-      "growth": 0.0
+      "total": 325,
+      "new": 4,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -78116,6 +78741,11 @@
         "total": 321,
         "new": 1,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 325,
+        "new": 4,
+        "growth": 0.01
       }
     }
   },
@@ -78733,6 +79363,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 18,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 18,
         "new": 0,
         "growth": 0.0
@@ -79356,15 +79991,20 @@
         "total": 18,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 18,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "San Marino",
     "total": {
-      "total": 661,
-      "new": 3,
-      "growth": 0.0
+      "total": 665,
+      "new": 4,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -79976,14 +80616,19 @@
         "total": 661,
         "new": 3,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 665,
+        "new": 4,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Saudi Arabia",
     "total": {
-      "total": 67719,
-      "new": 2642,
+      "total": 70161,
+      "new": 2442,
       "growth": 0.04
     },
     "timeline": {
@@ -80596,15 +81241,20 @@
         "total": 67719,
         "new": 2642,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 70161,
+        "new": 2442,
+        "growth": 0.04
       }
     }
   },
   {
     "country": "Senegal",
     "total": {
-      "total": 2909,
-      "new": 97,
-      "growth": 0.03
+      "total": 2976,
+      "new": 67,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -81216,14 +81866,19 @@
         "total": 2909,
         "new": 97,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 2976,
+        "new": 67,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Serbia",
     "total": {
-      "total": 11024,
-      "new": 105,
+      "total": 11092,
+      "new": 68,
       "growth": 0.01
     },
     "timeline": {
@@ -81835,6 +82490,11 @@
       "2020-05-22": {
         "total": 11024,
         "new": 105,
+        "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 11092,
+        "new": 68,
         "growth": 0.01
       }
     }
@@ -82456,14 +83116,19 @@
         "total": 11,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 11,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Singapore",
     "total": {
-      "total": 30426,
-      "new": 614,
+      "total": 31068,
+      "new": 642,
       "growth": 0.02
     },
     "timeline": {
@@ -83076,13 +83741,18 @@
         "total": 30426,
         "new": 614,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 31068,
+        "new": 642,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Slovakia",
     "total": {
-      "total": 1503,
+      "total": 1504,
       "new": 1,
       "growth": 0.0
     },
@@ -83694,6 +84364,11 @@
       },
       "2020-05-22": {
         "total": 1503,
+        "new": 1,
+        "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1504,
         "new": 1,
         "growth": 0.0
       }
@@ -84313,6 +84988,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 1468,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 1468,
         "new": 0,
         "growth": 0.0
@@ -84936,15 +85616,20 @@
         "total": 1594,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1594,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "South Africa",
     "total": {
-      "total": 20125,
-      "new": 988,
-      "growth": 0.05
+      "total": 21343,
+      "new": 1218,
+      "growth": 0.06
     },
     "timeline": {
       "2020-01-22": {
@@ -85556,15 +86241,20 @@
         "total": 20125,
         "new": 988,
         "growth": 0.05
+      },
+      "2020-05-23": {
+        "total": 21343,
+        "new": 1218,
+        "growth": 0.06
       }
     }
   },
   {
     "country": "Spain",
     "total": {
-      "total": 234824,
-      "new": 1787,
-      "growth": 0.01
+      "total": 235290,
+      "new": 466,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -86176,15 +86866,20 @@
         "total": 234824,
         "new": 1787,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 235290,
+        "new": 466,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Sri Lanka",
     "total": {
-      "total": 1068,
-      "new": 13,
-      "growth": 0.01
+      "total": 1089,
+      "new": 21,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -86796,15 +87491,20 @@
         "total": 1068,
         "new": 13,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 1089,
+        "new": 21,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Sudan",
     "total": {
-      "total": 3378,
-      "new": 240,
-      "growth": 0.08
+      "total": 3628,
+      "new": 250,
+      "growth": 0.07
     },
     "timeline": {
       "2020-01-22": {
@@ -87416,6 +88116,11 @@
         "total": 3378,
         "new": 240,
         "growth": 0.08
+      },
+      "2020-05-23": {
+        "total": 3628,
+        "new": 250,
+        "growth": 0.07
       }
     }
   },
@@ -88036,15 +88741,20 @@
         "total": 11,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 11,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Sweden",
     "total": {
-      "total": 32809,
-      "new": 637,
-      "growth": 0.02
+      "total": 33188,
+      "new": 379,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -88656,14 +89366,19 @@
         "total": 32809,
         "new": 637,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 33188,
+        "new": 379,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Switzerland",
     "total": {
-      "total": 30707,
-      "new": 13,
+      "total": 30725,
+      "new": 18,
       "growth": 0.0
     },
     "timeline": {
@@ -89276,6 +89991,11 @@
         "total": 30707,
         "new": 13,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 30725,
+        "new": 18,
+        "growth": 0.0
       }
     }
   },
@@ -89283,7 +90003,7 @@
     "country": "Taiwan*",
     "total": {
       "total": 441,
-      "new": 1,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -89895,6 +90615,11 @@
       "2020-05-22": {
         "total": 441,
         "new": 1,
+        "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 441,
+        "new": 0,
         "growth": 0.0
       }
     }
@@ -90516,14 +91241,19 @@
         "total": 509,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 509,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Thailand",
     "total": {
-      "total": 3037,
-      "new": 0,
+      "total": 3040,
+      "new": 3,
       "growth": 0.0
     },
     "timeline": {
@@ -91136,14 +91866,19 @@
         "total": 3037,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 3040,
+        "new": 3,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Togo",
     "total": {
-      "total": 363,
-      "new": 9,
+      "total": 373,
+      "new": 10,
       "growth": 0.03
     },
     "timeline": {
@@ -91755,6 +92490,11 @@
       "2020-05-22": {
         "total": 363,
         "new": 9,
+        "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 373,
+        "new": 10,
         "growth": 0.03
       }
     }
@@ -92376,6 +93116,11 @@
         "total": 116,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 116,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -92383,7 +93128,7 @@
     "country": "Tunisia",
     "total": {
       "total": 1048,
-      "new": 2,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -92996,14 +93741,19 @@
         "total": 1048,
         "new": 2,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1048,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Turkey",
     "total": {
-      "total": 154500,
-      "new": 952,
+      "total": 155686,
+      "new": 1186,
       "growth": 0.01
     },
     "timeline": {
@@ -93616,15 +94366,20 @@
         "total": 154500,
         "new": 952,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 155686,
+        "new": 1186,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Uganda",
     "total": {
-      "total": 175,
-      "new": 15,
-      "growth": 0.09
+      "total": 198,
+      "new": 23,
+      "growth": 0.13
     },
     "timeline": {
       "2020-01-22": {
@@ -94236,14 +94991,19 @@
         "total": 175,
         "new": 15,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 198,
+        "new": 23,
+        "growth": 0.13
       }
     }
   },
   {
     "country": "Ukraine",
     "total": {
-      "total": 20148,
-      "new": 442,
+      "total": 20580,
+      "new": 432,
       "growth": 0.02
     },
     "timeline": {
@@ -94856,15 +95616,20 @@
         "total": 20148,
         "new": 442,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 20580,
+        "new": 432,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "United Arab Emirates",
     "total": {
-      "total": 27892,
-      "new": 994,
-      "growth": 0.04
+      "total": 28704,
+      "new": 812,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -95476,14 +96241,19 @@
         "total": 27892,
         "new": 994,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 28704,
+        "new": 812,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "United Kingdom",
     "total": {
-      "total": 255544,
-      "new": 3298,
+      "total": 258504,
+      "new": 2960,
       "growth": 0.01
     },
     "timeline": {
@@ -96096,14 +96866,19 @@
         "total": 255544,
         "new": 3298,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 258504,
+        "new": 2960,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Uruguay",
     "total": {
-      "total": 753,
-      "new": 4,
+      "total": 764,
+      "new": 11,
       "growth": 0.01
     },
     "timeline": {
@@ -96716,15 +97491,20 @@
         "total": 753,
         "new": 4,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 764,
+        "new": 11,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "US",
     "total": {
-      "total": 1600937,
-      "new": 23790,
-      "growth": 0.02
+      "total": 1622612,
+      "new": 21675,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -97336,15 +98116,20 @@
         "total": 1600937,
         "new": 23790,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 1622612,
+        "new": 21675,
+        "growth": 0.01
       }
     }
   },
   {
     "country": "Uzbekistan",
     "total": {
-      "total": 3028,
-      "new": 64,
-      "growth": 0.02
+      "total": 3115,
+      "new": 87,
+      "growth": 0.03
     },
     "timeline": {
       "2020-01-22": {
@@ -97956,14 +98741,19 @@
         "total": 3028,
         "new": 64,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 3115,
+        "new": 87,
+        "growth": 0.03
       }
     }
   },
   {
     "country": "Venezuela",
     "total": {
-      "total": 944,
-      "new": 62,
+      "total": 1010,
+      "new": 66,
       "growth": 0.07
     },
     "timeline": {
@@ -98576,14 +99366,19 @@
         "total": 944,
         "new": 62,
         "growth": 0.07
+      },
+      "2020-05-23": {
+        "total": 1010,
+        "new": 66,
+        "growth": 0.07
       }
     }
   },
   {
     "country": "Vietnam",
     "total": {
-      "total": 324,
-      "new": 0,
+      "total": 325,
+      "new": 1,
       "growth": 0.0
     },
     "timeline": {
@@ -99196,6 +99991,11 @@
         "total": 324,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 325,
+        "new": 1,
+        "growth": 0.0
       }
     }
   },
@@ -99203,8 +100003,8 @@
     "country": "Zambia",
     "total": {
       "total": 920,
-      "new": 54,
-      "growth": 0.06
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -99816,15 +100616,20 @@
         "total": 920,
         "new": 54,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 920,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Zimbabwe",
     "total": {
-      "total": 51,
-      "new": 0,
-      "growth": 0.0
+      "total": 56,
+      "new": 5,
+      "growth": 0.1
     },
     "timeline": {
       "2020-01-22": {
@@ -100436,6 +101241,11 @@
         "total": 51,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 56,
+        "new": 5,
+        "growth": 0.1
       }
     }
   },
@@ -101053,6 +101863,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 16,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 16,
         "new": 0,
         "growth": 0.0
@@ -101676,15 +102491,20 @@
         "total": 22,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 22,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Mozambique",
     "total": {
-      "total": 164,
-      "new": 2,
-      "growth": 0.01
+      "total": 168,
+      "new": 4,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -102296,15 +103116,20 @@
         "total": 164,
         "new": 2,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 168,
+        "new": 4,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Syria",
     "total": {
-      "total": 59,
-      "new": 1,
-      "growth": 0.02
+      "total": 70,
+      "new": 11,
+      "growth": 0.19
     },
     "timeline": {
       "2020-01-22": {
@@ -102916,6 +103741,11 @@
         "total": 59,
         "new": 1,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 70,
+        "new": 11,
+        "growth": 0.19
       }
     }
   },
@@ -103533,6 +104363,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 24,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 24,
         "new": 0,
         "growth": 0.0
@@ -104156,6 +104991,11 @@
         "total": 18,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 18,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -104776,15 +105616,20 @@
         "total": 19,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 19,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Libya",
     "total": {
-      "total": 72,
-      "new": 1,
-      "growth": 0.01
+      "total": 75,
+      "new": 3,
+      "growth": 0.04
     },
     "timeline": {
       "2020-01-22": {
@@ -105396,6 +106241,11 @@
         "total": 72,
         "new": 1,
         "growth": 0.01
+      },
+      "2020-05-23": {
+        "total": 75,
+        "new": 3,
+        "growth": 0.04
       }
     }
   },
@@ -106016,6 +106866,11 @@
         "total": 423,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 423,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -106023,7 +106878,7 @@
     "country": "Guinea-Bissau",
     "total": {
       "total": 1114,
-      "new": 5,
+      "new": 0,
       "growth": 0.0
     },
     "timeline": {
@@ -106636,15 +107491,20 @@
         "total": 1114,
         "new": 5,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1114,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Mali",
     "total": {
-      "total": 969,
-      "new": 22,
-      "growth": 0.02
+      "total": 1015,
+      "new": 46,
+      "growth": 0.05
     },
     "timeline": {
       "2020-01-22": {
@@ -107256,6 +108116,11 @@
         "total": 969,
         "new": 22,
         "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 1015,
+        "new": 46,
+        "growth": 0.05
       }
     }
   },
@@ -107876,15 +108741,20 @@
         "total": 15,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 15,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Kosovo",
     "total": {
-      "total": 1004,
-      "new": 1,
-      "growth": 0.0
+      "total": 1025,
+      "new": 21,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -108496,15 +109366,20 @@
         "total": 1004,
         "new": 1,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 1025,
+        "new": 21,
+        "growth": 0.02
       }
     }
   },
   {
     "country": "Burma",
     "total": {
-      "total": 199,
-      "new": 0,
-      "growth": 0.0
+      "total": 201,
+      "new": 2,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -109116,6 +109991,11 @@
         "total": 199,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 201,
+        "new": 2,
+        "growth": 0.01
       }
     }
   },
@@ -109736,6 +110616,11 @@
         "total": 9,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 9,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -109743,8 +110628,8 @@
     "country": "Botswana",
     "total": {
       "total": 30,
-      "new": 1,
-      "growth": 0.03
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -110356,6 +111241,11 @@
         "total": 30,
         "new": 1,
         "growth": 0.03
+      },
+      "2020-05-23": {
+        "total": 30,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
@@ -110976,15 +111866,20 @@
         "total": 42,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 42,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Sierra Leone",
     "total": {
-      "total": 606,
-      "new": 21,
-      "growth": 0.04
+      "total": 621,
+      "new": 15,
+      "growth": 0.02
     },
     "timeline": {
       "2020-01-22": {
@@ -111596,6 +112491,11 @@
         "total": 606,
         "new": 21,
         "growth": 0.04
+      },
+      "2020-05-23": {
+        "total": 621,
+        "new": 15,
+        "growth": 0.02
       }
     }
   },
@@ -111603,8 +112503,8 @@
     "country": "Malawi",
     "total": {
       "total": 82,
-      "new": 10,
-      "growth": 0.14
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -112216,15 +113116,20 @@
         "total": 82,
         "new": 10,
         "growth": 0.14
+      },
+      "2020-05-23": {
+        "total": 82,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "South Sudan",
     "total": {
-      "total": 563,
-      "new": 82,
-      "growth": 0.17
+      "total": 655,
+      "new": 92,
+      "growth": 0.16
     },
     "timeline": {
       "2020-01-22": {
@@ -112836,6 +113741,11 @@
         "total": 563,
         "new": 82,
         "growth": 0.17
+      },
+      "2020-05-23": {
+        "total": 655,
+        "new": 92,
+        "growth": 0.16
       }
     }
   },
@@ -113453,6 +114363,11 @@
         "growth": 0.0
       },
       "2020-05-22": {
+        "total": 6,
+        "new": 0,
+        "growth": 0.0
+      },
+      "2020-05-23": {
         "total": 6,
         "new": 0,
         "growth": 0.0
@@ -114076,15 +114991,20 @@
         "total": 251,
         "new": 0,
         "growth": 0.0
+      },
+      "2020-05-23": {
+        "total": 251,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Yemen",
     "total": {
-      "total": 209,
-      "new": 12,
-      "growth": 0.06
+      "total": 212,
+      "new": 3,
+      "growth": 0.01
     },
     "timeline": {
       "2020-01-22": {
@@ -114696,6 +115616,11 @@
         "total": 209,
         "new": 12,
         "growth": 0.06
+      },
+      "2020-05-23": {
+        "total": 212,
+        "new": 3,
+        "growth": 0.01
       }
     }
   },
@@ -114703,8 +115628,8 @@
     "country": "Comoros",
     "total": {
       "total": 78,
-      "new": 44,
-      "growth": 1.29
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -115316,15 +116241,20 @@
         "total": 78,
         "new": 44,
         "growth": 1.29
+      },
+      "2020-05-23": {
+        "total": 78,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "Tajikistan",
     "total": {
-      "total": 2551,
-      "new": 201,
-      "growth": 0.09
+      "total": 2738,
+      "new": 187,
+      "growth": 0.07
     },
     "timeline": {
       "2020-01-22": {
@@ -115936,6 +116866,11 @@
         "total": 2551,
         "new": 201,
         "growth": 0.09
+      },
+      "2020-05-23": {
+        "total": 2738,
+        "new": 187,
+        "growth": 0.07
       }
     }
   },
@@ -115943,8 +116878,8 @@
     "country": "Lesotho",
     "total": {
       "total": 2,
-      "new": 1,
-      "growth": 1.0
+      "new": 0,
+      "growth": 0.0
     },
     "timeline": {
       "2020-01-22": {
@@ -116556,14 +117491,19 @@
         "total": 2,
         "new": 1,
         "growth": 1.0
+      },
+      "2020-05-23": {
+        "total": 2,
+        "new": 0,
+        "growth": 0.0
       }
     }
   },
   {
     "country": "World",
     "total": {
-      "total": 5210817,
-      "new": 108393,
+      "total": 5310362,
+      "new": 99545,
       "growth": 0.02
     },
     "timeline": {
@@ -117175,6 +118115,11 @@
       "2020-05-22": {
         "total": 5210817,
         "new": 108393,
+        "growth": 0.02
+      },
+      "2020-05-23": {
+        "total": 5310362,
+        "new": 99545,
         "growth": 0.02
       }
     }
