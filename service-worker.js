@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://adimoldovan.github.io/covid-19/precache-manifest.38a3b11a58c8fc53e609a0937eec7308.js"
+  "https://adimoldovan.github.io/covid-19/precache-manifest.10e1fa125a63de9799fc2cd47badf0fb.js"
 );
 
 self.addEventListener('message', (event) => {
