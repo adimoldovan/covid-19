@@ -6,7 +6,7 @@ import List from 'list.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort } from '@fortawesome/free-solid-svg-icons';
 import Utils from './utils';
-import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area, ComposedChart } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, AreaChart, Area, ComposedChart } from 'recharts';
 
 export default class Countries extends Component {
     componentDidMount() {
@@ -29,11 +29,11 @@ export default class Countries extends Component {
         var deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
         var deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
-        var colors = ['red', 'blue', 'green', 'black', 'orange', 'brown', 'blueviolet'];
+        // var colors = ['red', 'blue', 'green', 'black', 'orange', 'brown', 'blueviolet'];
 
 
-        var chartCountries = ['Spain', 'Italy', 'France', 'Germany', 'China', 'Romania']
-        var confirmedTimeline = DataService.getConfirmedTimelines(chartCountries);
+        // var chartCountries = ['Spain', 'Italy', 'France', 'Germany', 'China', 'Romania']
+        // var confirmedTimeline = DataService.getConfirmedTimelines(chartCountries);
 
         return (
             <Container>
