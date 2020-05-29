@@ -113,7 +113,7 @@ export default class Countries extends Component {
                                     <Line name="total active" dot={false} dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} strokeWidth="2" />
                                 </ComposedChart>
                             </ResponsiveContainer>
-                            <ResponsiveContainer height={300}>
+                            {/* <ResponsiveContainer height={300}>
                                 <LineChart data={confirmedTimeline} style={{ margin: "0 auto" }} fontSize={10}>
                                     <XAxis dataKey="date" />
                                     <YAxis />
@@ -126,7 +126,7 @@ export default class Countries extends Component {
                                         )
                                     }
                                 </LineChart>
-                            </ResponsiveContainer>
+                            </ResponsiveContainer> */}
                         </Card.Body>
                     </Card>
                 </Container>

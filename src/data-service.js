@@ -7,7 +7,7 @@ export default class DataService {
         var data = confirmedData.map(function (obj) {
             return DataService.getCountryData(obj.country);
         });
-        
+
         return data;
     }
 
@@ -55,7 +55,9 @@ export default class DataService {
                 closedNew: countryDeaths.timeline[key].new + countryRecovered.timeline[key].new,
                 closedTotal: countryDeaths.timeline[key].total + countryRecovered.timeline[key].total,
                 activeNew: countryConfirmed.timeline[key].new - (countryDeaths.timeline[key].new + countryRecovered.timeline[key].new),
-                activeTotal: countryConfirmed.timeline[key].total - (countryDeaths.timeline[key].total + countryRecovered.timeline[key].total)
+                activeTotal: countryConfirmed.timeline[key].total - (countryDeaths.timeline[key].total + countryRecovered.timeline[key].total),
+                deathRateClosedCases: Number(((countryDeaths.timeline[key].total / (countryDeaths.timeline[key].total + countryRecovered.timeline[key].total)) * 100).toFixed(1)),
+                deathRateTotalCases: Number(((countryDeaths.timeline[key].total / countryConfirmed.timeline[key].total) * 100).toFixed(1))
             };
         });
 
