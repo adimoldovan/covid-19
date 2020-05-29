@@ -172,7 +172,7 @@ export default class Country extends Component {
                         <Card.Header>Cases outcome</Card.Header>
                         <Card.Body>
                             <CardDeck>
-                                <Card>
+                                <Card border="light">
                                     <Card.Body>
                                         <ResponsiveContainer height={250}>
                                             <PieChart>
@@ -191,7 +191,7 @@ export default class Country extends Component {
                                         </ResponsiveContainer>
                                     </Card.Body>
                                 </Card>
-                                <Card>
+                                <Card border="light">
                                     <Card.Body>
                                         <ResponsiveContainer height={250}>
                                             <LineChart width={730} height={250} data={data.timeline} style={{ margin: "0 auto" }}>

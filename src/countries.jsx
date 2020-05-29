@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort } from '@fortawesome/free-solid-svg-icons';
 import Utils from './utils';
 import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, AreaChart, Area, ComposedChart } from 'recharts';
+import ReactEcharts from 'echarts-for-react';
+require('echarts/map/js/world.js');
 
 export default class Countries extends Component {
     componentDidMount() {
@@ -34,6 +36,77 @@ export default class Countries extends Component {
 
         // var chartCountries = ['Spain', 'Italy', 'France', 'Germany', 'China', 'Romania']
         // var confirmedTimeline = DataService.getConfirmedTimelines(chartCountries);
+
+        console.log(data);
+
+        var mapData = [];
+
+        var nameTranslator = {
+            'US': 'United States',
+            'South Sudan': 'S. Sudan',
+            'Western Sahara': 'W. Sahara',
+            'Cote d\'Ivoire': 'Cote d\'Ivoire',
+            'Central African Republic': 'Central African Rep.',
+            'Congo (Kinshasa)': 'Dem. Rep. Congo',
+            'Congo (Brazzaville)': 'Congo',
+            'Czechia':'Czech Rep.',
+            'Bosnia and Herzegovina':'Bosnia and Herz.',
+            'North Macedonia':'Macedonia',
+            'Korea, South':'Korea',
+            'Dominican Republic':'Dominican Rep.',
+            'Laos':'Lao PDR',
+            'Burma':'Myanmar'
+        }
+
+        console.log(nameTranslator['US'])
+
+        data.forEach(function (country) {
+            var nameMatch = nameTranslator[country.name]
+            var translatedName = (nameMatch) ? nameMatch : country.name
+            var countryMapData = {
+                name: translatedName,
+                value: country.summary.confirmed.total
+            };
+            mapData.push(countryMapData);
+        });
+
+        var option = {
+            title: {
+                text: 'Total confirmed cases',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            visualMap: {
+                left: 'left',
+                min: 100,
+                max: 50000,
+                inRange: {
+                    color: ['#f5f5f5', '#a50026']
+                },
+                text: ['1 000', '100 000'],
+                calculable: true
+            },
+            series: [
+                {
+                    name: 'Confirmed cases',
+                    type: 'map',
+                    mapType: 'world',
+                    roam: true,
+                    emphasis: { itemStyle: { areaColor: 'yellow' } },
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    data: mapData
+                }
+            ]
+        };
 
         return (
             <Container>
@@ -100,8 +173,12 @@ export default class Countries extends Component {
                 </Container>
                 <Container id="charts">
                     <Card>
-                        <Card.Header>Total cases</Card.Header>
+                        {/* <Card.Header>Total cases</Card.Header> */}
                         <Card.Body>
+                            <ReactEcharts
+                                option={option || {}}
+                                style={{ height: '550px', width: '100%' }}
+                                className='react_for_echarts' />
                             <ResponsiveContainer height={250}>
                                 <ComposedChart data={world.timeline} style={{ margin: "0 auto" }} fontSize={10}>
                                     <XAxis dataKey="date" />
@@ -131,18 +208,16 @@ export default class Countries extends Component {
                     </Card>
                 </Container>
                 <Container id="countries">
-                    <table className="table table-condensed table-hover">
+                    <table className="table table-condensed table-hover table-bordered">
                         <thead>
                             <tr>
-                                <th colSpan="3"><input className="search" placeholder="Filter" /></th>
+                                <th><input className="search" placeholder="Filter" /></th>
                                 <th colSpan="2">Confirmed</th>
                                 <th colSpan="2">Deaths</th>
                                 <th colSpan="2">Recovered</th>
                             </tr>
                             <tr>
                                 <td className="sort" data-sort="name">Country <FontAwesomeIcon icon={faSort} /></td>
-                                <td></td>
-                                <td></td>
                                 <td className="text-right sort" data-sort="confirmedTotal">Total <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="confirmedNew">New <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="deathsTotal">Total <FontAwesomeIcon icon={faSort} /></td>
@@ -156,20 +231,6 @@ export default class Countries extends Component {
                                 data.map((country, index) =>
                                     <tr key={index}>
                                         <td className="text-left name"><a href={"#/" + country.name} target="_blank" rel="noopener noreferrer">{country.name}</a></td>
-                                        <td>
-                                            {/* <ResponsiveContainer height={50}>
-                                                <BarChart data={country.timeline} style={{ margin: "0 auto" }}>
-                                                    <Bar dataKey="confirmedNew" stroke={Utils.CONFIRMED_COLOR} />
-                                                </BarChart>
-                                            </ResponsiveContainer> */}
-                                        </td>
-                                        <td>
-                                            {/* <ResponsiveContainer height={50}>
-                                                <BarChart data={country.timeline} style={{ margin: "0 auto" }}>
-                                                    <Bar dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} />
-                                                </BarChart>
-                                            </ResponsiveContainer> */}
-                                        </td>
                                         <td className="text-right confirmedTotal">{country.summary.confirmed.total}</td>
                                         <td className="text-right confirmedNew">{country.summary.confirmed.new}</td>
                                         <td className="text-right deathsTotal">{country.summary.deaths.total}</td>
