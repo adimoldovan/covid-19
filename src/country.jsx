@@ -24,7 +24,7 @@ export default class Country extends Component {
             { name: "Deceased", value: data.summary.deaths.total }
         ]
 
-        var timelineSliced = data.timeline.slice(-1 * 20);
+        var timelineSliced = data.timeline.slice(-1 * 30);
 
         const RADIAN = Math.PI / 180;
         const renderCustomizedLabel = ({
@@ -45,13 +45,13 @@ export default class Country extends Component {
         // console.log(data)
 
         return (
-            <Container>
+            <Container fluid>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>{this.countryName}</h1></Col>
                     <Col className="text-right"><a href="#/">All countries</a></Col>
                 </Row>
                 <hr />
-                <Container id="summary">
+                <Container fluid id="summary">
                     <CardDeck>
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.CONFIRMED_COLOR, color: "#333" }}>Confirmed</Card.Header>
@@ -107,7 +107,7 @@ export default class Country extends Component {
                         </Card>
                     </CardDeck>
                 </Container>
-                <Container id="charts">
+                <Container fluid id="charts">
                     <Card>
                         <Card.Header>Total cases</Card.Header>
                         <Card.Body>
@@ -130,7 +130,7 @@ export default class Country extends Component {
                             <ResponsiveContainer height={250}>
                                 <ComposedChart width={730} height={250} data={timelineSliced} style={{ margin: "0 auto" }}>
                                     <XAxis dataKey="date" />
-                                    <YAxis />
+                                    <YAxis domain={[0, 'dataMax+10']}/>
                                     <CartesianGrid strokeDasharray="3 3" />
                                     <Tooltip />
                                     <Legend verticalAlign="top" height={36} />

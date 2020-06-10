@@ -1,10 +1,12 @@
 import csv
 import json
 import os
+import urllib
 import urllib.request
 from datetime import datetime, timedelta
 
 DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_%s"
+LOOKUP_DATA = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv"
 IMPORTED_DATA_DIR = "imported_data"
 
 DATE_FORMAT_IN = "%m/%d/%y"
@@ -36,13 +38,28 @@ MAPPING = [
 
 def main():
     get_data_files()
+    lookup = process_lookup_data()
 
     for e in MAPPING:
-        process_input(e["input"], e["object"])
+        process_input(e["input"], e["object"], lookup)
         write_json(e["object"], e["json"])
 
 
-def process_input(input_file, output):
+def process_lookup_data():
+    with open(
+            "{}/{}".format(IMPORTED_DATA_DIR, "lookup-table.csv"), newline=""
+    ) as csv_file:
+        data = list(csv.DictReader(csv_file, delimiter=","))
+
+    lookup = list()
+    for line in data:
+        if line["Province_State"] == "":
+            lookup.append(line)
+
+    return lookup
+
+
+def process_input(input_file, output, lookup):
     with open("{}/{}".format(IMPORTED_DATA_DIR, input_file), newline="") as csv_file:
         data = list(csv.DictReader(csv_file, delimiter=","))
 
@@ -70,6 +87,7 @@ def process_input(input_file, output):
 
     world = {}
     for country in countries.items():
+        # sum up to get add world values
         for day in country[1].keys():
             if world.get(day):
                 world[day] += country[1][day]
@@ -83,13 +101,13 @@ def process_input(input_file, output):
             # d is "2020-01-22": 0, day is "2020-01-22", amount is 0
             timeline[day] = {"total": amount, "new": amount, "growth": 0}
             yesterday = (
-                datetime.strptime(day, DATE_FORMAT_OUT) - timedelta(days=1)
+                    datetime.strptime(day, DATE_FORMAT_OUT) - timedelta(days=1)
             ).strftime(DATE_FORMAT_OUT)
 
             # get new cases and growth since yesterday
             if timeline.get(yesterday):
                 timeline[day]["new"] = (
-                    timeline[day]["total"] - timeline[yesterday]["total"]
+                        timeline[day]["total"] - timeline[yesterday]["total"]
                 )
                 timeline[day]["growth"] = round(
                     timeline[day]["new"] / timeline[yesterday]["total"]
@@ -98,9 +116,30 @@ def process_input(input_file, output):
                     2,
                 )
 
+            # add population, iso codes
+            lookup_data = [line for line in lookup if line["Country_Region"] == country]
+
+            try:
+                population = lookup_data[0]["Population"]
+            except IndexError:
+                population = ""
+
+            try:
+                iso2 = lookup_data[0]["iso2"]
+            except IndexError:
+                iso2 = ""
+
+            try:
+                iso3 = lookup_data[0]["iso3"]
+            except IndexError:
+                iso3 = ""
+
         output.append(
             {
                 "country": country,
+                "population": population,
+                "iso2": iso2,
+                "iso3": iso3,
                 "total": list(timeline.values())[-1],
                 "timeline": timeline,
             }
@@ -120,6 +159,10 @@ def get_data_files():
         urllib.request.urlretrieve(
             DATA_BASE_URL % e["input"], "{}/{}".format(IMPORTED_DATA_DIR, e["input"])
         )
+
+    urllib.request.urlretrieve(
+        LOOKUP_DATA, "{}/{}".format(IMPORTED_DATA_DIR, "lookup-table.csv")
+    )
 
 
 if __name__ == "__main__":

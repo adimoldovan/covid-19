@@ -18,10 +18,13 @@ export default class DataService {
 
         var countryData = {
             name: countryName,
+            population: countryConfirmed.population,
             summary: {
                 confirmed: {
                     new: countryConfirmed.total.new,
+                    new1Mil: parseInt((countryConfirmed.total.new / parseInt(countryConfirmed.population)) * 1000000),
                     total: countryConfirmed.total.total,
+                    total1Mil: parseInt((countryConfirmed.total.total / parseInt(countryConfirmed.population)) * 1000000),
                 },
                 recovered: {
                     new: countryRecovered.total.new,
@@ -29,7 +32,9 @@ export default class DataService {
                 },
                 deaths: {
                     new: countryDeaths.total.new,
+                    new1Mil: parseInt((countryDeaths.total.new / parseInt(countryDeaths.population)) * 1000000),
                     total: countryDeaths.total.total,
+                    total1Mil: parseInt((countryDeaths.total.total / parseInt(countryDeaths.population)) * 1000000),
                 },
                 closed: {
                     new: countryDeaths.total.new + countryRecovered.total.new,

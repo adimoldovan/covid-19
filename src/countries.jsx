@@ -13,7 +13,7 @@ require('echarts/map/js/world.js');
 export default class Countries extends Component {
     componentDidMount() {
         var options = {
-            valueNames: ['name', 'confirmedTotal', 'confirmedNew', 'deathsTotal', 'deathsNew', 'recoveredTotal', 'recoveredNew']
+            valueNames: ['name', 'confirmedTotal', 'confirmedTotal1Mil', 'confirmedNew', 'confirmedNew1Mil', 'deathsTotal', 'deathsTotal1Mil', 'deathsNew', 'deathsNew1Mil', 'recoveredTotal', 'recoveredNew', 'population']
         };
 
         var countriesList = new List('countries', options);
@@ -31,14 +31,6 @@ export default class Countries extends Component {
         var deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
         var deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
-        // var colors = ['red', 'blue', 'green', 'black', 'orange', 'brown', 'blueviolet'];
-
-
-        // var chartCountries = ['Spain', 'Italy', 'France', 'Germany', 'China', 'Romania']
-        // var confirmedTimeline = DataService.getConfirmedTimelines(chartCountries);
-
-        console.log(data);
-
         var mapData = [];
 
         var nameTranslator = {
@@ -49,13 +41,13 @@ export default class Countries extends Component {
             'Central African Republic': 'Central African Rep.',
             'Congo (Kinshasa)': 'Dem. Rep. Congo',
             'Congo (Brazzaville)': 'Congo',
-            'Czechia':'Czech Rep.',
-            'Bosnia and Herzegovina':'Bosnia and Herz.',
-            'North Macedonia':'Macedonia',
-            'Korea, South':'Korea',
-            'Dominican Republic':'Dominican Rep.',
-            'Laos':'Lao PDR',
-            'Burma':'Myanmar'
+            'Czechia': 'Czech Rep.',
+            'Bosnia and Herzegovina': 'Bosnia and Herz.',
+            'North Macedonia': 'Macedonia',
+            'Korea, South': 'Korea',
+            'Dominican Republic': 'Dominican Rep.',
+            'Laos': 'Lao PDR',
+            'Burma': 'Myanmar'
         }
 
         console.log(nameTranslator['US'])
@@ -65,14 +57,14 @@ export default class Countries extends Component {
             var translatedName = (nameMatch) ? nameMatch : country.name
             var countryMapData = {
                 name: translatedName,
-                value: country.summary.confirmed.total
+                value: country.summary.confirmed.total1Mil
             };
             mapData.push(countryMapData);
         });
 
         var option = {
             title: {
-                text: 'Total confirmed cases',
+                text: 'Total confirmed cases / 1 mil population',
                 left: 'center'
             },
             tooltip: {
@@ -80,12 +72,12 @@ export default class Countries extends Component {
             },
             visualMap: {
                 left: 'left',
-                min: 100,
-                max: 50000,
+                min: 50,
+                max: 10000,
                 inRange: {
                     color: ['#f5f5f5', '#a50026']
                 },
-                text: ['1 000', '100 000'],
+                text: ['50', '1 000'],
                 calculable: true
             },
             series: [
@@ -109,13 +101,13 @@ export default class Countries extends Component {
         };
 
         return (
-            <Container>
+            <Container fluid>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>COVID-19</h1></Col>
                     <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener noreferrer">data source</a></Col>
                 </Row>
                 <hr />
-                <Container id="summary">
+                <Container fluid id="summary">
                     <CardDeck>
                         <Card>
                             <Card.Header style={{ backgroundColor: Utils.CONFIRMED_COLOR, color: "#333" }}>Confirmed</Card.Header>
@@ -171,9 +163,8 @@ export default class Countries extends Component {
                         </Card>
                     </CardDeck>
                 </Container>
-                <Container id="charts">
+                <Container fluid id="charts">
                     <Card>
-                        {/* <Card.Header>Total cases</Card.Header> */}
                         <Card.Body>
                             <ReactEcharts
                                 option={option || {}}
@@ -190,40 +181,32 @@ export default class Countries extends Component {
                                     <Line name="total active" dot={false} dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} strokeWidth="2" />
                                 </ComposedChart>
                             </ResponsiveContainer>
-                            {/* <ResponsiveContainer height={300}>
-                                <LineChart data={confirmedTimeline} style={{ margin: "0 auto" }} fontSize={10}>
-                                    <XAxis dataKey="date" />
-                                    <YAxis />
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <Tooltip />
-                                    <Legend verticalAlign="top" height={36} />
-                                    {
-                                        chartCountries.map((country, index) =>
-                                            <Line key={index} dataKey={country} legendType="square" dot={false} strokeWidth="3" activeDot={true} stroke={colors[index]} />
-                                        )
-                                    }
-                                </LineChart>
-                            </ResponsiveContainer> */}
                         </Card.Body>
                     </Card>
                 </Container>
-                <Container id="countries">
+                <Container fluid id="countries">
                     <table className="table table-condensed table-hover table-bordered">
                         <thead>
                             <tr>
                                 <th><input className="search" placeholder="Filter" /></th>
-                                <th colSpan="2">Confirmed</th>
-                                <th colSpan="2">Deaths</th>
+                                <th colSpan="4">Confirmed</th>
+                                <th colSpan="4">Deaths</th>
                                 <th colSpan="2">Recovered</th>
+                                <th className="text-right sort" data-sort="population">Population <FontAwesomeIcon icon={faSort} /></th>
                             </tr>
                             <tr>
                                 <td className="sort" data-sort="name">Country <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="confirmedTotal">Total <FontAwesomeIcon icon={faSort} /></td>
+                                <td className="text-right sort" data-sort="confirmedTotal1Mil">Total/1M <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="confirmedNew">New <FontAwesomeIcon icon={faSort} /></td>
+                                <td className="text-right sort" data-sort="confirmedNew1Mil">New/1M <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="deathsTotal">Total <FontAwesomeIcon icon={faSort} /></td>
+                                <td className="text-right sort" data-sort="deathsTotal1Mil">Total/1M <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="deathsNew">New <FontAwesomeIcon icon={faSort} /></td>
+                                <td className="text-right sort" data-sort="deathsNew1Mil">New/1M <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="recoveredTotal">Total <FontAwesomeIcon icon={faSort} /></td>
                                 <td className="text-right sort" data-sort="recoveredNew">New <FontAwesomeIcon icon={faSort} /></td>
+                                <td className="text-right sort" data-sort="population"></td>
                             </tr>
                         </thead>
                         <tbody className="list">
@@ -232,11 +215,16 @@ export default class Countries extends Component {
                                     <tr key={index}>
                                         <td className="text-left name"><a href={"#/" + country.name} target="_blank" rel="noopener noreferrer">{country.name}</a></td>
                                         <td className="text-right confirmedTotal">{country.summary.confirmed.total}</td>
+                                        <td className="text-right confirmedTotal1Mil">{country.summary.confirmed.total1Mil}</td>
                                         <td className="text-right confirmedNew">{country.summary.confirmed.new}</td>
+                                        <td className="text-right confirmedNew1Mil">{country.summary.confirmed.new1Mil}</td>
                                         <td className="text-right deathsTotal">{country.summary.deaths.total}</td>
+                                        <td className="text-right deathsTotal1Mil">{country.summary.deaths.total1Mil}</td>
                                         <td className="text-right deathsNew">{country.summary.deaths.new}</td>
+                                        <td className="text-right deathsNew1Mil">{country.summary.deaths.new1Mil}</td>
                                         <td className="text-right recoveredTotal">{country.summary.recovered.total}</td>
                                         <td className="text-right recoveredNew">{country.summary.recovered.new}</td>
+                                        <td className="text-right population">{country.population}</td>
                                     </tr>)
                             }
                         </tbody>
