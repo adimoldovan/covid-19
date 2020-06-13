@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "beb89bdd725a5cc998d6af4cde3f9734",
+    "revision": "e1b152221340f4fb299334be4d1a8e24",
     "url": "https://adimoldovan.github.io/covid-19/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://adimoldovan.github.io/covid-19/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "fe0d506670fd1251db82",
+    "revision": "cc0308e44a72e3f1d023",
     "url": "https://adimoldovan.github.io/covid-19/static/css/main.77fa9edc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://adimoldovan.github.io/covid-19/static/js/2.c9f935ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe0d506670fd1251db82",
-    "url": "https://adimoldovan.github.io/covid-19/static/js/main.f980c554.chunk.js"
+    "revision": "cc0308e44a72e3f1d023",
+    "url": "https://adimoldovan.github.io/covid-19/static/js/main.89c50385.chunk.js"
   },
   {
     "revision": "198aeba81d5a202e37ed",
