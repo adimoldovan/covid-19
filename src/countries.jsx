@@ -74,6 +74,21 @@ export default class Countries extends Component {
                 text: 'Total confirmed cases / 1 mil population',
                 left: 'center'
             },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    dataZoom: {
+                        show: false,
+                        title: {
+                            zoom: 'Area zooming',
+                            back: 'Restore area zooming'
+                        }
+                    }
+                }
+            },
             tooltip: {
                 trigger: 'item'
             },
@@ -92,7 +107,8 @@ export default class Countries extends Component {
                     name: 'Confirmed cases',
                     type: 'map',
                     mapType: 'world',
-                    roam: true,
+                    roam: 'move',
+                    zoom: 1.1,
                     emphasis: {itemStyle: {areaColor: 'yellow'}},
                     label: {
                         normal: {
