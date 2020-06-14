@@ -22,9 +22,9 @@ export default class DataService {
             summary: {
                 confirmed: {
                     new: countryConfirmed.total.new,
-                    new1Mil: parseInt((countryConfirmed.total.new / parseInt(countryConfirmed.population)) * 1000000),
+                    new1Mil: this.noNaN(parseInt((countryConfirmed.total.new / parseInt(countryConfirmed.population)) * 1000000)),
                     total: countryConfirmed.total.total,
-                    total1Mil: parseInt((countryConfirmed.total.total / parseInt(countryConfirmed.population)) * 1000000),
+                    total1Mil: this.noNaN(parseInt((countryConfirmed.total.total / parseInt(countryConfirmed.population)) * 1000000)),
                 },
                 recovered: {
                     new: countryRecovered.total.new,
@@ -32,9 +32,9 @@ export default class DataService {
                 },
                 deaths: {
                     new: countryDeaths.total.new,
-                    new1Mil: parseInt((countryDeaths.total.new / parseInt(countryDeaths.population)) * 1000000),
+                    new1Mil: this.noNaN(parseInt((countryDeaths.total.new / parseInt(countryDeaths.population)) * 1000000)),
                     total: countryDeaths.total.total,
-                    total1Mil: parseInt((countryDeaths.total.total / parseInt(countryDeaths.population)) * 1000000),
+                    total1Mil: this.noNaN(parseInt((countryDeaths.total.total / parseInt(countryDeaths.population)) * 1000000)),
                 },
                 closed: {
                     new: countryDeaths.total.new + countryRecovered.total.new,
@@ -42,7 +42,8 @@ export default class DataService {
                 },
                 active: {
                     new: countryConfirmed.total.new - (countryDeaths.total.new + countryRecovered.total.new),
-                    total: countryConfirmed.total.total - (countryDeaths.total.total + countryRecovered.total.total)
+                    total: countryConfirmed.total.total - (countryDeaths.total.total + countryRecovered.total.total),
+                    total1Mil: this.noNaN(parseInt(((countryConfirmed.total.total - (countryDeaths.total.total + countryRecovered.total.total)) / parseInt(countryConfirmed.population)) * 1000000))
                 }
             },
             timeline: {}
@@ -92,5 +93,9 @@ export default class DataService {
 
         // console.log(data);
         return data;
+    }
+
+    static noNaN(n) {
+        return isNaN(n) ? 0 : n;
     }
 }

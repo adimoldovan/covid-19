@@ -120,9 +120,9 @@ def process_input(input_file, output, lookup):
             lookup_data = [line for line in lookup if line["Country_Region"] == country]
 
             try:
-                population = lookup_data[0]["Population"]
-            except IndexError:
-                population = ""
+                population = int(lookup_data[0]["Population"])
+            except (IndexError, ValueError):
+                population = 0
 
             try:
                 iso2 = lookup_data[0]["iso2"]

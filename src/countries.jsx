@@ -1,39 +1,48 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import DataService from './data-service';
-import { Container, Card, CardDeck, Row, Col } from 'react-bootstrap';
-import "list.js";
-import List from 'list.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSort } from '@fortawesome/free-solid-svg-icons';
+import {Card, CardDeck, Col, Container, Row} from 'react-bootstrap';
 import Utils from './utils';
-import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, AreaChart, Area, ComposedChart } from 'recharts';
+import {
+    Area,
+    AreaChart,
+    CartesianGrid,
+    ComposedChart,
+    Legend,
+    Line,
+    ResponsiveContainer,
+    Tooltip,
+    XAxis,
+    YAxis
+} from 'recharts';
 import ReactEcharts from 'echarts-for-react';
-require('echarts/map/js/world.js');
+import BootstrapTable from 'react-bootstrap-table-next';
+
+import 'echarts/map/js/world.js';
+import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
+import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.js';
+import filterFactory, {textFilter} from 'react-bootstrap-table2-filter';
+import ToolkitProvider, {ColumnToggle} from 'react-bootstrap-table2-toolkit';
+
 
 export default class Countries extends Component {
     componentDidMount() {
-        var options = {
-            valueNames: ['name', 'confirmedTotal', 'confirmedTotal1Mil', 'confirmedNew', 'confirmedNew1Mil', 'deathsTotal', 'deathsTotal1Mil', 'deathsNew', 'deathsNew1Mil', 'recoveredTotal', 'recoveredNew', 'population']
-        };
 
-        var countriesList = new List('countries', options);
-        countriesList.sort('confirmedTotal', { order: "desc" });
     }
 
     render() {
-        var data = DataService.getVerboseData()
-        var world = data.find(c => c.name === 'World');
+        let data = DataService.getVerboseData()
+        let world = data.find(c => c.name === 'World');
         data.pop(world);
 
-        var activeRate = (world.summary.active.total / world.summary.confirmed.total * 100).toFixed(1);
-        var recoveredRateTotal = (world.summary.recovered.total / world.summary.confirmed.total * 100).toFixed(1);
-        var recoveredRateClosed = (world.summary.recovered.total / world.summary.closed.total * 100).toFixed(1);
-        var deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
-        var deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
+        let activeRate = (world.summary.active.total / world.summary.confirmed.total * 100).toFixed(1);
+        let recoveredRateTotal = (world.summary.recovered.total / world.summary.confirmed.total * 100).toFixed(1);
+        let recoveredRateClosed = (world.summary.recovered.total / world.summary.closed.total * 100).toFixed(1);
+        let deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
+        let deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
-        var mapData = [];
+        let mapData = [];
 
-        var nameTranslator = {
+        let nameTranslator = {
             'US': 'United States',
             'South Sudan': 'S. Sudan',
             'Western Sahara': 'W. Sahara',
@@ -50,19 +59,17 @@ export default class Countries extends Component {
             'Burma': 'Myanmar'
         }
 
-        console.log(nameTranslator['US'])
-
         data.forEach(function (country) {
-            var nameMatch = nameTranslator[country.name]
-            var translatedName = (nameMatch) ? nameMatch : country.name
-            var countryMapData = {
+            let nameMatch = nameTranslator[country.name]
+            let translatedName = (nameMatch) ? nameMatch : country.name
+            let countryMapData = {
                 name: translatedName,
                 value: country.summary.confirmed.total1Mil
             };
             mapData.push(countryMapData);
         });
 
-        var option = {
+        let option = {
             title: {
                 text: 'Total confirmed cases / 1 mil population',
                 left: 'center'
@@ -86,7 +93,7 @@ export default class Countries extends Component {
                     type: 'map',
                     mapType: 'world',
                     roam: true,
-                    emphasis: { itemStyle: { areaColor: 'yellow' } },
+                    emphasis: {itemStyle: {areaColor: 'yellow'}},
                     label: {
                         normal: {
                             show: false
@@ -100,63 +107,201 @@ export default class Countries extends Component {
             ]
         };
 
+        function countryLink(countryName) {
+            return <a href={"#/" + countryName} target="_blank" rel="noopener noreferrer">{countryName}</a>;
+        }
+
+        function sortCaret(order) {
+            if (!order) return (<span className="order">&nbsp;</span>);
+            else if (order === 'asc') return (<span className="caret-asc">&nbsp;</span>);
+            else if (order === 'desc') return (<span className="caret-desc">&nbsp;</span>);
+            return null;
+        }
+
+        const {ToggleList} = ColumnToggle;
+
+        const columns = [{
+            dataField: 'name',
+            text: 'Country',
+            sort: true,
+            filter: textFilter({
+                placeholder: 'filter',
+                style: {
+                    backgroundColor: '#f5f5f5',
+                    border: 0,
+                    margin: 5,
+                    color: '#d3d3d3',
+                    fontStyle: 'italic'
+                }
+            }),
+            align: 'left',
+            formatter: countryLink,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.confirmed.total',
+            text: 'Total cases',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.confirmed.total1Mil',
+            text: 'Total cases/1M pop.',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.confirmed.new',
+            text: 'New cases',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.confirmed.new1Mil',
+            text: 'New cases/1M pop.',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.active.total',
+            text: 'Active cases',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.active.total1Mil',
+            text: 'Active cases/1M pop.',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.deaths.total',
+            text: 'Total deceased',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.deaths.total1Mil',
+            text: 'Deceased/1M pop.',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.deaths.new',
+            text: 'Deceased new',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.deaths.new1Mil',
+            text: 'Deceased new/1M pop.',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.recovered.total',
+            text: 'Recovered',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'summary.recovered.new',
+            text: 'Recovered new',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }, {
+            dataField: 'population',
+            text: 'Population',
+            sort: true,
+            align: 'right',
+            formatter: Utils.formattedNumber,
+            sortCaret: sortCaret
+        }];
+
+        const defaultSorted = [{
+            dataField: 'summary.confirmed.total',
+            order: 'desc'
+        }];
+
         return (
             <Container fluid>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>COVID-19</h1></Col>
-                    <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener noreferrer">data source</a></Col>
+                    <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank"
+                                                   rel="noopener noreferrer">data source</a></Col>
                 </Row>
-                <hr />
+                <hr/>
                 <Container fluid id="summary">
                     <CardDeck>
                         <Card>
-                            <Card.Header style={{ backgroundColor: Utils.CONFIRMED_COLOR, color: "#333" }}>Confirmed</Card.Header>
+                            <Card.Header
+                                style={{backgroundColor: Utils.CONFIRMED_COLOR, color: "#333"}}>Confirmed</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {Utils.formattedNumber(world.summary.confirmed.total)}<br />&nbsp;<br />&nbsp;
+                                    {Utils.formattedNumber(world.summary.confirmed.total)}<br/>&nbsp;<br/>&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
-                                        <Area dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR} />
+                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
+                                        <Area dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR}/>
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header style={{ backgroundColor: Utils.ACTIVE_COLOR, color: "#333" }}>Active</Card.Header>
+                            <Card.Header
+                                style={{backgroundColor: Utils.ACTIVE_COLOR, color: "#333"}}>Active</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {Utils.formattedNumber(world.summary.active.total)}<br /><small className="text-muted">{activeRate}% out of total</small><br />&nbsp;
+                                    {Utils.formattedNumber(world.summary.active.total)}<br/><small
+                                    className="text-muted">{activeRate}% out of total</small><br/>&nbsp;
                                 </Card.Title>
                                 <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
-                                        <Area dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none" />
+                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
+                                        <Area dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none"/>
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header style={{ backgroundColor: Utils.RECOVERED_COLOR, color: "#333" }}>Recovered</Card.Header>
+                            <Card.Header
+                                style={{backgroundColor: Utils.RECOVERED_COLOR, color: "#333"}}>Recovered</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {Utils.formattedNumber(world.summary.recovered.total)}<br /><small className="text-muted">{recoveredRateTotal}% out of total</small><br /><small className="text-muted">{recoveredRateClosed}% out of closed</small>
+                                    {Utils.formattedNumber(world.summary.recovered.total)}<br/><small
+                                    className="text-muted">{recoveredRateTotal}% out of total</small><br/><small
+                                    className="text-muted">{recoveredRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
-                                        <Area dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none" />
+                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
+                                        <Area dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none"/>
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header style={{ backgroundColor: Utils.DECEASED_COLOR, color: "#fff" }}>Deceased</Card.Header>
+                            <Card.Header
+                                style={{backgroundColor: Utils.DECEASED_COLOR, color: "#fff"}}>Deceased</Card.Header>
                             <Card.Body>
                                 <Card.Title>
-                                    {Utils.formattedNumber(world.summary.deaths.total)}<br /><small className="text-muted">{deathRateTotal}% out of total</small><br /><small className="text-muted">{deathRateClosed}% out of closed</small>
+                                    {Utils.formattedNumber(world.summary.deaths.total)}<br/><small
+                                    className="text-muted">{deathRateTotal}% out of total</small><br/><small
+                                    className="text-muted">{deathRateClosed}% out of closed</small>
                                 </Card.Title>
                                 <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{ margin: "0 auto" }}>
-                                        <Area dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none" />
+                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
+                                        <Area dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none"/>
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </Card.Body>
@@ -168,68 +313,51 @@ export default class Countries extends Component {
                         <Card.Body>
                             <ReactEcharts
                                 option={option || {}}
-                                style={{ height: '550px', width: '100%' }}
-                                className='react_for_echarts' />
+                                style={{height: '550px', width: '100%'}}
+                                className='react_for_echarts'/>
                             <ResponsiveContainer height={250}>
-                                <ComposedChart data={world.timeline} style={{ margin: "0 auto" }} fontSize={10}>
-                                    <XAxis dataKey="date" />
-                                    <YAxis />
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <Tooltip />
-                                    <Legend verticalAlign="top" height={36} />
-                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none" fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR} />
-                                    <Line name="total active" dot={false} dataKey="activeTotal" stroke={Utils.ACTIVE_COLOR} strokeWidth="2" />
+                                <ComposedChart data={world.timeline} style={{margin: "0 auto"}} fontSize={10}>
+                                    <XAxis dataKey="date"/>
+                                    <YAxis/>
+                                    <CartesianGrid strokeDasharray="3 3"/>
+                                    <Tooltip/>
+                                    <Legend verticalAlign="top" height={36}/>
+                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none"
+                                          fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
+                                    <Line name="total active" dot={false} dataKey="activeTotal"
+                                          stroke={Utils.ACTIVE_COLOR} strokeWidth="2"/>
                                 </ComposedChart>
                             </ResponsiveContainer>
                         </Card.Body>
                     </Card>
                 </Container>
                 <Container fluid id="countries">
-                    <table className="table table-condensed table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th><input className="search" placeholder="Filter" /></th>
-                                <th colSpan="4">Confirmed</th>
-                                <th colSpan="4">Deaths</th>
-                                <th colSpan="2">Recovered</th>
-                                <th className="text-right sort" data-sort="population">Population <FontAwesomeIcon icon={faSort} /></th>
-                            </tr>
-                            <tr>
-                                <td className="sort" data-sort="name">Country <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="confirmedTotal">Total <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="confirmedTotal1Mil">Total/1M <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="confirmedNew">New <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="confirmedNew1Mil">New/1M <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="deathsTotal">Total <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="deathsTotal1Mil">Total/1M <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="deathsNew">New <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="deathsNew1Mil">New/1M <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="recoveredTotal">Total <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="recoveredNew">New <FontAwesomeIcon icon={faSort} /></td>
-                                <td className="text-right sort" data-sort="population"></td>
-                            </tr>
-                        </thead>
-                        <tbody className="list">
-                            {
-                                data.map((country, index) =>
-                                    <tr key={index}>
-                                        <td className="text-left name"><a href={"#/" + country.name} target="_blank" rel="noopener noreferrer">{country.name}</a></td>
-                                        <td className="text-right confirmedTotal">{country.summary.confirmed.total}</td>
-                                        <td className="text-right confirmedTotal1Mil">{country.summary.confirmed.total1Mil}</td>
-                                        <td className="text-right confirmedNew">{country.summary.confirmed.new}</td>
-                                        <td className="text-right confirmedNew1Mil">{country.summary.confirmed.new1Mil}</td>
-                                        <td className="text-right deathsTotal">{country.summary.deaths.total}</td>
-                                        <td className="text-right deathsTotal1Mil">{country.summary.deaths.total1Mil}</td>
-                                        <td className="text-right deathsNew">{country.summary.deaths.new}</td>
-                                        <td className="text-right deathsNew1Mil">{country.summary.deaths.new1Mil}</td>
-                                        <td className="text-right recoveredTotal">{country.summary.recovered.total}</td>
-                                        <td className="text-right recoveredNew">{country.summary.recovered.new}</td>
-                                        <td className="text-right population">{country.population}</td>
-                                    </tr>)
-                            }
-                        </tbody>
-                    </table>
-                    <div>Data source: <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a></div>
+                    <ToolkitProvider
+                        keyField='name'
+                        data={data}
+                        columns={columns}
+                        columnToggle>
+                        {
+                            props => (
+                                <div>
+                                    <ToggleList
+                                        contextual="light"
+                                        {...props.columnToggleProps} />
+                                    <hr/>
+                                    <BootstrapTable
+                                        {...props.baseProps}
+                                        filter={filterFactory()}
+                                        hover
+                                        bordered={false}
+                                        defaultSorted={defaultSorted}
+                                    />
+                                </div>
+                            )
+                        }
+                    </ToolkitProvider>
+                    <div>Data source: <a
+                        href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>
+                    </div>
                 </Container>
             </Container>
         )
