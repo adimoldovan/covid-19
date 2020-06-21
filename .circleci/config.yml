@@ -28,10 +28,23 @@ jobs:
           command: python covid-19.py
       - run:
           name: "Push changes to master"
+          command: sh push-latest-data.sh
+  push-new-data-romania:
+    docker:
+      - image: circleci/python:3-node
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f5:6f:87:54:ce:8c:42:69:18:23:85:36:84:ed:e3:9e"
+      - checkout
+      - run:
+          name: "Fetch latest data"
           command: |
-            git config user.name 'CD Pipeline'
-            git config user.email 'cd@trashmail.com'
-            sh push-latest-data.sh
+            pip install -r requirements.txt
+            python ro-scraper.py
+      - run:
+          name: "Push changes to master"
+          command: sh push-latest-data.sh
 
 workflows:
   commit:
@@ -42,7 +55,7 @@ workflows:
               only:
                 - master
 
-  daily-update:
+  daily-update-global:
     triggers:
       - schedule:
           cron: "0 5 * * *"
@@ -52,3 +65,14 @@ workflows:
                 - master
     jobs:
       - push-new-data
+
+  daily-update-romania:
+    triggers:
+      - schedule:
+          cron: "0 14 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - push-new-data-romania
