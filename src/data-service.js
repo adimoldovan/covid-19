@@ -4,19 +4,17 @@ import deathsData from './data/deaths.json';
 
 export default class DataService {
     static getVerboseData() {
-        var data = confirmedData.map(function (obj) {
+        return confirmedData.map(function (obj) {
             return DataService.getCountryData(obj.country);
         });
-
-        return data;
     }
 
     static getCountryData(countryName) {
-        var countryConfirmed = confirmedData.find(c => c.country === countryName);
-        var countryRecovered = recoveredData.find(c => c.country === countryName);
-        var countryDeaths = deathsData.find(c => c.country === countryName);
+        const countryConfirmed = confirmedData.find(c => c.country === countryName);
+        const countryRecovered = recoveredData.find(c => c.country === countryName);
+        const countryDeaths = deathsData.find(c => c.country === countryName);
 
-        var countryData = {
+        const countryData = {
             name: countryName,
             population: countryConfirmed.population,
             summary: {
@@ -73,11 +71,11 @@ export default class DataService {
 
     static getConfirmedTimelines(countries) {
         // get all dates
-        var dates = Object.keys(confirmedData[0].timeline).map(function (d) {
+        const dates = Object.keys(confirmedData[0].timeline).map(function (d) {
             return d
         });
 
-        var data = dates.map(function (d) {
+        const data = dates.map(function (d) {
             return {
                 date: d
             }
@@ -85,7 +83,7 @@ export default class DataService {
 
 
         countries.forEach(function (countryName) {
-            var confirmedTimeline = confirmedData.find(c => c.country === countryName);
+            const confirmedTimeline = confirmedData.find(c => c.country === countryName);
             data.forEach(function (obj) {
                 obj[countryName] = confirmedTimeline.timeline[obj.date].total;
             });

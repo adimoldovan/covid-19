@@ -23,4 +23,5 @@ Utils.RECOVERED_COLOR = "#82ca9d";
 Utils.DECEASED_COLOR = "#1c1c1c";
 Utils.ACTIVE_COLOR = "#fca085";
 Utils.CLOSED_COLOR = "#8884d8";
+Utils.POSITIVITY_COLOR = "#C889A3";
 
