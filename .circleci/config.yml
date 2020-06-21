@@ -40,8 +40,8 @@ jobs:
       - run:
           name: "Fetch latest data"
           command: |
-          pip install -r requirements.txt
-          python ro-scraper.py
+            pip install -r requirements.txt
+            python ro-scraper.py
       - run:
           name: "Push changes to master"
           command: sh push-latest-data.sh
