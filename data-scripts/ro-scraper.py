@@ -15,8 +15,8 @@ DATE_FORMAT_OUT = "%Y-%m-%d"
 TESTS_STRING = "au fost prelucrate\s*(\d+\.\d+)\s*(?:de\s)*teste"
 ATI_STRING = "La ATI.+ (\d+)"
 NEW_CASES_STRING = "alte (\d+) (?:de\s)*noi cazuri"
-JSON_FILE = "src/data/romania.json"
-CSV_FILE = "src/data/romania.csv"
+JSON_FILE = "../src/data/romania.json"
+CSV_FILE = "../src/data/romania.csv"
 
 
 def main():
@@ -46,7 +46,7 @@ def main():
         start = start + timedelta(days=1)
         time.sleep(3)
 
-    print(timeline_data)
+    # print(timeline_data)
     write_json(timeline_data)
     write_csv(timeline_data)
 

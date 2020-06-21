@@ -25,10 +25,10 @@ jobs:
       - checkout
       - run:
           name: "Fetch latest data"
-          command: python covid-19.py
+          command: python data-scripts/fetch-global-data.py
       - run:
           name: "Push changes to master"
-          command: sh push-latest-data.sh
+          command: sh git-push.sh
   push-new-data-romania:
     docker:
       - image: circleci/python:3-node
@@ -40,11 +40,11 @@ jobs:
       - run:
           name: "Fetch latest data"
           command: |
-            pip install -r requirements.txt
-            python ro-scraper.py
+            pip install -r data-scripts/requirements.txt
+            python data-scripts/ro-scraper.py
       - run:
           name: "Push changes to master"
-          command: sh push-latest-data.sh
+          command: sh git-push.sh
 
 workflows:
   commit:

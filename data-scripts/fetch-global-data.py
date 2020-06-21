@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 DATA_BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_%s"
 LOOKUP_DATA = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv"
-IMPORTED_DATA_DIR = "imported_data"
+IMPORTED_DATA_DIR = "../imported_data"
 
 DATE_FORMAT_IN = "%m/%d/%y"
 DATE_FORMAT_OUT = "%Y-%m-%d"
@@ -21,17 +21,17 @@ MAPPING = [
     {
         "input": "confirmed_global.csv",
         "object": confirmed_data,
-        "json": "src/data/confirmed.json",
+        "json": "../src/data/confirmed.json",
     },
     {
         "input": "deaths_global.csv",
         "object": deaths_data,
-        "json": "src/data/deaths.json",
+        "json": "../src/data/deaths.json",
     },
     {
         "input": "recovered_global.csv",
         "object": recovered_data,
-        "json": "src/data/recovered.json",
+        "json": "../src/data/recovered.json",
     },
 ]
 
