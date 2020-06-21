@@ -104,7 +104,7 @@ export default class Countries extends Component {
             },
             series: [
                 {
-                    name: 'Confirmed cases',
+                    name: 'Confirmed cases / 1 mil. pop.',
                     type: 'map',
                     mapType: 'world',
                     roam: 'move',
