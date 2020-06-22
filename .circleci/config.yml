@@ -13,7 +13,7 @@ jobs:
           name: "Deploy to GH pages"
           command: |
             locale-gen ro_RO.UTF-8
-            dpkg-reconfigure locales
+            sudo dpkg-reconfigure locales
             pip install -r data-scripts/requirements.txt
             python data-scripts/ro-scraper.py
             npm install
