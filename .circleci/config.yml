@@ -12,10 +12,7 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: |
-            export LANGUAGE=ro_RO.UTF-8
-            export LANG=ro_RO.UTF-8
-            export LC_ALL=ro_RO.UTF-8
-            sudo locale-gen ro_RO.UTF-8
+            export LC_TIME=ro_RO.UTF-8
             sudo dpkg-reconfigure locales
             pip install -r data-scripts/requirements.txt
             python data-scripts/ro-scraper.py
