@@ -52,7 +52,7 @@ def main():
 
 
 def parse_date(article_date):
-    locale.setlocale(locale.LC_TIME, "ro_RO")
+    locale.setlocale(locale.LC_TIME, "ro_RO.UTF-8")
     article_url = "buletin-de-presa-{}-ora-13-00".format(
         article_date.strftime("%-d-%B-%Y").lower()
     )
