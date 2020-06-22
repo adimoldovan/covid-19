@@ -5,6 +5,7 @@ jobs:
     environment:
       LC_ALL: ro_RO.UTF-8
       LANG: ro_RO.UTF-8
+      LANGUAGE: ro_RO.UTF-8
     docker:
       - image: circleci/python:3-node
     steps:
@@ -15,7 +16,8 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: |
-            dpkg-reconfigure locales
+            sudo locale-gen en_US.UTF-8
+            sudo dpkg-reconfigure locales
             pip install -r data-scripts/requirements.txt
             python data-scripts/ro-scraper.py
             npm install
