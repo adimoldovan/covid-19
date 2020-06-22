@@ -69,7 +69,7 @@ workflows:
   daily-update-romania:
     triggers:
       - schedule:
-          cron: "0 14 * * *"
+          cron: "19 11 * * *"
           filters:
             branches:
               only:
