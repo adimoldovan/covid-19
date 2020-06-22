@@ -13,7 +13,7 @@ jobs:
           name: "Deploy to GH pages"
           command: |
             pip install -r data-scripts/requirements.txt
-            python data-scripts/ro-scraper.py
+            LC_ALL=C python data-scripts/ro-scraper.py
             npm install
             PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run deploy
 
