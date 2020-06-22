@@ -2,6 +2,9 @@ version: 2.1
 
 jobs:
   deploy-gh-pages:
+    environment:
+      LC_ALL: ro_RO.UTF-8
+      LANG: ro_RO.UTF-8
     docker:
       - image: circleci/python:3-node
     steps:
@@ -12,6 +15,9 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: |
+            dpkg-reconfigure locales
+            pip install -r data-scripts/requirements.txt
+            python data-scripts/ro-scraper.py
             npm install
             PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run deploy
 
