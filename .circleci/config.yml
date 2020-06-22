@@ -12,8 +12,12 @@ jobs:
       - run:
           name: "Deploy to GH pages"
           command: |
+            apt-get update
+            apt-get install -y locales
+            sed -i -e 's/# ro_RO.UTF-8 UTF-8/ro_RO.UTF-8 UTF-8/' /etc/locale.gen
+            sudo dpkg-reconfigure --frontend=noninteractive locales
             pip install -r data-scripts/requirements.txt
-            LC_ALL=C python data-scripts/ro-scraper.py
+            LC_ALL=ro_RO.UTF-8 python data-scripts/ro-scraper.py
             npm install
             PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run deploy
 
