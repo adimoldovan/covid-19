@@ -22,6 +22,7 @@ import {
 import Utils from './utils';
 import Romania from "./romania";
 
+
 export default class Country extends Component {
     constructor(props) {
         super(props);
@@ -155,7 +156,7 @@ export default class Country extends Component {
                         </Card.Body>
                     </Card>
                     {this.countryName === "Romania" &&
-                        <Romania/>
+                    <Romania/>
                     }
                     <Card>
                         <Card.Header>Daily cases</Card.Header>
