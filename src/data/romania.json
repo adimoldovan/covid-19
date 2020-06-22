@@ -758,5 +758,13 @@
     "ati": 195,
     "new_tests": 6333,
     "positivity_rate": 4.97
+  },
+  {
+    "date": "2020-06-22",
+    "tests": 630374,
+    "new_cases": 246,
+    "ati": 195,
+    "new_tests": 4044,
+    "positivity_rate": 6.08
   }
 ]
