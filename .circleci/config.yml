@@ -40,6 +40,7 @@ jobs:
       - run:
           name: "Fetch latest data"
           command: |
+            export LC_ALL="ro_RO.UTF-8" & export LC_CTYPE="ro_RO.UTF-8" & sudo dpkg-reconfigure locales
             pip install -r data-scripts/requirements.txt
             python data-scripts/ro-scraper.py
       - run:
@@ -69,7 +70,7 @@ workflows:
   daily-update-romania:
     triggers:
       - schedule:
-          cron: "19 11 * * *"
+          cron: "34 11 * * *"
           filters:
             branches:
               only:
