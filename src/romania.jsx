@@ -4,7 +4,6 @@ import {Bar, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} 
 import Utils from './utils';
 import data from './data/romania.json';
 import BarChart from "recharts/lib/chart/BarChart";
-import Container from "react-bootstrap/Container";
 
 export default class Romania extends Component {
     render() {
