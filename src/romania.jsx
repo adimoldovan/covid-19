@@ -16,7 +16,7 @@ export default class Romania extends Component {
                     <ResponsiveContainer height={250}>
                         <BarChart data={data} style={{margin: "0 auto"}}>
                             <XAxis dataKey="date"/>
-                            <YAxis/>
+                            <YAxis domain={[0, 'dataMax+1']}/>
                             <CartesianGrid strokeDasharray="3 3"/>
                             <Tooltip/>
                             <Legend verticalAlign="top" height={36}/>

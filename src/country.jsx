@@ -165,7 +165,7 @@ export default class Country extends Component {
                                 <ComposedChart width={730} height={250} data={timelineSliced}
                                                style={{margin: "0 auto"}}>
                                     <XAxis dataKey="date"/>
-                                    <YAxis domain={[0, 'dataMax+10']}/>
+                                    <YAxis domain={[0, 'dataMax+1']}/>
                                     <CartesianGrid strokeDasharray="3 3"/>
                                     <Tooltip/>
                                     <Legend verticalAlign="top" height={36}/>
@@ -182,7 +182,7 @@ export default class Country extends Component {
                             <ResponsiveContainer height={250}>
                                 <BarChart width={730} height={250} data={data.timeline} style={{margin: "0 auto"}}>
                                     <XAxis dataKey="date"/>
-                                    <YAxis/>
+                                    <YAxis domain={[0, 'dataMax+1']}/>
                                     <CartesianGrid strokeDasharray="3 3"/>
                                     <Tooltip/>
                                     <Legend verticalAlign="top" height={36}/>
