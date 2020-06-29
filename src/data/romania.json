@@ -801,11 +801,11 @@
   },
   {
     "date": "2020-06-27",
-    "tests": 677259,
+    "tests": 687618,
     "new_cases": 325,
     "ati": 199,
-    "new_tests": 1877,
-    "positivity_rate": 17.31
+    "new_tests": 12236,
+    "positivity_rate": 1.77
   },
   {
     "date": "2020-06-28",
@@ -814,5 +814,13 @@
     "ati": 217,
     "new_tests": 17650,
     "positivity_rate": 1.65
+  },
+  {
+    "date": "2020-06-29",
+    "tests": 699688,
+    "new_cases": 269,
+    "ati": 210,
+    "new_tests": 4779,
+    "positivity_rate": 5.63
   }
 ]
