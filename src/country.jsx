@@ -155,9 +155,6 @@ export default class Country extends Component {
                             </ResponsiveContainer>
                         </Card.Body>
                     </Card>
-                    {this.countryName === "Romania" &&
-                    <Romania/>
-                    }
                     <Card>
                         <Card.Header>Daily cases</Card.Header>
                         <Card.Body>
@@ -192,6 +189,9 @@ export default class Country extends Component {
                             </ResponsiveContainer>
                         </Card.Body>
                     </Card>
+                    {this.countryName === "Romania" &&
+                    <Romania/>
+                    }
                     <Card>
                         <Card.Header>Active vs closed cases</Card.Header>
                         <Card.Body>
