@@ -1,6 +1,10 @@
 
 ## Available Scripts
 
-`python covid-19.py`
+```shell
+# fetch global data
+`python data-scripts/fetch-global-data.py`
 
-`npm run deploy`
+# fetch new romanian data
+python data-scripts/ro-scraper.py
+```
