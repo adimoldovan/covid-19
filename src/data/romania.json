@@ -822,5 +822,13 @@
     "ati": 210,
     "new_tests": 4779,
     "positivity_rate": 5.63
+  },
+  {
+    "date": "2020-06-30",
+    "tests": 710112,
+    "new_cases": 388,
+    "ati": 205,
+    "new_tests": 10424,
+    "positivity_rate": 3.72
   }
 ]
