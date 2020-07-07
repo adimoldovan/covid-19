@@ -878,5 +878,13 @@
     "ati": 227,
     "new_tests": 4614,
     "positivity_rate": 5.42
+  },
+  {
+    "date": "2020-07-07",
+    "tests": 783337,
+    "new_cases": 397,
+    "ati": 231,
+    "new_tests": 11855,
+    "positivity_rate": 3.35
   }
 ]
