@@ -902,5 +902,13 @@
     "ati": 240,
     "new_tests": 13179,
     "positivity_rate": 4.66
+  },
+  {
+    "date": "2020-07-10",
+    "tests": 824343,
+    "new_cases": 592,
+    "ati": 236,
+    "new_tests": 14680,
+    "positivity_rate": 4.03
   }
 ]
