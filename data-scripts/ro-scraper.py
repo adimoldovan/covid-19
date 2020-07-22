@@ -12,9 +12,9 @@ from bs4 import BeautifulSoup
 DATA_BASE_URL = "https://stirioficiale.ro/informatii"
 START_DATE = date(2020, 3, 19)
 DATE_FORMAT_OUT = "%Y-%m-%d"
-TESTS_STRING = "au fost prelucrate\s*(\d+\.\d+)\s*(?:de\s)*teste"
+TESTS_STRING = "prelucrate\s*(\d*[., ]?\d*?[., ]\d*)\s*(?:de\s)*teste"
 ATI_STRING = "La ATI.+ (\d+)"
-NEW_CASES_STRING = "alte (\d+) (?:de\s)*noi cazuri"
+NEW_CASES_STRING = "nregistrate (\d*?[.]?\d*) (?:de\s)*cazuri noi"
 JSON_FILE = "src/data/romania.json"
 CSV_FILE = "src/data/romania.csv"
 
@@ -65,17 +65,17 @@ def parse_date(article_date):
     soup = BeautifulSoup(response.text, "html.parser")
     article_content = soup.select("div.my-8.break-words.rich-text")[0].text
     # # print(article_content)
-    tests = re.findall(TESTS_STRING, article_content)
+    tests = re.findall(TESTS_STRING, article_content, flags=re.IGNORECASE)
     # # print(tests)
-    ati = re.findall(ATI_STRING, article_content)
+    ati = re.findall(ATI_STRING, article_content, flags=re.IGNORECASE)
     # # print(ati)
-    new_cases = re.findall(NEW_CASES_STRING, article_content)
+    new_cases = re.findall(NEW_CASES_STRING, article_content, flags=re.IGNORECASE)
     # # print(new_cases)
     #
     data["date"] = article_date.strftime(DATE_FORMAT_OUT)
-    data["tests"] = int(tests[0].replace(".", ""))
-    data["new_cases"] = int(new_cases[0].replace(".", ""))
-    data["ati"] = int(ati[0].replace(".", ""))
+    data["tests"] = int(tests[0].replace(".", "").replace(" ", "").strip())
+    data["new_cases"] = int(new_cases[0].replace(".", "").replace(" ", "").strip())
+    data["ati"] = int(ati[0].replace(".", "").replace(" ", "").strip())
 
     print(data)
     return data
