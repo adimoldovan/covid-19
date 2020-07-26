@@ -1030,5 +1030,13 @@
     "ati": 315,
     "new_tests": 34127,
     "positivity_rate": 3.76
+  },
+  {
+    "date": "2020-07-26",
+    "tests": 1102901,
+    "new_cases": 1120,
+    "ati": 351,
+    "new_tests": 15118,
+    "positivity_rate": 7.41
   }
 ]
