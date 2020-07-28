@@ -5,6 +5,8 @@ import Utils from './utils';
 import {
     Area,
     AreaChart,
+    Bar,
+    BarChart,
     CartesianGrid,
     ComposedChart,
     Legend,
@@ -331,19 +333,44 @@ export default class Countries extends Component {
                                 option={option || {}}
                                 style={{height: '550px', width: '100%'}}
                                 className='react_for_echarts'/>
-                            <ResponsiveContainer height={250}>
-                                <ComposedChart data={world.timeline} style={{margin: "0 auto"}} fontSize={10}>
-                                    <XAxis dataKey="date"/>
-                                    <YAxis/>
-                                    <CartesianGrid strokeDasharray="3 3"/>
-                                    <Tooltip/>
-                                    <Legend verticalAlign="top" height={36}/>
-                                    <Area name="total confirmed" type="monotone" dataKey="confirmedTotal" stroke="none"
-                                          fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
-                                    <Line name="total active" dot={false} dataKey="activeTotal"
-                                          stroke={Utils.ACTIVE_COLOR} strokeWidth="2"/>
-                                </ComposedChart>
-                            </ResponsiveContainer>
+                            <CardDeck>
+                                <Card border="light">
+                                    <Card.Body>
+                                        <ResponsiveContainer height={250}>
+                                            <ComposedChart data={world.timeline} style={{margin: "0 auto"}}
+                                                           fontSize={10}>
+                                                <XAxis dataKey="date"/>
+                                                <YAxis/>
+                                                <CartesianGrid strokeDasharray="3 3"/>
+                                                <Tooltip/>
+                                                <Legend verticalAlign="bottom" height={36}/>
+                                                <Area name="total confirmed" type="monotone" dataKey="confirmedTotal"
+                                                      stroke="none"
+                                                      fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
+                                                <Line name="total active" dot={false} dataKey="activeTotal"
+                                                      stroke={Utils.ACTIVE_COLOR} strokeWidth="2"/>
+                                            </ComposedChart>
+                                        </ResponsiveContainer>
+                                    </Card.Body>
+                                </Card>
+                                <Card border="light">
+                                    <Card.Body>
+                                        <ResponsiveContainer height={250}>
+                                            <BarChart width={730} height={250} data={world.timeline}
+                                                      style={{margin: "0 auto"}}>
+                                                <XAxis dataKey="date"/>
+                                                <YAxis domain={[0, 'dataMax+1']}/>
+                                                <CartesianGrid strokeDasharray="3 3"/>
+                                                <Tooltip/>
+                                                <Legend verticalAlign="bottom" height={36}/>
+                                                <Bar name="daily confirmed" type="monotone" dataKey="confirmedNew"
+                                                     stroke="none"
+                                                     fill={Utils.CONFIRMED_COLOR}/>
+                                            </BarChart>
+                                        </ResponsiveContainer>
+                                    </Card.Body>
+                                </Card>
+                            </CardDeck>
                         </Card.Body>
                     </Card>
                 </Container>
