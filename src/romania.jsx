@@ -21,21 +21,21 @@ export default class Romania extends Component {
         // calculate active cases
         rawData.covid_romania.forEach(function (day) {
             let active = day.total_cases - day.total_recovered - day.total_deaths
-            let closed = day["total_recovered"] + day["total_deaths"]
-            day["total_active"] = active;
-            day["percent_active"] = (active / day["total_cases"] * 100).toFixed(1);
-            day["percent_deceased_closed"] = (day["total_deaths"] / closed * 100).toFixed(1);
-            day["percent_deceased_total"] = (day["total_deaths"] / day["total_cases"] * 100).toFixed(1);
-            day["percent_recovered_closed"] = (day["total_recovered"] / closed * 100).toFixed(1);
-            day["percent_recovered_total"] = (day["total_recovered"] / day["total_cases"] * 100).toFixed(1);
-            day["percent_positive_tests_today"] = (parseInt(day["new_cases_today"]) / parseInt(day["new_tests_today"]) * 100).toFixed(1);
+            let closed = day.total_recovered + day.total_deaths
+            day.total_active = active;
+            day.percent_active = (active / day.total_cases * 100).toFixed(1);
+            day.percent_deceased_closed = (day.total_deaths / closed * 100).toFixed(1);
+            day.percent_deceased_total = (day.total_deaths / day.total_cases * 100).toFixed(1);
+            day.percent_recovered_closed = (day.total_recovered / closed * 100).toFixed(1);
+            day.percent_recovered_total = (day.total_recovered / day.total_cases * 100).toFixed(1);
+            day.percent_positive_tests_today = (parseInt(day.new_cases_today) / parseInt(day.new_tests_today) * 100).toFixed(1);
 
-            if (day["county_data"]) {
-                day["county_data"].forEach(function (cty) {
-                    cty["cases_1_k_pop"] = (cty["total_cases"] / cty["county_population"] * 1000).toFixed(1);
+            if (day.county_data) {
+                day.county_data.forEach(function (cty) {
+                    cty.cases_1_k_pop = (cty.total_cases / cty.county_population * 1000).toFixed(1);
                 });
 
-                day["county_data"].sort((a, b) => (a.cases_1_k_pop < b.cases_1_k_pop) ? 1 : -1)
+                day.county_data.sort((a, b) => (a.cases_1_k_pop < b.cases_1_k_pop) ? 1 : -1)
             }
         });
 
@@ -46,9 +46,9 @@ export default class Romania extends Component {
         // create initial county objects
         lastDay.county_data.forEach(function (cty) {
             let ctyObj = {
-                county_id: cty["county_id"],
-                county_name: cty["county_name"],
-                county_population: cty["county_population"],
+                county_id: cty.county_id,
+                county_name: cty.county_name,
+                county_population: cty.county_population,
                 timeline: []
             }
 
@@ -58,7 +58,7 @@ export default class Romania extends Component {
         // fill counties objects with timeline data
         counties.forEach(function (county) {
                 timelineData.forEach(function (day) {
-                    if (day["county_data"]) {
+                    if (day.county_data) {
                         let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
                         county.timeline.push(
                             {
