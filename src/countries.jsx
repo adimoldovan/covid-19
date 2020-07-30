@@ -25,7 +25,6 @@ import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.js';
 import filterFactory, {textFilter} from 'react-bootstrap-table2-filter';
 import ToolkitProvider, {ColumnToggle} from 'react-bootstrap-table2-toolkit';
 
-
 export default class Countries extends Component {
     componentDidMount() {
 

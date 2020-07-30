@@ -11,7 +11,6 @@ import {
     Legend,
     Line,
     LineChart,
-    ReferenceLine,
     ResponsiveContainer,
     Tooltip,
     XAxis,
@@ -29,6 +28,10 @@ export default class Country extends Component {
     }
 
     render() {
+        if (this.countryName === "Romania") {
+            return (<Romania/>)
+        }
+
         const data = DataService.getCountryData(this.countryName);
 
         const activeRate = (data.summary.active.total / data.summary.confirmed.total * 100).toFixed(1);
@@ -178,11 +181,6 @@ export default class Country extends Component {
                                         <CartesianGrid strokeDasharray="3 3"/>
                                         <Tooltip/>
                                         <Legend verticalAlign="bottom"/>
-                                        {
-                                            this.countryName === "Romania" &&
-                                            <ReferenceLine x="2020-05-01" stroke="red" label="1st of May"/>
-
-                                        }
                                         <Line name="confirmed" dot={false} dataKey="confirmedNew"
                                               stroke={Utils.CONFIRMED_COLOR} strokeWidth="2" legendType="none"/>
                                         <Line name="recovered" dot={false} dataKey="recoveredNew"
@@ -209,9 +207,6 @@ export default class Country extends Component {
                                              fill={Utils.CONFIRMED_COLOR}/>
                                     </BarChart>
                                 </ResponsiveContainer>
-                                {this.countryName === "Romania" &&
-                                <Romania/>
-                                }
                             </Card.Body>
                         </Card>
                     </CardDeck>
