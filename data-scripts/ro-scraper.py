@@ -48,7 +48,7 @@ def main():
 
     # print(timeline_data)
     write_json(timeline_data)
-    write_csv(timeline_data)
+    # write_csv(timeline_data)
 
 
 def parse_date(article_date):

@@ -1,0 +1,12 @@
+{
+  "infected": 49591,
+  "tested": 1177630,
+  "recovered": 26609,
+  "deceased": 2304,
+  "country": "Romania",
+  "historyData": "https://api.apify.com/v2/datasets/n1XtXTelVG5dJhDhy/items?format=json&clean=1",
+  "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-30-iulie-2020-ora-13-00",
+  "lastUpdatedAtApify": "2020-07-30T13:10:00.000Z",
+  "lastUpdatedAtSource": "2020-07-30T13:00:00.000Z",
+  "README": "https://www.graphs.ro/resources.php"
+}

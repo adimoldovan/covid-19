@@ -44,7 +44,7 @@ jobs:
             sudo dpkg-reconfigure --frontend=noninteractive locales
             pip install -r data-scripts/requirements.txt
             export LC_ALL=ro_RO.UTF-8
-            python data-scripts/ro-scraper.py
+            python data-scripts/fetch-ro-data.py
       - run:
           name: "Push changes to master"
           command: sh git-push.sh
