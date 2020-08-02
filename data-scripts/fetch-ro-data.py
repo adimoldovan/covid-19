@@ -19,7 +19,7 @@ MAPPING = [
 def main():
     for e in MAPPING:
         r = requests.get("{}/{}".format(DATA_BASE_URL, e["input"]))
-        with open("../src/data/{}".format(e["json"]), "w") as outfile:
+        with open("./src/data/{}".format(e["json"]), "w") as outfile:
             j = json.loads(r.text)
             json.dump(j, outfile, indent=2)
 
