@@ -15,6 +15,7 @@ import {
     XAxis,
     YAxis
 } from "recharts";
+import DataService from "./data-service";
 
 export default class Romania extends Component {
     render() {
@@ -28,7 +29,7 @@ export default class Romania extends Component {
             day.percent_deceased_total = (day.total_deaths / day.total_cases * 100).toFixed(1);
             day.percent_recovered_closed = (day.total_recovered / closed * 100).toFixed(1);
             day.percent_recovered_total = (day.total_recovered / day.total_cases * 100).toFixed(1);
-            day.percent_positive_tests_today = (parseInt(day.new_cases_today) / parseInt(day.new_tests_today) * 100).toFixed(1);
+            day.percent_positive_tests_today = DataService.noNaN(parseInt(day.new_cases_today) / parseInt(day.new_tests_today) * 100).toFixed(1);
 
             if (day.county_data) {
                 day.county_data.forEach(function (cty) {
@@ -234,7 +235,7 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <BarChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"/>
+                                <YAxis orientation="right" domain={[0, 20]}/>
                                 <Tooltip/>
                                 <Bar name="percent of positive tests" type="monotone"
                                      dataKey="percent_positive_tests_today"
