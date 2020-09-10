@@ -1,12 +1,12 @@
 {
-  "infected": 98304,
-  "tested": 1990587,
-  "recovered": 41002,
-  "deceased": 4018,
+  "infected": 99684,
+  "tested": 2015772,
+  "recovered": 41010,
+  "deceased": 4065,
   "country": "Romania",
   "historyData": "https://api.apify.com/v2/datasets/n1XtXTelVG5dJhDhy/items?format=json&clean=1",
-  "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-9-septembrie-2020-ora-13-00",
-  "lastUpdatedAtApify": "2020-09-09T13:10:00.000Z",
-  "lastUpdatedAtSource": "2020-09-09T13:00:00.000Z",
+  "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-10-septembrie-2020-ora-13-00",
+  "lastUpdatedAtApify": "2020-09-10T13:10:00.000Z",
+  "lastUpdatedAtSource": "2020-09-10T13:00:00.000Z",
   "README": "https://www.graphs.ro/resources.php"
 }
