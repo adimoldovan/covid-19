@@ -1,6 +1,287 @@
 {
   "covid_romania": [
     {
+      "reporting_date": "2020-09-14",
+      "total_cases": 104187,
+      "new_cases_today": 692,
+      "total_tests": 2088975,
+      "new_tests_today": 7331,
+      "total_deaths": 4185,
+      "new_deaths_today": 22,
+      "total_recovered": 43244,
+      "new_recovered_today": 219,
+      "intensive_care_right_now": 456,
+      "emergency_calls": 609,
+      "information_calls": null,
+      "persons_in_quarantine": null,
+      "persons_in_home_isolation": 10847,
+      "tests_for_case_definition": 4854,
+      "tests_upon_request": 2477,
+      "tests_done_before_today_and_reported_today": null,
+      "infected_asymptomatic": 11374,
+      "infected_hospitalized": 7134,
+      "infected_positive_retests": 201,
+      "persons_in_institutional_isolation": 5878,
+      "persons_in_home_quarantine": 36711,
+      "persons_in_institutional_quarantine": 5,
+      "romania_population_2020": "22174693",
+      "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-14-septembrie-2020-ora-13-00",
+      "county_data": [
+        {
+          "county_id": "AB",
+          "county_name": "Alba",
+          "county_population": 373710,
+          "total_cases": 1358
+        },
+        {
+          "county_id": "AR",
+          "county_name": "Arad",
+          "county_population": 470093,
+          "total_cases": 2217
+        },
+        {
+          "county_id": "AG",
+          "county_name": "Arges",
+          "county_population": 632124,
+          "total_cases": 5268
+        },
+        {
+          "county_id": "BC",
+          "county_name": "Bacau",
+          "county_population": 737629,
+          "total_cases": 3533
+        },
+        {
+          "county_id": "BH",
+          "county_name": "Bihor",
+          "county_population": 616264,
+          "total_cases": 3006
+        },
+        {
+          "county_id": "BN",
+          "county_name": "Bistrita Nasaud",
+          "county_population": 327886,
+          "total_cases": 1315
+        },
+        {
+          "county_id": "BT",
+          "county_name": "Botosani",
+          "county_population": 456130,
+          "total_cases": 1430
+        },
+        {
+          "county_id": "BV",
+          "county_name": "Brasov",
+          "county_population": 638000,
+          "total_cases": 5175
+        },
+        {
+          "county_id": "BR",
+          "county_name": "Braila",
+          "county_population": 340804,
+          "total_cases": 2063
+        },
+        {
+          "county_id": "BZ",
+          "county_name": "Buzau",
+          "county_population": 461039,
+          "total_cases": 2562
+        },
+        {
+          "county_id": "CS",
+          "county_name": "Caras Severin",
+          "county_population": 315473,
+          "total_cases": 975
+        },
+        {
+          "county_id": "CL",
+          "county_name": "Calarasi",
+          "county_population": 306820,
+          "total_cases": 669
+        },
+        {
+          "county_id": "CJ",
+          "county_name": "Cluj",
+          "county_population": 736945,
+          "total_cases": 2467
+        },
+        {
+          "county_id": "CT",
+          "county_name": "Constanta",
+          "county_population": 763549,
+          "total_cases": 2096
+        },
+        {
+          "county_id": "CV",
+          "county_name": "Covasna",
+          "county_population": 225743,
+          "total_cases": 955
+        },
+        {
+          "county_id": "DB",
+          "county_name": "Dambovita",
+          "county_population": 518645,
+          "total_cases": 3502
+        },
+        {
+          "county_id": "DJ",
+          "county_name": "Dolj",
+          "county_population": 686350,
+          "total_cases": 2200
+        },
+        {
+          "county_id": "GL",
+          "county_name": "Galati",
+          "county_population": 628104,
+          "total_cases": 3640
+        },
+        {
+          "county_id": "GR",
+          "county_name": "Giurgiu",
+          "county_population": 269221,
+          "total_cases": 902
+        },
+        {
+          "county_id": "GJ",
+          "county_name": "Gorj",
+          "county_population": 355358,
+          "total_cases": 1739
+        },
+        {
+          "county_id": "HR",
+          "county_name": "Harghita",
+          "county_population": 330473,
+          "total_cases": 820
+        },
+        {
+          "county_id": "HD",
+          "county_name": "Hunedoara",
+          "county_population": 453431,
+          "total_cases": 1939
+        },
+        {
+          "county_id": "IL",
+          "county_name": "Ialomita",
+          "county_population": 285100,
+          "total_cases": 1076
+        },
+        {
+          "county_id": "IS",
+          "county_name": "Iasi",
+          "county_population": 965634,
+          "total_cases": 3810
+        },
+        {
+          "county_id": "IF",
+          "county_name": "Ilfov",
+          "county_population": 451839,
+          "total_cases": 2627
+        },
+        {
+          "county_id": "MM",
+          "county_name": "Maramures",
+          "county_population": 520551,
+          "total_cases": 1552
+        },
+        {
+          "county_id": "MH",
+          "county_name": "Mehedinti",
+          "county_population": 277017,
+          "total_cases": 1255
+        },
+        {
+          "county_id": "MS",
+          "county_name": "Mures",
+          "county_population": 590305,
+          "total_cases": 1592
+        },
+        {
+          "county_id": "NT",
+          "county_name": "Neamt",
+          "county_population": 566080,
+          "total_cases": 2603
+        },
+        {
+          "county_id": "OT",
+          "county_name": "Olt",
+          "county_population": 431248,
+          "total_cases": 1531
+        },
+        {
+          "county_id": "PH",
+          "county_name": "Prahova",
+          "county_population": 787529,
+          "total_cases": 4974
+        },
+        {
+          "county_id": "SM",
+          "county_name": "Satu Mare",
+          "county_population": 386110,
+          "total_cases": 438
+        },
+        {
+          "county_id": "SJ",
+          "county_name": "Salaj",
+          "county_population": 243525,
+          "total_cases": 499
+        },
+        {
+          "county_id": "SB",
+          "county_name": "Sibiu",
+          "county_population": 469285,
+          "total_cases": 1780
+        },
+        {
+          "county_id": "SV",
+          "county_name": "Suceava",
+          "county_population": 764123,
+          "total_cases": 5829
+        },
+        {
+          "county_id": "TR",
+          "county_name": "Teleorman",
+          "county_population": 365976,
+          "total_cases": 820
+        },
+        {
+          "county_id": "TM",
+          "county_name": "Timis",
+          "county_population": 758380,
+          "total_cases": 3121
+        },
+        {
+          "county_id": "TL",
+          "county_name": "Tulcea",
+          "county_population": 234243,
+          "total_cases": 663
+        },
+        {
+          "county_id": "VS",
+          "county_name": "Vaslui",
+          "county_population": 504879,
+          "total_cases": 2313
+        },
+        {
+          "county_id": "VL",
+          "county_name": "Valcea",
+          "county_population": 394725,
+          "total_cases": 1586
+        },
+        {
+          "county_id": "VN",
+          "county_name": "Vrancea",
+          "county_population": 382688,
+          "total_cases": 2528
+        },
+        {
+          "county_id": "B",
+          "county_name": "Bucuresti",
+          "county_population": 2151665,
+          "total_cases": 13647
+        }
+      ]
+    },
+    {
       "reporting_date": "2020-09-13",
       "total_cases": 103495,
       "new_cases_today": 1109,
