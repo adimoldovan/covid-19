@@ -4,10 +4,10 @@ import Utils from "./utils";
 import rawData from './data/romania_graphs_ro.json'
 import {
     Area,
-    AreaChart,
     Bar,
     BarChart,
     ComposedChart,
+    AreaChart,
     Line,
     LineChart,
     ResponsiveContainer,
@@ -42,6 +42,17 @@ export default class Romania extends Component {
 
         let lastDay = rawData.covid_romania[0]
         let timelineData = rawData.covid_romania.reverse();
+
+        // find outliers in recovered cases
+        let recoveredDataSet = timelineData.map(n => n["new_recovered_today"] || 0)
+        let recoveredWithoutOutliers = Utils.filterOutliers(recoveredDataSet)
+        let maxRecoveredWithoutOutliers = Math.max(...recoveredWithoutOutliers)
+
+        let confirmedDataSet = timelineData.map(n => n["new_cases_today"] || 0)
+        let deceasedDataSet = timelineData.map(n => n["new_deaths_today"] || 0)
+
+        let maxDaily = Math.max(...[maxRecoveredWithoutOutliers, Math.max(...confirmedDataSet), Math.max(...deceasedDataSet)])
+
         let counties = [];
 
         // create initial county objects
@@ -70,6 +81,12 @@ export default class Romania extends Component {
                         )
                     }
                 });
+                // calculate new cases for each day
+                let day_before = 0
+                county.timeline.forEach(function (day) {
+                    day["new_cases"] = day.total_cases - day_before
+                    day_before = day.total_cases
+                })
             }
         );
 
@@ -82,6 +99,7 @@ export default class Romania extends Component {
                 <Row>
                     <Col className="text-right">Last update: {lastDay.reporting_date}</Col>
                 </Row>
+                {/* Top charts */}
                 <Row className="spaced-row">
                     <Col sm={6}>
                         <ResponsiveContainer height={250}>
@@ -102,7 +120,8 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <LineChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"/>
+                                <YAxis orientation="right"
+                                       domain={[0, dataMax => (maxDaily + 100)]}/>
                                 <Tooltip/>
                                 <Line name="new cases" type="monotone" dataKey="new_cases_today"
                                       dot={false}
@@ -120,6 +139,7 @@ export default class Romania extends Component {
                         </ResponsiveContainer>
                     </Col>
                 </Row>
+                {/* Summary boxes */}
                 <Row className="justify-content-between header">
                     <Col sm={3}>
                         <div className="summary-box">
@@ -157,6 +177,7 @@ export default class Romania extends Component {
                     </Col>
                 </Row>
                 <hr/>
+                {/* Main charts */}
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
@@ -259,7 +280,8 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <BarChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"/>
+                                <YAxis orientation="right"
+                                       domain={[0, dataMax => (maxRecoveredWithoutOutliers + 200)]}/>
                                 <Tooltip/>
                                 <Bar name="daily recoveries" type="monotone"
                                      dataKey="new_recovered_today"
@@ -271,32 +293,50 @@ export default class Romania extends Component {
                     </Col>
                 </Row>
                 <hr/>
-                <Row className="spaced-row">
-                    {lastDay.county_data.map((county, index) => (
-                        <Col sm={6} key={index}>
-                            <div className="summary-box county-box">
+                {/* Counties */}
+                {lastDay.county_data.map((county, index) => (
+                    <Row className="spaced-row" key={index}>
+                        <Col>
+                            <div className="summary-box county-box left">
                                 <span className="description county-name ">{county.county_name}</span>
                                 <br/>
                                 <span className="number">{county.total_cases} ({county.cases_1_k_pop} &#8240;)</span>
                                 <br/>
                                 <span className="description">total cases</span>
                             </div>
+                        </Col>
+                        <Col>
+                            <ResponsiveContainer height={250}>
+                                <BarChart data={counties.find(c => c.county_name === county.county_name).timeline}
+                                          style={{margin: "0 auto"}}>
+                                    <XAxis dataKey="reporting_date"/>
+                                    <YAxis orientation="right" domain={["0", 'dataMax+10']}/>
+                                    <Tooltip/>
+                                    <Bar name="confirmed" type="monotone"
+                                         dataKey="new_cases"
+                                         stroke="none"
+                                         fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
+                                </BarChart>
+                            </ResponsiveContainer>
+                        </Col>
+                        <Col>
                             <ResponsiveContainer height={250}>
                                 <AreaChart data={counties.find(c => c.county_name === county.county_name).timeline}
-                                           style={{margin: "0 auto"}}>
+                                          style={{margin: "0 auto"}}>
                                     <XAxis dataKey="reporting_date"/>
-                                    <YAxis orientation="right"/>
+                                    <YAxis orientation="right" domain={["0", 'dataMax+10']}/>
                                     <Tooltip/>
                                     <Area name="confirmed" type="monotone"
-                                          dataKey="total_cases"
-                                          stroke="none"
-                                          fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
+                                         dataKey="total_cases"
+                                         stroke="none"
+                                         fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
                                 </AreaChart>
                             </ResponsiveContainer>
                         </Col>
-                    ))}
-                </Row>
+                    </Row>
+                ))}
                 <hr/>
+                {/* Footer */}
                 <Row className="spaced-row">
                     <Col className="text-left">
                         <a href="#/">All countries</a>

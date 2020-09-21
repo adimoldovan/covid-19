@@ -13,8 +13,36 @@ export default class Utils {
     }
 
     static getRandomColor() {
-        var colors = ['red', 'blue', 'green', 'black', 'orange'];
+        let colors = ['red', 'blue', 'green', 'black', 'orange'];
         return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    static filterOutliers(dataSet) {
+        return dataSet.filter((x) => !this.findOutliers(dataSet).includes(x));
+    }
+
+    static findOutliers(dataSet) {
+        if (dataSet.length < 4) {
+            return [];
+        }
+
+        let values, q1, q3, iqr, maxValue, minValue;
+
+        values = dataSet.slice().sort((a, b) => a - b);
+
+        if ((values.length / 4) % 1 === 0) {
+            q1 = 1 / 2 * (values[(values.length / 4)] + values[(values.length / 4) + 1]);
+            q3 = 1 / 2 * (values[(values.length * (3 / 4))] + values[(values.length * (3 / 4)) + 1]);
+        } else {
+            q1 = values[Math.floor(values.length / 4 + 1)];
+            q3 = values[Math.ceil(values.length * (3 / 4) + 1)];
+        }
+
+        iqr = q3 - q1;
+        maxValue = q3 + iqr * 1.5;
+        minValue = q1 - iqr * 1.5;
+
+        return values.filter((x) => (x > maxValue) || (x < minValue));
     }
 }
 
