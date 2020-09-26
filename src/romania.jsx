@@ -4,10 +4,11 @@ import Utils from "./utils";
 import rawData from './data/romania_graphs_ro.json'
 import {
     Area,
+    AreaChart,
     Bar,
     BarChart,
+    Brush,
     ComposedChart,
-    AreaChart,
     Line,
     LineChart,
     ResponsiveContainer,
@@ -107,6 +108,8 @@ export default class Romania extends Component {
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Area name="confirmed" type="monotone" dataKey="total_cases"
                                       stroke="none"
                                       fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
@@ -123,6 +126,8 @@ export default class Romania extends Component {
                                 <YAxis orientation="right"
                                        domain={[0, dataMax => (maxDaily + 100)]}/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Line name="new cases" type="monotone" dataKey="new_cases_today"
                                       dot={false}
                                       strokeWidth={2}
@@ -192,6 +197,8 @@ export default class Romania extends Component {
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Bar name="daily new cases" type="monotone" dataKey="new_cases_today"
                                      stroke="none"
                                      fill={Utils.CONFIRMED_COLOR}/>
@@ -213,6 +220,8 @@ export default class Romania extends Component {
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Bar name="daily new deaths" type="monotone" dataKey="new_deaths_today"
                                      stroke="none"
                                      fillOpacity={0.6}
@@ -235,6 +244,8 @@ export default class Romania extends Component {
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Bar name="ICU cases" type="monotone" dataKey="intensive_care_right_now"
                                      stroke="none"
                                      fillOpacity={1}
@@ -258,6 +269,8 @@ export default class Romania extends Component {
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right" domain={[0, 20]}/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Bar name="percent of positive tests" type="monotone"
                                      dataKey="percent_positive_tests_today"
                                      stroke="none"
@@ -283,6 +296,8 @@ export default class Romania extends Component {
                                 <YAxis orientation="right"
                                        domain={[0, dataMax => (maxRecoveredWithoutOutliers + 200)]}/>
                                 <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
                                 <Bar name="daily recoveries" type="monotone"
                                      dataKey="new_recovered_today"
                                      stroke="none"
@@ -312,6 +327,8 @@ export default class Romania extends Component {
                                     <XAxis dataKey="reporting_date"/>
                                     <YAxis orientation="right" domain={["0", 'dataMax+10']}/>
                                     <Tooltip/>
+                                    <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                           fill="none" height={20}/>
                                     <Bar name="confirmed" type="monotone"
                                          dataKey="new_cases"
                                          stroke="none"
@@ -322,14 +339,16 @@ export default class Romania extends Component {
                         <Col>
                             <ResponsiveContainer height={250}>
                                 <AreaChart data={counties.find(c => c.county_name === county.county_name).timeline}
-                                          style={{margin: "0 auto"}}>
+                                           style={{margin: "0 auto"}}>
                                     <XAxis dataKey="reporting_date"/>
                                     <YAxis orientation="right" domain={["0", 'dataMax+10']}/>
                                     <Tooltip/>
+                                    <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                           fill="none" height={20}/>
                                     <Area name="confirmed" type="monotone"
-                                         dataKey="total_cases"
-                                         stroke="none"
-                                         fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
+                                          dataKey="total_cases"
+                                          stroke="none"
+                                          fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
                                 </AreaChart>
                             </ResponsiveContainer>
                         </Col>

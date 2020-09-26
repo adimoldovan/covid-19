@@ -52,4 +52,5 @@ Utils.DECEASED_COLOR = "#1c1c1c";
 Utils.ACTIVE_COLOR = "#fca085";
 Utils.CLOSED_COLOR = "#8884d8";
 Utils.POSITIVITY_COLOR = "#C889A3";
+Utils.BRUSH_COLOR = "#919191";
 
