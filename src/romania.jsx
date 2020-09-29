@@ -123,8 +123,7 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <LineChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"
-                                       domain={[0, dataMax => (maxDaily + 100)]}/>
+                                <YAxis orientation="right"/>
                                 <Tooltip/>
                                 <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
                                        fill="none" height={20}/>
@@ -267,7 +266,7 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <BarChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right" domain={[0, 20]}/>
+                                <YAxis orientation="right"/>
                                 <Tooltip/>
                                 <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
                                        fill="none" height={20}/>
@@ -293,8 +292,7 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <BarChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"
-                                       domain={[0, dataMax => (maxRecoveredWithoutOutliers + 200)]}/>
+                                <YAxis orientation="right"/>
                                 <Tooltip/>
                                 <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
                                        fill="none" height={20}/>
