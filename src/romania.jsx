@@ -45,14 +45,14 @@ export default class Romania extends Component {
         let timelineData = rawData.covid_romania.reverse();
 
         // find outliers in recovered cases
-        let recoveredDataSet = timelineData.map(n => n["new_recovered_today"] || 0)
-        let recoveredWithoutOutliers = Utils.filterOutliers(recoveredDataSet)
-        let maxRecoveredWithoutOutliers = Math.max(...recoveredWithoutOutliers)
+        // let recoveredDataSet = timelineData.map(n => n["new_recovered_today"] || 0)
+        // let recoveredWithoutOutliers = Utils.filterOutliers(recoveredDataSet)
+        // let maxRecoveredWithoutOutliers = Math.max(...recoveredWithoutOutliers)
 
-        let confirmedDataSet = timelineData.map(n => n["new_cases_today"] || 0)
-        let deceasedDataSet = timelineData.map(n => n["new_deaths_today"] || 0)
+        // let confirmedDataSet = timelineData.map(n => n["new_cases_today"] || 0)
+        // let deceasedDataSet = timelineData.map(n => n["new_deaths_today"] || 0)
 
-        let maxDaily = Math.max(...[maxRecoveredWithoutOutliers, Math.max(...confirmedDataSet), Math.max(...deceasedDataSet)])
+        // let maxDaily = Math.max(...[maxRecoveredWithoutOutliers, Math.max(...confirmedDataSet), Math.max(...deceasedDataSet)])
 
         let counties = [];
 
