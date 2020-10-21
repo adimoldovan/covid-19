@@ -44,6 +44,8 @@ export default class Romania extends Component {
         let lastDay = rawData.covid_romania[0]
         let timelineData = rawData.covid_romania.reverse();
 
+        let maxPositivityRate = Math.max(...timelineData.map(n => n["percent_positive_tests_today"] || 0))
+
         // find outliers in recovered cases
         // let recoveredDataSet = timelineData.map(n => n["new_recovered_today"] || 0)
         // let recoveredWithoutOutliers = Utils.filterOutliers(recoveredDataSet)
@@ -54,44 +56,54 @@ export default class Romania extends Component {
 
         // let maxDaily = Math.max(...[maxRecoveredWithoutOutliers, Math.max(...confirmedDataSet), Math.max(...deceasedDataSet)])
 
-        let counties = [];
+        let
+            counties = [];
 
         // create initial county objects
-        lastDay.county_data.forEach(function (cty) {
-            let ctyObj = {
-                county_id: cty.county_id,
-                county_name: cty.county_name,
-                county_population: cty.county_population,
-                timeline: []
-            }
+        lastDay
+            .county_data
+            .forEach(
+                function (cty) {
+                    let ctyObj = {
+                        county_id: cty.county_id,
+                        county_name: cty.county_name,
+                        county_population: cty.county_population,
+                        timeline: []
+                    }
 
-            counties.push(ctyObj)
-        });
+                    counties.push(ctyObj)
+                }
+            )
+        ;
 
         // fill counties objects with timeline data
-        counties.forEach(function (county) {
-                timelineData.forEach(function (day) {
-                    if (day.county_data) {
-                        let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
-                        county.timeline.push(
-                            {
-                                reporting_date: day.reporting_date,
-                                total_cases: ctyDay.total_cases,
-                                cases_1_k_pop: ctyDay.cases_1_k_pop
-                            }
-                        )
-                    }
-                });
-                // calculate new cases for each day
-                let day_before = 0
-                county.timeline.forEach(function (day) {
-                    day["new_cases"] = day.total_cases - day_before
-                    day_before = day.total_cases
-                })
-            }
-        );
+        counties
+            .forEach(
+                function (county) {
+                    timelineData.forEach(function (day) {
+                        if (day.county_data) {
+                            let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
+                            county.timeline.push(
+                                {
+                                    reporting_date: day.reporting_date,
+                                    total_cases: ctyDay.total_cases,
+                                    cases_1_k_pop: ctyDay.cases_1_k_pop
+                                }
+                            )
+                        }
+                    });
+                    // calculate new cases for each day
+                    let day_before = 0
+                    county.timeline.forEach(function (day) {
+                        day["new_cases"] = day.total_cases - day_before
+                        day_before = day.total_cases
+                    })
+                }
+            )
+        ;
 
         return (
+
             <Container fluid>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>Romania</h1></Col>
@@ -266,7 +278,7 @@ export default class Romania extends Component {
                         <ResponsiveContainer height={250}>
                             <BarChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right"/>
+                                <YAxis orientation="right" domain={[0, maxPositivityRate + 5]}/>
                                 <Tooltip/>
                                 <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
                                        fill="none" height={20}/>
@@ -282,8 +294,8 @@ export default class Romania extends Component {
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
-                            <span
-                                className="number">{Utils.formattedNumber(lastDay.new_recovered_today)}</span>
+<span
+    className="number">{Utils.formattedNumber(lastDay.new_recovered_today)}</span>
                             <br/>
                             <span className="description">new recoveries</span>
                         </div>
