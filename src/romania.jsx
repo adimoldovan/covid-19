@@ -44,7 +44,7 @@ export default class Romania extends Component {
         let lastDay = rawData.covid_romania[0]
         let timelineData = rawData.covid_romania.reverse();
 
-        let maxPositivityRate = Math.max(...timelineData.map(n => n["percent_positive_tests_today"] || 0))
+        // let maxPositivityRate = Math.max(...timelineData.map(n => n["percent_positive_tests_today"] || 0))
 
         // find outliers in recovered cases
         // let recoveredDataSet = timelineData.map(n => n["new_recovered_today"] || 0)
@@ -276,18 +276,48 @@ export default class Romania extends Component {
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <BarChart data={timelineData} style={{margin: "0 auto"}}>
+                            <ComposedChart data={timelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
-                                <YAxis orientation="right" domain={[0, maxPositivityRate + 5]}/>
+                                <YAxis yAxisId="left" orientation="left" domain={[0, 100]}/>
+                                <YAxis yAxisId="right" orientation="right" domain={["0, dataMax + 1000"]}/>
                                 <Tooltip/>
                                 <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
                                        fill="none" height={20}/>
-                                <Bar name="percent of positive tests" type="monotone"
-                                     dataKey="percent_positive_tests_today"
+                                <Line name="percent of positive tests" type="monotone"
+                                      yAxisId="left"
+                                      dataKey="percent_positive_tests_today"
+                                      strokeWidth={2}
+                                      dot={false}
+                                      fillOpacity={1}
+                                      stroke={Utils.POSITIVITY_COLOR}/>
+                                <Bar name="case definition tests" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="tests_for_case_definition"
                                      stroke="none"
-                                     fillOpacity={1}
-                                     fill={Utils.POSITIVITY_COLOR}/>
-                            </BarChart>
+                                     fillOpacity={0.5}
+                                     fill={Utils.BRUSH_COLOR}/>
+                                <Bar name="on demand tests" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="tests_upon_request"
+                                     stroke="none"
+                                     fillOpacity={0.7}
+                                     fill={Utils.BRUSH_COLOR}/>
+                                <Bar name="previous tests reported today" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="tests_done_before_today_and_reported_today"
+                                     stroke="none"
+                                     fillOpacity={0.9}
+                                     fill={Utils.BRUSH_COLOR}/>
+                                <Line name="total tests" type="monotone"
+                                      yAxisId="right"
+                                      dataKey="new_tests_today"
+                                      stroke="none"
+                                      fillOpacity={1}
+                                      fill={Utils.ACTIVE_COLOR}/>
+                            </ComposedChart>
                         </ResponsiveContainer>
                     </Col>
                 </Row>
