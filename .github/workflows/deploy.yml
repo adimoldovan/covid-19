@@ -25,4 +25,5 @@ jobs:
           PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run prepare-deploy
       - name: Push to Github Pages
         run: |
+          git status
           git push origin gh-pages
