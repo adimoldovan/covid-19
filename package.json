@@ -36,7 +36,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "copy-ci-config": "copyfiles .circleci/* build",
-    "deploy": "npm run copy-ci-config && gh-pages -d build -t -u 'CD Pipeline <cd@trashmail.com>'"
+    "deploy": "npm run copy-ci-config && gh-pages -d build -t",
+    "prepare-deploy": "npm run copy-ci-config && gh-pages -d build -t -n"
   },
   "eslintConfig": {
     "extends": "react-app"
