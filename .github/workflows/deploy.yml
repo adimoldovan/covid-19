@@ -18,12 +18,12 @@ jobs:
       - name: Install
         run: npm ci
       - name: Configure Git
-          run: |
-            git config --local user.email "github-actions-bot@noreply.github.com"
-            git config --local user.name "github-actions-bot"
+        run: |
+          git config --local user.email "github-actions-bot@noreply.github.com"
+          git config --local user.name "github-actions-bot"
       - name: Build and prepare deploy
         run: PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run prepare-deploy
       - name: Push to Github Pages
-          run: |
-            remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${REPOSITORY}.git"
-            git push "${remote_repo}" HEAD:gh-pages --follow-tags $_FORCE_OPTION $_TAGS;
+        run: |
+          remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${REPOSITORY}.git"
+          git push "${remote_repo}" HEAD:gh-pages --follow-tags $_FORCE_OPTION $_TAGS;
