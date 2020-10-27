@@ -25,4 +25,4 @@ jobs:
           PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run prepare-deploy
       - name: Push to Github Pages
         run: |
-          git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${REPOSITORY}.git" HEAD:gh-pages --follow-tags $_FORCE_OPTION $_TAGS;
+          git push
