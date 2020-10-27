@@ -15,11 +15,9 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: 12
-      - name: Configure Git
-        run: |
-          git config --local user.email "github-actions-bot@noreply.github.com"
-          git config --local user.name "github-actions-bot"
       - name: Build and deploy
         run: |
           npm ci
+          git config --local user.email "github-actions-bot@noreply.github.com"
+          git config --local user.name "github-actions-bot"
           PUBLIC_URL=https://adimoldovan.github.io/covid-19 npm run deploy
