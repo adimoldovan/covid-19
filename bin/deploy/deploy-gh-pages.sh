@@ -62,7 +62,7 @@ cp -R "$TEMP_DIR/.git/" "$WORK_DIR/.git"
 cp -R "$REPO_ROOT"/$BUILD_DIR/. "$WORK_DIR"
 
 if [ -z "$(git status --porcelain)" ]; then
-  echo "$LOG_PREFIX There are not changes to deploy"
+  echo "$LOG_PREFIX There are no changes to deploy"
 else
   echo "$LOG_PREFIX Commit changes"
   cd "$WORK_DIR"
