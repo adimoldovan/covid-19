@@ -20,11 +20,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r bin/data/requirements.txt
       - name: Run fetch data scripts
-          run: |
-            python bin/data/fetch-ro-data.py
-            python bin/data/fetch-global-data.py
+        run: |
+          python bin/data/fetch-ro-data.py
+          python bin/data/fetch-global-data.py
       - name: Push changes
-          run: |
-            git add .
-            git commit -m "Data update"
-            git push
+        run: |
+          git add .
+          git commit -m "Data update"
+          git push
