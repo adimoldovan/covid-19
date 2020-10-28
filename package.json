@@ -37,7 +37,7 @@
     "copy-ci-config": "copyfiles .circleci/* build",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build --dotfiles --message \"Automatic update\"",
-    "deploy-ci": "sh deploy/gh-pages.sh"
+    "deploy-ci": "sh deploy/deploy-gh-pages.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

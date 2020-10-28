@@ -39,26 +39,21 @@ BUILD_DIR=${BUILD_DIR%/}
 WORK_DIR="$HOME/temp-gh-pages/"
 REPO_ROOT=$(pwd)
 
-echo "$LOG_PREFIX Clone repo $REPO_URL"
-
+echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
 rm -rf "$WORK_DIR"
+cp -R "$REPO_ROOT"/ "$WORK_DIR"
+cd "$WORK_DIR"
 
 if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
   echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
-  git clone --quiet "$REPO_URL" "$WORK_DIR" >/dev/null
-  cd "$WORK_DIR"
   git checkout -b $TARGET_BRANCH
-  git rm -rf .
-else
-  git clone --quiet --branch=$TARGET_BRANCH "$REPO_URL" "$WORK_DIR" >/dev/null
 fi
 
-echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
+git rm -rf .
 cp -R "$REPO_ROOT"/$BUILD_DIR/* "$WORK_DIR"
 
 echo "$LOG_PREFIX Commit changes"
 
-cd "$WORK_DIR"
 git config --local user.name "$USERNAME"
 git config --local user.email "$EMAIL"
 git add -Af .
