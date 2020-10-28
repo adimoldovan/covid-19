@@ -28,7 +28,7 @@ jobs:
           git config --local user.name "github-actions-bot"
           git config --local user.email "github-actions-bot-noreply@noreply"
           touch datalog
-          echo $(date +"%Y-%m-%d %H-%M") >> datalog
+          echo $(date +"%d %b %Y %H-%M %Z") >> datalog
           git add .
           git commit -m "Data update"
           git push

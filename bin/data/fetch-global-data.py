@@ -99,7 +99,7 @@ def process_input(input_file, output, lookup):
     for country, timeline in countries.items():
         for day, amount in timeline.items():
             # d is "2020-01-22": 0, day is "2020-01-22", amount is 0
-            timeline[day] = {"total": amount, "new": amount, "growth": 0}
+            timeline[day] = {"total": amount, "new": amount}
             yesterday = (
                     datetime.strptime(day, DATE_FORMAT_OUT) - timedelta(days=1)
             ).strftime(DATE_FORMAT_OUT)
@@ -108,12 +108,6 @@ def process_input(input_file, output, lookup):
             if timeline.get(yesterday):
                 timeline[day]["new"] = (
                         timeline[day]["total"] - timeline[yesterday]["total"]
-                )
-                timeline[day]["growth"] = round(
-                    timeline[day]["new"] / timeline[yesterday]["total"]
-                    if timeline[yesterday]["total"] != 0
-                    else 0,
-                    2,
                 )
 
             # add population, iso codes
@@ -138,8 +132,7 @@ def process_input(input_file, output, lookup):
             {
                 "country": country,
                 "population": population,
-                "iso2": iso2,
-                "iso3": iso3,
+                "iso": "{}-{}".format(iso2, iso3),
                 "total": list(timeline.values())[-1],
                 "timeline": timeline,
             }
