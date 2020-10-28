@@ -25,6 +25,8 @@ jobs:
           python bin/data/fetch-global-data.py
       - name: Push changes
         run: |
+          git config --local user.name "github-actions-bot"
+          git config --local user.email "github-actions-bot-noreply@noreply"
           git add .
           git commit -m "Data update"
           git push
