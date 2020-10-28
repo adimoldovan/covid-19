@@ -37,28 +37,36 @@ fi
 REPO_URL=https://"${TOKEN}"@github.com/${REPO_NAME}.git
 BUILD_DIR=${BUILD_DIR%/}
 WORK_DIR="$HOME/temp-gh-pages/"
+TEMP_DIR="$HOME/temp-gh-pages-checkout/"
 REPO_ROOT=$(pwd)
 
 echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
-rm -rf "$WORK_DIR"
-cp -R "$REPO_ROOT"/ "$WORK_DIR"
-cd "$WORK_DIR"
+rm -rf "$TEMP_DIR"
+mkdir "$TEMP_DIR"
+cp -R "$REPO_ROOT/.git/" "$TEMP_DIR/.git"
+cd "$TEMP_DIR"
 
 if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
   echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
   git checkout -b $TARGET_BRANCH
 else
-  git checkout $TARGET_BRANCH
+  echo "Checkout $TARGET_BRANCH branch"
+  git checkout -f $TARGET_BRANCH
+#  git pull --rebase
 fi
 
-git rm -rf .
-cp -R "$REPO_ROOT"/$BUILD_DIR/* "$WORK_DIR"
+echo "$LOG_PREFIX Prepare build"
+rm -rf "$WORK_DIR"
+mkdir "$WORK_DIR"
+cp -R "$TEMP_DIR/.git/" "$WORK_DIR/.git"
+cp -R "$REPO_ROOT"/$BUILD_DIR/ "$WORK_DIR"
 
 echo "$LOG_PREFIX Commit changes"
 
+cd "$WORK_DIR"
 git config --local user.name "$USERNAME"
 git config --local user.email "$EMAIL"
-git add -Af .
+git add .
 git commit -m "Automatic site update"
 
 echo "$LOG_PREFIX Push changes"
