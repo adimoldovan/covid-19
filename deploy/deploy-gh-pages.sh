@@ -53,14 +53,13 @@ else
   echo "Checkout $TARGET_BRANCH branch"
   git fetch
   git checkout -f --track origin/$TARGET_BRANCH
-#  git pull --rebase
 fi
 
 echo "$LOG_PREFIX Prepare build"
 rm -rf "$WORK_DIR"
 mkdir "$WORK_DIR"
 cp -R "$TEMP_DIR/.git/" "$WORK_DIR/.git"
-cp -R "$REPO_ROOT"/$BUILD_DIR/ "$WORK_DIR"
+cp -R "$REPO_ROOT"/$BUILD_DIR/. "$WORK_DIR"
 
 echo "$LOG_PREFIX Commit changes"
 
