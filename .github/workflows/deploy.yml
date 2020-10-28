@@ -8,6 +8,8 @@ on:
     workflows: [ "Fetch data" ]
     branches:
       - master
+    types:
+      - completed
 
 jobs:
   build-and-deploy:
