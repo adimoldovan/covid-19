@@ -16,9 +16,11 @@ jobs:
         with:
           node-version: 12
       - name: Build and deploy
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           yarn install --frozen-lockfile
           yarn run build
           git config --local user.email "github-actions-bot@noreply.github.com"
           git config --local user.name "github-actions-bot"
-          PUBLIC_URL=https://adimoldovan.github.io/covid-19 yarn run deploy-ci
+          PUBLIC_URL=https://adimoldovan.github.io/covid-19 NODE_DEBUG=gh-pages yarn run deploy-ci
