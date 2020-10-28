@@ -47,21 +47,18 @@ export default class Romania extends Component {
         let counties = [];
 
         // create initial county objects
-        lastDay
-            .county_data
-            .forEach(
-                function (cty) {
-                    let ctyObj = {
-                        county_id: cty.county_id,
-                        county_name: cty.county_name,
-                        county_population: cty.county_population,
-                        timeline: []
-                    }
-
-                    counties.push(ctyObj)
+        lastDay.county_data.forEach(
+            function (cty) {
+                let ctyObj = {
+                    county_id: cty.county_id,
+                    county_name: cty.county_name,
+                    county_population: cty.county_population,
+                    timeline: []
                 }
-            )
-        ;
+
+                counties.push(ctyObj)
+            }
+        );
 
         // fill counties objects with timeline data
         counties

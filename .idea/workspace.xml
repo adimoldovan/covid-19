@@ -26,7 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c147180-6671-4d07-a513-3e8311b20eef" name="Default Changelist" comment="Updated readme">
-      <change afterPath="$PROJECT_DIR$/deploy/gh-pages.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/gh-pages.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/gh-pages.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/romania.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/romania.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +194,7 @@
       <workItem from="1601550898659" duration="1839000" />
       <workItem from="1603279809913" duration="886000" />
       <workItem from="1603711042871" duration="1724000" />
-      <workItem from="1603809744155" duration="8875000" />
+      <workItem from="1603809744155" duration="9339000" />
     </task>
     <task id="LOCAL-00011" summary="Cleaned up unused dependency">
       <created>1592813420481</created>

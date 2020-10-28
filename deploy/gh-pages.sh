@@ -82,4 +82,4 @@ echo "$LOG_PREFIX Push changes"
 
 git push -fq origin $TARGET_BRANCH >/dev/null
 
-echo "$LOG_PREFIX  Done"
+echo "$LOG_PREFIX Done"
