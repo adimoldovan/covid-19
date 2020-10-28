@@ -39,11 +39,6 @@ BUILD_DIR=${BUILD_DIR%/}
 WORK_DIR="$HOME/temp-gh-pages/"
 REPO_ROOT=$(pwd)
 
-echo "$LOG_PREFIX Configure Git"
-
-git config --global user.name "$USERNAME"
-git config --global user.email "$EMAIL"
-
 echo "$LOG_PREFIX Clone repo $REPO_URL"
 
 rm -rf "$WORK_DIR"
@@ -64,6 +59,8 @@ cp -R "$REPO_ROOT"/$BUILD_DIR/* "$WORK_DIR"
 echo "$LOG_PREFIX Commit changes"
 
 cd "$WORK_DIR"
+git config --local user.name "$USERNAME"
+git config --local user.email "$EMAIL"
 git add -Af .
 git commit -m "Automatic site update"
 

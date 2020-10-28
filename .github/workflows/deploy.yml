@@ -21,7 +21,7 @@ jobs:
           PUBLIC_URL=https://adimoldovan.github.io/covid-19 yarn run build
       - name: Deply to Github Pages
         env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           EMAIL: "github-actions-bot-noreply@noreply"
           USERNAME: "github-actions-bot"
         run: yarn run deploy-ci
