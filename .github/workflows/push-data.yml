@@ -1,10 +1,12 @@
-name: Push new data
+name: Fetch new data
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "10 30 * * *"
 
 jobs:
-  build-and-deploy:
+  fetch-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r data-scripts/requirements.txt
+          pip install -r bin/data/requirements.txt
           sudo sed -i -e 's/# ro_RO.UTF-8 UTF-8/ro_RO.UTF-8 UTF-8/' /etc/locale.gen
           sudo dpkg-reconfigure --frontend=noninteractive locales
           export LC_ALL=ro_RO.UTF-8
