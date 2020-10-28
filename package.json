@@ -37,7 +37,7 @@
     "copy-ci-config": "copyfiles .circleci/* build",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build --dotfiles --message \"Automatic update\"",
-    "deploy-ci": "gh-pages -d build --dotfiles --message \"Automatic CD update\" --repo \"https://$TOKEN@github.com/adimoldovan/covid-19.git\""
+    "deploy-ci": "sh deploy/gh-pages.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

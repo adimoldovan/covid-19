@@ -34,6 +34,7 @@ if [ -z "$BUILD_DIR" ]; then
   echo "BUILD_DIR not provided. Defaulting to $BUILD_DIR"
 fi
 
+REPO_URL=https://"${TOKEN}"@github.com/${REPO_NAME}.git
 BUILD_DIR=${BUILD_DIR%/}
 WORK_DIR="$HOME/temp/$BUILD_DIR"
 
@@ -48,10 +49,10 @@ echo "$LOG_PREFIX Configure Git"
 git config --global user.name "$USERNAME"
 git config --global user.email "$EMAIL"
 
-echo "$LOG_PREFIX Clone repo"
+echo "$LOG_PREFIX Clone repo $REPO_URL"
 
-#if [ -z "$(git ls-remote --heads https://"${TOKEN}"@github.com/${REPO_NAME}.git "$WORK_DIR")" ]; then
-#  echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist. Creating it"
+if [ -z "$(git ls-remote --heads "$REPO_URL")" ]; then
+  echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
 #  git clone --quiet https://"${TOKEN}"@github.com/${REPO_NAME}.git $TARGET_BRANCH >/dev/null
 #  cd $TARGET_BRANCH
 #  git checkout --orphan $TARGET_BRANCH
@@ -61,9 +62,9 @@ echo "$LOG_PREFIX Clone repo"
 #  git commit -a -m "Create $TARGET_BRANCH branch"
 #  git push origin $TARGET_BRANCH
 #  cd ..
-#else
-  git clone --quiet --branch=$TARGET_BRANCH https://"${TOKEN}"@github.com/${REPO_NAME}.git "$WORK_DIR" >/dev/null
-#fi
+fi
+
+git clone --quiet --branch=$TARGET_BRANCH "$REPO_URL" "$WORK_DIR" >/dev/null
 
 echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
 cp -R $BUILD_DIR/* "$WORK_DIR"
