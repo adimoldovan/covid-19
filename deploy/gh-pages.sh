@@ -21,12 +21,12 @@ fi
 
 if [ -z "$EMAIL" ]; then
   EMAIL="deploy-bot-noreply@noreply"
-  echo "EMAIL not provided. Defaulting to $EMAIL"
+  echo "WARN! EMAIL not provided!"
 fi
 
 if [ -z "$USERNAME" ]; then
   USERNAME="deploy-bot"
-  echo "USERNAME not provided. Defaulting to $USERNAME"
+  echo "WARN! USERNAME not provided!"
 fi
 
 if [ -z "$BUILD_DIR" ]; then

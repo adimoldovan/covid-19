@@ -22,4 +22,6 @@ jobs:
       - name: Deply to Github Pages
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EMAIL: "github-actions-bot-noreply@noreply"
+          USERNAME: "github-actions-bot"
         run: yarn run deploy-ci
