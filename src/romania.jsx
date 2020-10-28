@@ -61,30 +61,26 @@ export default class Romania extends Component {
         );
 
         // fill counties objects with timeline data
-        counties
-            .forEach(
-                function (county) {
-                    timelineData.forEach(function (day) {
-                        if (day.county_data) {
-                            let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
-                            county.timeline.push(
-                                {
-                                    reporting_date: day.reporting_date,
-                                    total_cases: ctyDay.total_cases,
-                                    cases_1_k_pop: ctyDay.cases_1_k_pop
-                                }
-                            )
+        counties.forEach(function (county) {
+            timelineData.forEach(function (day) {
+                if (day.county_data) {
+                    let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
+                    county.timeline.push(
+                        {
+                            reporting_date: day.reporting_date,
+                            total_cases: ctyDay.total_cases,
+                            cases_1_k_pop: ctyDay.cases_1_k_pop
                         }
-                    });
-                    // calculate new cases for each day
-                    let day_before = 0
-                    county.timeline.forEach(function (day) {
-                        day["new_cases"] = day.total_cases - day_before
-                        day_before = day.total_cases
-                    })
+                    )
                 }
-            )
-        ;
+            });
+            // calculate new cases for each day
+            let day_before = 0
+            county.timeline.forEach(function (day) {
+                day["new_cases"] = day.total_cases - day_before
+                day_before = day.total_cases
+            })
+        });
 
         return (
             <Container fluid>
