@@ -47,6 +47,8 @@ cd "$WORK_DIR"
 if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
   echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
   git checkout -b $TARGET_BRANCH
+else
+  git checkout $TARGET_BRANCH
 fi
 
 git rm -rf .
