@@ -36,13 +36,8 @@ fi
 
 REPO_URL=https://"${TOKEN}"@github.com/${REPO_NAME}.git
 BUILD_DIR=${BUILD_DIR%/}
-WORK_DIR="$HOME/temp/$BUILD_DIR"
-
-#echo "$LOG_PREFIX Preparing working dir: $WORK_DIR"
-#
-#mkdir -p "$WORK_DIR"
-#cp -R $BUILD_DIR/* "$WORK_DIR"
-#cd "$WORK_DIR"
+WORK_DIR="$HOME/temp-gh-pages/"
+REPO_ROOT=$(pwd)
 
 echo "$LOG_PREFIX Configure Git"
 
@@ -51,31 +46,24 @@ git config --global user.email "$EMAIL"
 
 echo "$LOG_PREFIX Clone repo $REPO_URL"
 
-if [ -z "$(git ls-remote --heads "$REPO_URL")" ]; then
+rm -rf "$WORK_DIR"
+
+if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
   echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
-#  git clone --quiet https://"${TOKEN}"@github.com/${REPO_NAME}.git $TARGET_BRANCH >/dev/null
-#  cd $TARGET_BRANCH
-#  git checkout --orphan $TARGET_BRANCH
-#  git rm -rf .
-#  touch README.md
-#  git add README.md
-#  git commit -a -m "Create $TARGET_BRANCH branch"
-#  git push origin $TARGET_BRANCH
-#  cd ..
+  git clone --quiet "$REPO_URL" "$WORK_DIR" >/dev/null
+  cd "$WORK_DIR"
+  git checkout -b $TARGET_BRANCH
+  git rm -rf .
+else
+  git clone --quiet --branch=$TARGET_BRANCH "$REPO_URL" "$WORK_DIR" >/dev/null
 fi
 
-git clone --quiet --branch=$TARGET_BRANCH "$REPO_URL" "$WORK_DIR" >/dev/null
-
 echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
-cp -R $BUILD_DIR/* "$WORK_DIR"
-#cp -R $TARGET_BRANCH/.git "$WORK_DIR"/.git
-#rm -rf $TARGET_BRANCH/*
-#cp -R "$WORK_DIR"/.git $TARGET_BRANCH/.git
-#cd $TARGET_BRANCH
-#cp -Rf "$WORK_DIR"/* .
+cp -R "$REPO_ROOT"/$BUILD_DIR/* "$WORK_DIR"
 
 echo "$LOG_PREFIX Commit changes"
 
+cd "$WORK_DIR"
 git add -Af .
 git commit -m "Automatic site update"
 
