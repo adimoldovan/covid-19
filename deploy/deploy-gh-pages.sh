@@ -51,7 +51,8 @@ if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
   git checkout -b $TARGET_BRANCH
 else
   echo "Checkout $TARGET_BRANCH branch"
-  git checkout -f $TARGET_BRANCH
+  git fetch
+  git checkout -f --track origin/$TARGET_BRANCH
 #  git pull --rebase
 fi
 
