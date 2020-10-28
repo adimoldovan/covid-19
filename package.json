@@ -34,10 +34,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
     "copy-ci-config": "copyfiles .circleci/* build",
-    "deploy": "npm run copy-ci-config && gh-pages -d build -t",
-    "prepare-deploy": "npm run copy-ci-config && gh-pages -d build -t -n"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build --dotfiles --message \"Automatic update\"",
+    "deploy-ci": "gh-pages -d build --dotfiles --message \"Automatic CD update\" --repo \"https://${{ secrets.GITHUB_TOKEN }}@github.com/adimoldovan/covid-19.git\""
   },
   "eslintConfig": {
     "extends": "react-app"

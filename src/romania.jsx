@@ -44,8 +44,7 @@ export default class Romania extends Component {
         let lastDay = rawData.covid_romania[0]
         let timelineData = rawData.covid_romania.reverse();
 
-        let
-            counties = [];
+        let counties = [];
 
         // create initial county objects
         lastDay
@@ -91,7 +90,6 @@ export default class Romania extends Component {
         ;
 
         return (
-
             <Container fluid>
                 <Row className="justify-content-between header">
                     <Col className="text-left"><h1>Romania</h1></Col>
