@@ -61,16 +61,18 @@ mkdir "$WORK_DIR"
 cp -R "$TEMP_DIR/.git/" "$WORK_DIR/.git"
 cp -R "$REPO_ROOT"/$BUILD_DIR/. "$WORK_DIR"
 
-echo "$LOG_PREFIX Commit changes"
+if [ -z "$(git status --porcelain)" ]; then
+  echo "$LOG_PREFIX There are not changes to deploy"
+else
+  echo "$LOG_PREFIX Commit changes"
+  cd "$WORK_DIR"
+  git config --local user.name "$USERNAME"
+  git config --local user.email "$EMAIL"
+  git add .
+  git commit -m "Automatic site update"
 
-cd "$WORK_DIR"
-git config --local user.name "$USERNAME"
-git config --local user.email "$EMAIL"
-git add .
-git commit -m "Automatic site update"
-
-echo "$LOG_PREFIX Push changes"
-
-git push -fq origin $TARGET_BRANCH >/dev/null
+  echo "$LOG_PREFIX Push changes"
+  git push -fq origin $TARGET_BRANCH >/dev/null
+fi
 
 echo "$LOG_PREFIX Done"
