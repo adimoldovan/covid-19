@@ -33,8 +33,9 @@ rm -rf "$TEMP_DIR"
 mkdir "$TEMP_DIR"
 cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
 
+# Assuming target branch already exists
 echo "Checkout $TARGET_BRANCH branch"
-git checkout -B $TARGET_BRANCH
+git checkout -f --track origin/$TARGET_BRANCH
 
 cp -R ".git"/. "$TEMP_DIR/.git"
 cd "$TEMP_DIR"
