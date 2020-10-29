@@ -35,6 +35,7 @@ cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
 
 # Assuming target branch already exists
 echo "Checkout $TARGET_BRANCH branch"
+git fetch
 git checkout -f --track origin/$TARGET_BRANCH
 
 cp -R ".git"/. "$TEMP_DIR/.git"
