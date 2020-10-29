@@ -34,32 +34,24 @@ if [ -z "$BUILD_DIR" ]; then
   echo "BUILD_DIR not provided. Defaulting to $BUILD_DIR"
 fi
 
-REPO_URL=https://"${TOKEN}"@github.com/${REPO_NAME}.git
 BUILD_DIR=${BUILD_DIR%/}
-WORK_DIR="$HOME/temp-gh-pages/"
-TEMP_DIR="$HOME/temp-gh-pages-checkout/"
+TEMP_DIR="$HOME/temp-gh-pages/"
 REPO_ROOT=$(pwd)
 
 echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
+# copy build content for backup
 rm -rf "$TEMP_DIR"
 mkdir "$TEMP_DIR"
-cp -R "$REPO_ROOT/.git/" "$TEMP_DIR/.git"
-cd "$TEMP_DIR"
+cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
 
-if [ -z "$(git ls-remote --heads "$REPO_URL" $TARGET_BRANCH)" ]; then
-  echo "$LOG_PREFIX $TARGET_BRANCH doesn't exist!"
-  git checkout -b $TARGET_BRANCH
-else
-  echo "Checkout $TARGET_BRANCH branch"
-  git fetch
-  git checkout -f --track origin/$TARGET_BRANCH
-fi
+echo "Checkout $TARGET_BRANCH branch"
+git checkout -B $TARGET_BRANCH
 
-echo "$LOG_PREFIX Prepare build"
-rm -rf "$WORK_DIR"
-mkdir "$WORK_DIR"
-cp -R "$TEMP_DIR/.git/" "$WORK_DIR/.git"
-cp -R "$REPO_ROOT"/$BUILD_DIR/. "$WORK_DIR"
+# Remove all fines except .git folder
+find . -path ./.git -prune -o -print -a \( -type f -o -type l -o -type d \) | xargs rm -R -v
+
+# Copy build content back
+cp -R "$TEMP_DIR"/. .
 
 if [ -z "$(git status --porcelain)" ]; then
   echo "$LOG_PREFIX There are no changes to deploy"
@@ -72,7 +64,7 @@ else
   git commit -m "Automatic site update"
 
   echo "$LOG_PREFIX Push changes"
-  git push -fq origin $TARGET_BRANCH >/dev/null
+  git push
 fi
 
 echo "$LOG_PREFIX Done"
