@@ -4,16 +4,6 @@ set -e
 LOG_PREFIX="Deploy to Github Pages:"
 echo "$LOG_PREFIX Checking prerequisites"
 
-if [ -z "$TOKEN" ]; then
-  echo "TOKEN not provided!"
-  exit 1
-fi
-
-if [ -z "$REPO_NAME" ]; then
-  REPO_NAME="adimoldovan/covid-19"
-  echo "REPO_NAME not provided. Defaulting to $REPO_NAME"
-fi
-
 if [ -z "$TARGET_BRANCH" ]; then
   TARGET_BRANCH="gh-pages"
   echo "TARGET_BRANCH not provided. Defaulting to $TARGET_BRANCH"
@@ -39,7 +29,6 @@ TEMP_DIR="$HOME/temp-gh-pages/"
 REPO_ROOT=$(pwd)
 
 echo "$LOG_PREFIX Prepare $TARGET_BRANCH branch"
-# copy build content for backup
 rm -rf "$TEMP_DIR"
 mkdir "$TEMP_DIR"
 cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
@@ -47,11 +36,9 @@ cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
 echo "Checkout $TARGET_BRANCH branch"
 git checkout -B $TARGET_BRANCH
 
-# Delete all except .git folder
-find . -path ./.git -prune -o -print -a \( -type f -o -type l -o -type d \) | xargs rm -rf 2>/dev/null
-
-# Copy build content back
-cp -R "$TEMP_DIR"/. .
+cp -R ".git"/. "$TEMP_DIR/.git"
+cd "$TEMP_DIR"
+git status
 
 if [ -z "$(git status --porcelain)" ]; then
   echo "$LOG_PREFIX There are no changes to deploy"
