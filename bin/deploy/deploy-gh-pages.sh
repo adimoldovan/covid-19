@@ -39,7 +39,6 @@ git checkout -f --track origin/$TARGET_BRANCH
 
 cp -R ".git"/. "$TEMP_DIR/.git"
 cd "$TEMP_DIR"
-git status
 
 if [ -z "$(git status --porcelain)" ]; then
   echo "$LOG_PREFIX There are no changes to deploy"
