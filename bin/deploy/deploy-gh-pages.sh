@@ -47,8 +47,8 @@ cp -R "$REPO_ROOT"/$BUILD_DIR/. "$TEMP_DIR"
 echo "Checkout $TARGET_BRANCH branch"
 git checkout -B $TARGET_BRANCH
 
-# Remove all fines except .git folder
-find . -path ./.git -prune -o -print -a \( -type f -o -type l -o -type d \) | xargs rm -R -v
+# Delete all except .git folder
+find . -path ./.git -prune -o -print -a \( -type f -o -type l -o -type d \) | xargs rm -rf 2>/dev/null
 
 # Copy build content back
 cp -R "$TEMP_DIR"/. .
