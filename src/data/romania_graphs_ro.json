@@ -25,7 +25,261 @@
       "persons_in_home_quarantine": 86177,
       "persons_in_institutional_quarantine": 19,
       "romania_population_2020": "19317984",
-      "sourceUrl": ""
+      "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-11-noiembrie-2020-ora-13-00",
+      "county_data": [
+        {
+          "county_id": "AB",
+          "county_name": "Alba",
+          "county_population": 323778,
+          "total_cases": 6975
+        },
+        {
+          "county_id": "AR",
+          "county_name": "Arad",
+          "county_population": 415732,
+          "total_cases": 7542
+        },
+        {
+          "county_id": "AG",
+          "county_name": "Arges",
+          "county_population": 574920,
+          "total_cases": 8890
+        },
+        {
+          "county_id": "BC",
+          "county_name": "Bacau",
+          "county_population": 580912,
+          "total_cases": 9891
+        },
+        {
+          "county_id": "BH",
+          "county_name": "Bihor",
+          "county_population": 559992,
+          "total_cases": 9544
+        },
+        {
+          "county_id": "BN",
+          "county_name": "Bistrita Nasaud",
+          "county_population": 277724,
+          "total_cases": 3906
+        },
+        {
+          "county_id": "BT",
+          "county_name": "Botosani",
+          "county_population": 376304,
+          "total_cases": 4320
+        },
+        {
+          "county_id": "BV",
+          "county_name": "Brasov",
+          "county_population": 553278,
+          "total_cases": 12544
+        },
+        {
+          "county_id": "BR",
+          "county_name": "Braila",
+          "county_population": 285851,
+          "total_cases": 3986
+        },
+        {
+          "county_id": "BZ",
+          "county_name": "Buzau",
+          "county_population": 409060,
+          "total_cases": 4912
+        },
+        {
+          "county_id": "CS",
+          "county_name": "Caras Severin",
+          "county_population": 269470,
+          "total_cases": 3378
+        },
+        {
+          "county_id": "CL",
+          "county_name": "Calarasi",
+          "county_population": 280099,
+          "total_cases": 2543
+        },
+        {
+          "county_id": "CJ",
+          "county_name": "Cluj",
+          "county_population": 709445,
+          "total_cases": 13868
+        },
+        {
+          "county_id": "CT",
+          "county_name": "Constanta",
+          "county_population": 671910,
+          "total_cases": 8666
+        },
+        {
+          "county_id": "CV",
+          "county_name": "Covasna",
+          "county_population": 201437,
+          "total_cases": 2936
+        },
+        {
+          "county_id": "DB",
+          "county_name": "Dambovita",
+          "county_population": 486964,
+          "total_cases": 8205
+        },
+        {
+          "county_id": "DJ",
+          "county_name": "Dolj",
+          "county_population": 621046,
+          "total_cases": 8757
+        },
+        {
+          "county_id": "GL",
+          "county_name": "Galati",
+          "county_population": 499650,
+          "total_cases": 7327
+        },
+        {
+          "county_id": "GR",
+          "county_name": "Giurgiu",
+          "county_population": 263194,
+          "total_cases": 2547
+        },
+        {
+          "county_id": "GJ",
+          "county_name": "Gorj",
+          "county_population": 311918,
+          "total_cases": 3527
+        },
+        {
+          "county_id": "HR",
+          "county_name": "Harghita",
+          "county_population": 301450,
+          "total_cases": 3794
+        },
+        {
+          "county_id": "HD",
+          "county_name": "Hunedoara",
+          "county_population": 379987,
+          "total_cases": 5728
+        },
+        {
+          "county_id": "IL",
+          "county_name": "Ialomita",
+          "county_population": 254130,
+          "total_cases": 2944
+        },
+        {
+          "county_id": "IS",
+          "county_name": "Iasi",
+          "county_population": 791665,
+          "total_cases": 13755
+        },
+        {
+          "county_id": "IF",
+          "county_name": "Ilfov",
+          "county_population": 486644,
+          "total_cases": 8716
+        },
+        {
+          "county_id": "MM",
+          "county_name": "Maramures",
+          "county_population": 458471,
+          "total_cases": 6232
+        },
+        {
+          "county_id": "MH",
+          "county_name": "Mehedinti",
+          "county_population": 238867,
+          "total_cases": 2733
+        },
+        {
+          "county_id": "MS",
+          "county_name": "Mures",
+          "county_population": 533064,
+          "total_cases": 7746
+        },
+        {
+          "county_id": "NT",
+          "county_name": "Neamt",
+          "county_population": 438221,
+          "total_cases": 7451
+        },
+        {
+          "county_id": "OT",
+          "county_name": "Olt",
+          "county_population": 389603,
+          "total_cases": 4982
+        },
+        {
+          "county_id": "PH",
+          "county_name": "Prahova",
+          "county_population": 712254,
+          "total_cases": 13332
+        },
+        {
+          "county_id": "SM",
+          "county_name": "Satu Mare",
+          "county_population": 331109,
+          "total_cases": 3067
+        },
+        {
+          "county_id": "SJ",
+          "county_name": "Salaj",
+          "county_population": 209893,
+          "total_cases": 4208
+        },
+        {
+          "county_id": "SB",
+          "county_name": "Sibiu",
+          "county_population": 401168,
+          "total_cases": 8686
+        },
+        {
+          "county_id": "SV",
+          "county_name": "Suceava",
+          "county_population": 622533,
+          "total_cases": 10827
+        },
+        {
+          "county_id": "TR",
+          "county_name": "Teleorman",
+          "county_population": 328683,
+          "total_cases": 4037
+        },
+        {
+          "county_id": "TM",
+          "county_name": "Timis",
+          "county_population": 705745,
+          "total_cases": 13434
+        },
+        {
+          "county_id": "TL",
+          "county_name": "Tulcea",
+          "county_population": 192037,
+          "total_cases": 1943
+        },
+        {
+          "county_id": "VS",
+          "county_name": "Vaslui",
+          "county_population": 371156,
+          "total_cases": 5968
+        },
+        {
+          "county_id": "VL",
+          "county_name": "Valcea",
+          "county_population": 348318,
+          "total_cases": 6240
+        },
+        {
+          "county_id": "VN",
+          "county_name": "Vrancea",
+          "county_population": 317419,
+          "total_cases": 4136
+        },
+        {
+          "county_id": "B",
+          "county_name": "Bucuresti",
+          "county_population": 1832883,
+          "total_cases": 45741
+        }
+      ]
     },
     {
       "reporting_date": "2020-11-10",
@@ -63,13 +317,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 7275
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 8702
         },
         {
@@ -344,13 +598,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 7140
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 8577
         },
         {
@@ -625,13 +879,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 6931
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 8418
         },
         {
@@ -906,13 +1160,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 6762
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 8207
         },
         {
@@ -1187,13 +1441,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 6500
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 8062
         },
         {
@@ -1468,13 +1722,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 6232
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 7819
         },
         {
@@ -1749,13 +2003,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 6046
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 7606
         },
         {
@@ -2030,13 +2284,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5820
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 7416
         },
         {
@@ -2311,13 +2565,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5656
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 7237
         },
         {
@@ -2592,13 +2846,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5522
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 7061
         },
         {
@@ -2873,13 +3127,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5423
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6932
         },
         {
@@ -3154,13 +3408,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5282
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6838
         },
         {
@@ -3435,13 +3689,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 5085
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6726
         },
         {
@@ -3716,13 +3970,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4852
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6627
         },
         {
@@ -3997,13 +4251,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4692
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6579
         },
         {
@@ -4278,13 +4532,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4525
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6514
         },
         {
@@ -4559,13 +4813,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4487
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6481
         },
         {
@@ -4840,13 +5094,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4380
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6424
         },
         {
@@ -5121,13 +5375,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4258
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6337
         },
         {
@@ -5402,13 +5656,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4144
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6244
         },
         {
@@ -5683,13 +5937,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 4026
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6179
         },
         {
@@ -5964,13 +6218,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3894
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6135
         },
         {
@@ -6245,13 +6499,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3789
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6095
         },
         {
@@ -6526,13 +6780,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3764
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6049
         },
         {
@@ -6807,13 +7061,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3661
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 6016
         },
         {
@@ -7088,13 +7342,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3570
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5973
         },
         {
@@ -7369,13 +7623,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3504
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5927
         },
         {
@@ -7650,13 +7904,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3423
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5893
         },
         {
@@ -7931,13 +8185,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3305
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5835
         },
         {
@@ -8212,13 +8466,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3256
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5806
         },
         {
@@ -8493,13 +8747,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3208
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5789
         },
         {
@@ -8774,13 +9028,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3166
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5767
         },
         {
@@ -9055,13 +9309,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3091
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5749
         },
         {
@@ -9336,13 +9590,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 3040
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5715
         },
         {
@@ -9617,13 +9871,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2972
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5666
         },
         {
@@ -9898,13 +10152,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2892
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5621
         },
         {
@@ -10179,13 +10433,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2852
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5601
         },
         {
@@ -10460,13 +10714,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2840
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5587
         },
         {
@@ -10741,13 +10995,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2823
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5564
         },
         {
@@ -11022,13 +11276,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2774
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5561
         },
         {
@@ -11303,13 +11557,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2737
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5545
         },
         {
@@ -11584,13 +11838,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5533
         },
         {
@@ -11865,13 +12119,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2651
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5507
         },
         {
@@ -12146,13 +12400,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2618
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5491
         },
         {
@@ -12427,13 +12681,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2610
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5487
         },
         {
@@ -12708,13 +12962,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2577
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5462
         },
         {
@@ -12989,13 +13243,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2538
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5447
         },
         {
@@ -13270,13 +13524,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2499
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5433
         },
         {
@@ -13551,13 +13805,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2474
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5418
         },
         {
@@ -13832,13 +14086,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2431
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5394
         },
         {
@@ -14113,13 +14367,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2412
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5386
         },
         {
@@ -14394,13 +14648,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2407
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5375
         },
         {
@@ -14675,13 +14929,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2373
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5368
         },
         {
@@ -14956,13 +15210,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2343
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5356
         },
         {
@@ -15237,13 +15491,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2304
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5337
         },
         {
@@ -15518,13 +15772,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2263
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5302
         },
         {
@@ -15799,13 +16053,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2237
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5286
         },
         {
@@ -16080,13 +16334,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2217
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5268
         },
         {
@@ -16361,13 +16615,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2210
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5263
         },
         {
@@ -16642,13 +16896,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2192
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5258
         },
         {
@@ -16923,13 +17177,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2172
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5248
         },
         {
@@ -17204,13 +17458,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2140
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5226
         },
         {
@@ -17485,13 +17739,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2103
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5207
         },
         {
@@ -17766,13 +18020,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2064
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5182
         },
         {
@@ -18047,13 +18301,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2034
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5156
         },
         {
@@ -18328,13 +18582,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2029
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5138
         },
         {
@@ -18609,13 +18863,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 2009
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5136
         },
         {
@@ -18890,13 +19144,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1975
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5122
         },
         {
@@ -19171,13 +19425,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1927
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5082
         },
         {
@@ -19452,13 +19706,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1902
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5068
         },
         {
@@ -19733,13 +19987,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1854
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5038
         },
         {
@@ -20014,13 +20268,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1831
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5017
         },
         {
@@ -20295,13 +20549,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1813
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 5006
         },
         {
@@ -20576,13 +20830,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1801
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4989
         },
         {
@@ -20857,13 +21111,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1756
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4962
         },
         {
@@ -21138,13 +21392,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1721
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4935
         },
         {
@@ -21419,13 +21673,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4903
         },
         {
@@ -21700,13 +21954,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1665
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4872
         },
         {
@@ -21981,13 +22235,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1632
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4843
         },
         {
@@ -22262,13 +22516,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1628
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4824
         },
         {
@@ -22543,13 +22797,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1598
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4792
         },
         {
@@ -22824,13 +23078,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1559
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4759
         },
         {
@@ -23105,13 +23359,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1536
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4721
         },
         {
@@ -23386,13 +23640,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1511
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4663
         },
         {
@@ -23667,13 +23921,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1479
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4599
         },
         {
@@ -23948,13 +24202,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1461
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4564
         },
         {
@@ -24229,13 +24483,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1444
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4508
         },
         {
@@ -24510,13 +24764,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1411
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4450
         },
         {
@@ -24791,13 +25045,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1400
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4380
         },
         {
@@ -25072,13 +25326,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1378
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4312
         },
         {
@@ -25353,13 +25607,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1353
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4232
         },
         {
@@ -25634,13 +25888,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1312
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4155
         },
         {
@@ -25915,13 +26169,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1280
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4102
         },
         {
@@ -26196,13 +26450,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1271
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 4062
         },
         {
@@ -26477,13 +26731,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1245
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3991
         },
         {
@@ -26758,13 +27012,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1221
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3900
         },
         {
@@ -27039,13 +27293,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1191
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3804
         },
         {
@@ -27320,13 +27574,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1172
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3705
         },
         {
@@ -27601,13 +27855,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1142
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3607
         },
         {
@@ -27882,13 +28136,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1119
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3512
         },
         {
@@ -28163,13 +28417,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1104
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3416
         },
         {
@@ -28444,13 +28698,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1080
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3316
         },
         {
@@ -28725,13 +28979,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1045
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3224
         },
         {
@@ -29006,13 +29260,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 1008
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3112
         },
         {
@@ -29287,13 +29541,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 990
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 3009
         },
         {
@@ -29568,13 +29822,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 969
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2911
         },
         {
@@ -29849,13 +30103,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 930
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2814
         },
         {
@@ -30130,13 +30384,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 920
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2685
         },
         {
@@ -30411,13 +30665,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 891
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2580
         },
         {
@@ -30692,13 +30946,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 865
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2472
         },
         {
@@ -30973,13 +31227,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 851
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2371
         },
         {
@@ -31254,13 +31508,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 836
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2265
         },
         {
@@ -31535,13 +31789,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 801
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2176
         },
         {
@@ -31816,13 +32070,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 788
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 2079
         },
         {
@@ -32097,13 +32351,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 786
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1960
         },
         {
@@ -32378,13 +32632,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 773
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1862
         },
         {
@@ -32659,13 +32913,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 756
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1758
         },
         {
@@ -32940,13 +33194,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 743
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1653
         },
         {
@@ -33221,13 +33475,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 732
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1570
         },
         {
@@ -33502,13 +33756,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 726
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1483
         },
         {
@@ -33783,13 +34037,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 719
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1390
         },
         {
@@ -34064,13 +34318,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 714
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1349
         },
         {
@@ -34345,13 +34599,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 713
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1284
         },
         {
@@ -34626,13 +34880,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 712
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1194
         },
         {
@@ -34907,13 +35161,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 709
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1138
         },
         {
@@ -35188,13 +35442,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 708
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1083
         },
         {
@@ -35469,13 +35723,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 707
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1030
         },
         {
@@ -35750,13 +36004,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 707
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 1016
         },
         {
@@ -36031,13 +36285,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 707
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 989
         },
         {
@@ -36312,13 +36566,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 707
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 946
         },
         {
@@ -36593,13 +36847,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 707
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 919
         },
         {
@@ -36874,13 +37128,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 872
         },
         {
@@ -37155,13 +37409,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 844
         },
         {
@@ -37436,13 +37690,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 793
         },
         {
@@ -37717,13 +37971,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 770
         },
         {
@@ -37998,13 +38252,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 744
         },
         {
@@ -38279,13 +38533,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 715
         },
         {
@@ -38560,13 +38814,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 704
         },
         {
@@ -38841,13 +39095,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 642
         },
         {
@@ -39122,13 +39376,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 706
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 566
         },
         {
@@ -39403,13 +39657,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 510
         },
         {
@@ -39684,13 +39938,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 510
         },
         {
@@ -39965,13 +40219,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 465
         },
         {
@@ -40246,13 +40500,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 438
         },
         {
@@ -40527,13 +40781,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 432
         },
         {
@@ -40808,13 +41062,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 704
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 415
         },
         {
@@ -41089,13 +41343,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 705
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 394
         },
         {
@@ -41370,13 +41624,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 705
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 375
         },
         {
@@ -41651,13 +41905,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 703
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 365
         },
         {
@@ -41932,13 +42186,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 703
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 355
         },
         {
@@ -42213,13 +42467,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 703
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 334
         },
         {
@@ -42494,13 +42748,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 701
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 320
         },
         {
@@ -42775,13 +43029,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 700
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 306
         },
         {
@@ -43056,13 +43310,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 303
         },
         {
@@ -43337,13 +43591,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 287
         },
         {
@@ -43618,13 +43872,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 286
         },
         {
@@ -43899,13 +44153,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 284
         },
         {
@@ -44180,13 +44434,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 279
         },
         {
@@ -44461,13 +44715,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 275
         },
         {
@@ -44742,13 +44996,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 272
         },
         {
@@ -45023,13 +45277,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 267
         },
         {
@@ -45304,13 +45558,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 698
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 265
         },
         {
@@ -45585,13 +45839,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 263
         },
         {
@@ -45866,13 +46120,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 260
         },
         {
@@ -46147,13 +46401,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 257
         },
         {
@@ -46428,13 +46682,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 253
         },
         {
@@ -46709,13 +46963,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 253
         },
         {
@@ -46990,13 +47244,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 245
         },
         {
@@ -47271,13 +47525,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 238
         },
         {
@@ -47552,13 +47806,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 236
         },
         {
@@ -47833,13 +48087,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 695
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 235
         },
         {
@@ -48114,13 +48368,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 695
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 232
         },
         {
@@ -48395,13 +48649,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 695
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 229
         },
         {
@@ -48676,13 +48930,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 226
         },
         {
@@ -48957,13 +49211,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 697
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 223
         },
         {
@@ -49238,13 +49492,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 219
         },
         {
@@ -49519,13 +49773,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 214
         },
         {
@@ -49800,13 +50054,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 696
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 210
         },
         {
@@ -50081,13 +50335,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 691
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 199
         },
         {
@@ -50362,13 +50616,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 691
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 193
         },
         {
@@ -50643,13 +50897,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 688
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 190
         },
         {
@@ -50924,13 +51178,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 679
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 188
         },
         {
@@ -51205,13 +51459,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 680
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 181
         },
         {
@@ -51486,13 +51740,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 679
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 179
         },
         {
@@ -51767,13 +52021,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 678
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 173
         },
         {
@@ -52048,13 +52302,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 675
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 167
         },
         {
@@ -52329,13 +52583,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 664
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 163
         },
         {
@@ -52610,13 +52864,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 655
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 164
         },
         {
@@ -52891,13 +53145,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 625
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 161
         },
         {
@@ -53172,13 +53426,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 619
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 160
         },
         {
@@ -53453,13 +53707,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 614
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 156
         },
         {
@@ -53734,13 +53988,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 606
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 154
         },
         {
@@ -54015,13 +54269,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 576
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 143
         },
         {
@@ -54296,13 +54550,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 574
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 143
         },
         {
@@ -54577,13 +54831,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 565
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 140
         },
         {
@@ -54858,13 +55112,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 550
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 134
         },
         {
@@ -55139,13 +55393,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 541
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 134
         },
         {
@@ -55420,13 +55674,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 522
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 131
         },
         {
@@ -55701,13 +55955,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 508
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 124
         },
         {
@@ -55982,13 +56236,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 495
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 118
         },
         {
@@ -56263,13 +56517,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 471
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 117
         },
         {
@@ -56544,13 +56798,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 439
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 114
         },
         {
@@ -56825,13 +57079,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 421
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 110
         },
         {
@@ -57106,13 +57360,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 423
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 98
         },
         {
@@ -57387,13 +57641,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 410
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 96
         },
         {
@@ -57668,13 +57922,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 402
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 90
         },
         {
@@ -57949,13 +58203,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 391
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 74
         },
         {
@@ -58230,13 +58484,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 360
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 73
         },
         {
@@ -58511,13 +58765,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 339
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 67
         },
         {
@@ -58792,13 +59046,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 312
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 62
         },
         {
@@ -59073,13 +59327,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 280
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 59
         },
         {
@@ -59354,13 +59608,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 270
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 57
         },
         {
@@ -59635,13 +59889,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 249
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 57
         },
         {
@@ -59916,13 +60170,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 229
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 51
         },
         {
@@ -60197,13 +60451,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 179
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 52
         },
         {
@@ -60478,13 +60732,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 162
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 32
         },
         {
@@ -60759,13 +61013,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 161
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 33
         },
         {
@@ -61040,13 +61294,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 161
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 31
         },
         {
@@ -61321,13 +61575,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 157
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 27
         },
         {
@@ -61602,13 +61856,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 150
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 25
         },
         {
@@ -61883,13 +62137,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 128
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 14
         },
         {
@@ -62164,13 +62418,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 110
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 12
         },
         {
@@ -62445,13 +62699,13 @@
         {
           "county_id": "AR",
           "county_name": "Arad",
-          "county_population": 574920,
+          "county_population": 415732,
           "total_cases": 110
         },
         {
           "county_id": "AG",
           "county_name": "Arges",
-          "county_population": 415732,
+          "county_population": 574920,
           "total_cases": 10
         },
         {
