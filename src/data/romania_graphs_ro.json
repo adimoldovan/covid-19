@@ -1,6 +1,33 @@
 {
   "covid_romania": [
     {
+      "reporting_date": "2020-12-05",
+      "total_cases": 508345,
+      "new_cases_today": 8072,
+      "total_tests": 4237925,
+      "new_tests_today": 32445,
+      "total_deaths": 12186,
+      "new_deaths_today": 134,
+      "total_recovered": 399207,
+      "new_recovered_today": 8995,
+      "intensive_care_right_now": 1280,
+      "emergency_calls": 4827,
+      "information_calls": 875,
+      "persons_in_quarantine": null,
+      "persons_in_home_isolation": 44941,
+      "tests_for_case_definition": 20672,
+      "tests_upon_request": 11679,
+      "tests_done_before_today_and_reported_today": 4,
+      "infected_asymptomatic": null,
+      "infected_hospitalized": 12472,
+      "infected_positive_retests": 1667,
+      "persons_in_institutional_isolation": 11979,
+      "persons_in_home_quarantine": 79642,
+      "persons_in_institutional_quarantine": 88,
+      "romania_population_2020": "19317984",
+      "sourceUrl": ""
+    },
+    {
       "reporting_date": "2020-12-04",
       "total_cases": 500273,
       "new_cases_today": 8062,
