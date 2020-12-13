@@ -1,12 +1,12 @@
 {
-  "infected": 551900,
-  "tested": 4413212,
-  "recovered": 451477,
-  "deceased": 13264,
+  "infected": 556335,
+  "tested": 4428071,
+  "recovered": 457360,
+  "deceased": 13385,
   "country": "Romania",
   "historyData": "https://api.apify.com/v2/datasets/n1XtXTelVG5dJhDhy/items?format=json&clean=1",
   "sourceUrl": "",
-  "lastUpdatedAtApify": "2020-12-12T13:10:00.000Z",
-  "lastUpdatedAtSource": "2020-12-12T13:00:00.000Z",
+  "lastUpdatedAtApify": "2020-12-13T13:10:00.000Z",
+  "lastUpdatedAtSource": "2020-12-13T13:00:00.000Z",
   "README": "https://www.graphs.ro/resources.php"
 }
