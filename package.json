@@ -11,6 +11,7 @@
     "bootstrap": "^4.4.1",
     "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.16",
+    "eslint": "^7.15.0",
     "jquery": "^3.5.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -35,9 +36,6 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build --dotfiles --message \"Automatic update\"",
     "deploy-ci": "sh bin/deploy/deploy-gh-pages.sh"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "standard","react-app"
+  ],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "rules": {
+  }
+}

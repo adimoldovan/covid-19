@@ -1,21 +1,8 @@
 import React, {Component} from 'react';
 import DataService from './data-service';
-import {Card, CardDeck, Col, Container, Row} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 import Utils from './utils';
-import {
-    Area,
-    AreaChart,
-    Bar,
-    BarChart,
-    CartesianGrid,
-    ComposedChart,
-    Legend,
-    Line,
-    ResponsiveContainer,
-    Tooltip,
-    XAxis,
-    YAxis
-} from 'recharts';
+import {Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import ReactEcharts from 'echarts-for-react';
 import BootstrapTable from 'react-bootstrap-table-next';
 
@@ -41,9 +28,7 @@ export default class Countries extends Component {
         let deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
         let deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
-        let mapData = [];
-
-        let nameTranslator = {
+        const countryNameDict = {
             'US': 'United States',
             'South Sudan': 'S. Sudan',
             'Western Sahara': 'W. Sahara',
@@ -60,69 +45,76 @@ export default class Countries extends Component {
             'Burma': 'Myanmar'
         }
 
+        // Map data
+        const confirmedMapData = [];
         data.forEach(function (country) {
-            let nameMatch = nameTranslator[country.name]
+            let nameMatch = countryNameDict[country.name]
             let translatedName = (nameMatch) ? nameMatch : country.name
             let countryMapData = {
                 name: translatedName,
                 value: country.summary.confirmed.total1Mil
             };
-            mapData.push(countryMapData);
+            confirmedMapData.push(countryMapData);
         });
 
-        let option = {
-            title: {
-                text: 'Total confirmed cases / 1 mil population',
-                left: 'center'
-            },
-            toolbox: {
-                show: true,
-                orient: 'vertical',
-                left: 'right',
-                top: 'center',
-                feature: {
-                    dataZoom: {
-                        show: false,
-                        title: {
-                            zoom: 'Area zooming',
-                            back: 'Restore area zooming'
-                        }
+        const activeMapData = [];
+        data.forEach(function (country) {
+            let nameMatch = countryNameDict[country.name]
+            let translatedName = (nameMatch) ? nameMatch : country.name
+            let countryMapData = {
+                name: translatedName,
+                value: country.summary.active.total1Mil
+            };
+            activeMapData.push(countryMapData);
+        });
+
+        function getMapOptions(title, color, data) {
+            return {
+                title: {
+                    text: title,
+                    right: 5,
+                    bottom: 5,
+                    textStyle: {
+                        fontWeight: 'normal'
                     }
-                }
-            },
-            tooltip: {
-                trigger: 'item'
-            },
-            visualMap: {
-                left: 'left',
-                min: 50,
-                max: 10000,
-                inRange: {
-                    color: ['#f5f5f5', '#a50026']
                 },
-                text: ['50', '1 000'],
-                calculable: true
-            },
-            series: [
-                {
-                    name: 'Confirmed cases / 1 mil. pop.',
-                    type: 'map',
-                    mapType: 'world',
-                    roam: 'move',
-                    zoom: 1.1,
-                    emphasis: {itemStyle: {areaColor: 'yellow'}},
-                    label: {
-                        normal: {
-                            show: false
-                        },
-                        emphasis: {
-                            show: false
-                        }
+                tooltip: {
+                    trigger: 'item'
+                },
+                visualMap: {
+                    left: 'left',
+                    min: 50,
+                    max: 10000,
+                    inRange: {
+                        color: ['#f5f5f5', color]
                     },
-                    data: mapData
-                }
-            ]
-        };
+                    text: ['50', '1 000'],
+                    calculable: true
+                },
+                series: [
+                    {
+                        name: title,
+                        type: 'map',
+                        mapType: 'world',
+                        roam: 'move',
+                        zoom: 1.2,
+                        emphasis: {itemStyle: {areaColor: 'red'}},
+                        label: {
+                            normal: {
+                                show: false
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        data: data
+                    }
+                ]
+            }
+        }
+
+        const confirmedMapOptions = getMapOptions('Confirmed cases / 1 mil. pop.', Utils.CONFIRMED_COLOR, confirmedMapData);
+        const activeMapOptions = getMapOptions('Active cases / 1 mil. pop.', Utils.ACTIVE_COLOR, activeMapData);
 
         function countryLink(countryName) {
             return <a href={"#/" + countryName} target="_blank" rel="noopener noreferrer">{countryName}</a>;
@@ -255,124 +247,76 @@ export default class Countries extends Component {
         return (
             <Container fluid>
                 <Row className="justify-content-between header">
-                    <Col className="text-left"><h1>COVID-19</h1></Col>
+                    <Col className="text-left"><h1>COVID-19 dashboard</h1></Col>
                     <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank"
                                                    rel="noopener noreferrer">data source</a></Col>
                 </Row>
                 <hr/>
-                <Container fluid id="summary">
-                    <CardDeck>
-                        <Card>
-                            <Card.Header
-                                style={{backgroundColor: Utils.CONFIRMED_COLOR, color: "#333"}}>Confirmed</Card.Header>
-                            <Card.Body>
-                                <Card.Title>
-                                    {Utils.formattedNumber(world.summary.confirmed.total)}<br/>&nbsp;<br/>&nbsp;
-                                </Card.Title>
-                                <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
-                                        <Area dataKey="confirmedNew" stroke="none" fill={Utils.CONFIRMED_COLOR}/>
-                                    </AreaChart>
-                                </ResponsiveContainer>
-                            </Card.Body>
-                        </Card>
-                        <Card>
-                            <Card.Header
-                                style={{backgroundColor: Utils.ACTIVE_COLOR, color: "#333"}}>Active</Card.Header>
-                            <Card.Body>
-                                <Card.Title>
-                                    {Utils.formattedNumber(world.summary.active.total)}<br/><small
-                                    className="text-muted">{activeRate}% out of total</small><br/>&nbsp;
-                                </Card.Title>
-                                <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
-                                        <Area dataKey="activeTotal" fill={Utils.ACTIVE_COLOR} stroke="none"/>
-                                    </AreaChart>
-                                </ResponsiveContainer>
-                            </Card.Body>
-                        </Card>
-                        <Card>
-                            <Card.Header
-                                style={{backgroundColor: Utils.RECOVERED_COLOR, color: "#333"}}>Recovered</Card.Header>
-                            <Card.Body>
-                                <Card.Title>
-                                    {Utils.formattedNumber(world.summary.recovered.total)}<br/><small
-                                    className="text-muted">{recoveredRateTotal}% out of total</small><br/><small
-                                    className="text-muted">{recoveredRateClosed}% out of closed</small>
-                                </Card.Title>
-                                <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
-                                        <Area dataKey="recoveredNew" fill={Utils.RECOVERED_COLOR} stroke="none"/>
-                                    </AreaChart>
-                                </ResponsiveContainer>
-                            </Card.Body>
-                        </Card>
-                        <Card>
-                            <Card.Header
-                                style={{backgroundColor: Utils.DECEASED_COLOR, color: "#fff"}}>Deceased</Card.Header>
-                            <Card.Body>
-                                <Card.Title>
-                                    {Utils.formattedNumber(world.summary.deaths.total)}<br/><small
-                                    className="text-muted">{deathRateTotal}% out of total</small><br/><small
-                                    className="text-muted">{deathRateClosed}% out of closed</small>
-                                </Card.Title>
-                                <ResponsiveContainer height={30}>
-                                    <AreaChart data={world.timeline} style={{margin: "0 auto"}}>
-                                        <Area dataKey="deathsNew" fill={Utils.DECEASED_COLOR} stroke="none"/>
-                                    </AreaChart>
-                                </ResponsiveContainer>
-                            </Card.Body>
-                        </Card>
-                    </CardDeck>
-                </Container>
-                <Container fluid id="charts">
-                    <Card>
-                        <Card.Body>
-                            <ReactEcharts
-                                option={option || {}}
-                                style={{height: '550px', width: '100%'}}
-                                className='react_for_echarts'/>
-                            <CardDeck>
-                                <Card border="light">
-                                    <Card.Body>
-                                        <ResponsiveContainer height={250}>
-                                            <ComposedChart data={world.timeline} style={{margin: "0 auto"}}
-                                                           fontSize={10}>
-                                                <XAxis dataKey="date"/>
-                                                <YAxis/>
-                                                <CartesianGrid strokeDasharray="3 3"/>
-                                                <Tooltip/>
-                                                <Legend verticalAlign="bottom" height={36}/>
-                                                <Area name="total confirmed" type="monotone" dataKey="confirmedTotal"
-                                                      stroke="none"
-                                                      fillOpacity={0.5} fill={Utils.CONFIRMED_COLOR}/>
-                                                <Line name="total active" dot={false} dataKey="activeTotal"
-                                                      stroke={Utils.ACTIVE_COLOR} strokeWidth="2"/>
-                                            </ComposedChart>
-                                        </ResponsiveContainer>
-                                    </Card.Body>
-                                </Card>
-                                <Card border="light">
-                                    <Card.Body>
-                                        <ResponsiveContainer height={250}>
-                                            <BarChart width={730} height={250} data={world.timeline}
-                                                      style={{margin: "0 auto"}}>
-                                                <XAxis dataKey="date"/>
-                                                <YAxis domain={[0, 'dataMax+1']}/>
-                                                <CartesianGrid strokeDasharray="3 3"/>
-                                                <Tooltip/>
-                                                <Legend verticalAlign="bottom" height={36}/>
-                                                <Bar name="daily confirmed" type="monotone" dataKey="confirmedNew"
-                                                     stroke="none"
-                                                     fill={Utils.CONFIRMED_COLOR}/>
-                                            </BarChart>
-                                        </ResponsiveContainer>
-                                    </Card.Body>
-                                </Card>
-                            </CardDeck>
-                        </Card.Body>
-                    </Card>
-                </Container>
+                <Row className="justify-content-between header">
+                    <Col sm={3}>
+                        <div className="summary-box">
+                            <span className="number">{Utils.formattedNumber(world.summary.confirmed.total)}</span>
+                            <br/>
+                            <span className="description">confirmed cases</span>
+                        </div>
+                    </Col>
+                    <Col sm={3}>
+                        <div className="summary-box">
+                            <span className="number">{Utils.formattedNumber(world.summary.active.total)}</span>
+                            <br/>
+                            <span className="description">active cases</span>
+                            <br/>
+                            <span className="fine">{Utils.formattedNumber(activeRate)} %</span>
+                        </div>
+                    </Col>
+                    <Col sm={3}>
+                        <div className="summary-box ">
+                            <span className="number">{Utils.formattedNumber(world.summary.deaths.total)}</span>
+                            <br/>
+                            <span className="description">deceased</span>
+                            <br/>
+                            <span
+                                className="fine">{Utils.formattedNumber(deathRateClosed)} % out of closed, {Utils.formattedNumber(deathRateTotal)} % out of total</span>
+                        </div>
+                    </Col>
+                    <Col sm={3}>
+                        <div className="summary-box ">
+                            <span className="number">{Utils.formattedNumber(world.summary.recovered.total)}</span>
+                            <br/>
+                            <span className="description">recovered</span>
+                            <br/>
+                            <span
+                                className="fine">{Utils.formattedNumber(recoveredRateClosed)} % out of closed, {Utils.formattedNumber(recoveredRateTotal)} % out of total</span>
+                        </div>
+                    </Col>
+                </Row>
+                <Row className="justify-content-between header">
+                    <Col sm={6}>
+                        <ReactEcharts
+                            option={confirmedMapOptions || {}}
+                            className='react_for_echarts'/>
+                    </Col>
+                    <Col sm={6}>
+                        <ReactEcharts
+                            option={activeMapOptions || {}}
+                            className='react_for_echarts'/>
+                    </Col>
+                </Row>
+                <Row className="justify-content-between header">
+                    <ResponsiveContainer height={250}>
+                        <BarChart width={730} height={250} data={world.timeline}
+                                  style={{margin: "0 auto"}}>
+                            <XAxis dataKey="date"/>
+                            <YAxis domain={[0, 'dataMax+1']}/>
+                            <CartesianGrid strokeDasharray="3 3"/>
+                            <Tooltip/>
+                            <Legend verticalAlign="bottom" height={36}/>
+                            <Bar name="daily confirmed" type="monotone" dataKey="confirmedNew"
+                                 stroke="none"
+                                 fill={Utils.CONFIRMED_COLOR}/>
+                        </BarChart>
+                    </ResponsiveContainer>
+                </Row>
                 <Container fluid id="countries">
                     <ToolkitProvider
                         keyField='name'
