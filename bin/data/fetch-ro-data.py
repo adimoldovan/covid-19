@@ -10,6 +10,10 @@ MAPPING = [
         "json": "romania_graphs_ro.json",
     },
     {
+         "input": "vaccinare_json.php",
+          "json": "romania_graphs_ro_vaccine.json",
+    },
+    {
         "input": "json_apify.php",
         "json": "romania_graphs_ro_light.json",
     }
