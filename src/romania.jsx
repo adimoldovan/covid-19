@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import Utils from "./utils";
 import rawData from './data/romania_graphs_ro.json'
+import rawVaccineData from './data/romania_graphs_ro_vaccine.json'
 import {
     Area,
     AreaChart,
@@ -20,10 +21,10 @@ import DataService from "./data-service";
 
 export default class Romania extends Component {
     render() {
-        // calculate active cases
+        // calculate missing daily data
         rawData.covid_romania.forEach(function (day) {
-            let active = day.total_cases - day.total_recovered - day.total_deaths
-            let closed = day.total_recovered + day.total_deaths
+            let active = day.total_cases - day.total_recovered - day.total_deaths;
+            let closed = day.total_recovered + day.total_deaths;
             day.total_active = active;
             day.percent_active = (active / day.total_cases * 100).toFixed(1);
             day.percent_deceased_closed = (day.total_deaths / closed * 100).toFixed(1);
@@ -37,17 +38,23 @@ export default class Romania extends Component {
                     cty.cases_1_k_pop = (cty.total_cases / cty.county_population * 1000).toFixed(1);
                 });
 
-                day.county_data.sort((a, b) => (a.cases_1_k_pop < b.cases_1_k_pop) ? 1 : -1)
+                day.county_data.sort((a, b) => (a.cases_1_k_pop < b.cases_1_k_pop) ? 1 : -1);
             }
         });
 
-        let lastDay = rawData.covid_romania[0]
-        let timelineData = rawData.covid_romania.reverse();
+        rawVaccineData.covid_romania_vaccination.forEach(function (day) {
+            day.new_vaccine_doses_today = day.pfizer_biontech_first_dose + day.pfizer_biontech_second_dose;
+        });
+
+        let lastCasesDay = rawData.covid_romania[0];
+        let casesTimelineData = rawData.covid_romania.reverse();
+        let lastVaccineDay = rawVaccineData.covid_romania_vaccination[0];
+        let vaccineTimelineData = rawVaccineData.covid_romania_vaccination.reverse();
 
         let counties = [];
 
         // create initial county objects
-        lastDay.county_data.forEach(
+        lastCasesDay.county_data.forEach(
             function (cty) {
                 let ctyObj = {
                     county_id: cty.county_id,
@@ -62,7 +69,7 @@ export default class Romania extends Component {
 
         // fill counties objects with timeline data
         counties.forEach(function (county) {
-            timelineData.forEach(function (day) {
+            casesTimelineData.forEach(function (day) {
                 if (day.county_data) {
                     let ctyDay = day.county_data.find(c => c.county_name === county.county_name);
                     county.timeline.push(
@@ -89,13 +96,13 @@ export default class Romania extends Component {
                 </Row>
                 <hr/>
                 <Row>
-                    <Col className="text-right">Last update: {lastDay.reporting_date}</Col>
+                    <Col className="text-right">Last update: {lastCasesDay.reporting_date}</Col>
                 </Row>
                 {/* Top charts */}
                 <Row className="spaced-row">
                     <Col sm={6}>
                         <ResponsiveContainer height={250}>
-                            <ComposedChart data={timelineData} style={{margin: "0 auto"}}>
+                            <ComposedChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -112,7 +119,7 @@ export default class Romania extends Component {
                     </Col>
                     <Col sm={6}>
                         <ResponsiveContainer height={250}>
-                            <LineChart data={timelineData} style={{margin: "0 auto"}}>
+                            <LineChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -136,38 +143,47 @@ export default class Romania extends Component {
                 </Row>
                 {/* Summary boxes */}
                 <Row className="justify-content-between header">
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <div className="summary-box">
-                            <span className="number">{Utils.formattedNumber(lastDay.total_cases)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.total_cases)}</span>
                             <br/>
                             <span className="description">confirmed cases</span>
                         </div>
                     </Col>
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <div className="summary-box">
-                            <span className="number">{Utils.formattedNumber(lastDay.total_active)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.total_active)}</span>
                             <br/>
                             <span className="description">active cases</span>
                             <br/>
-                            <span className="fine">{Utils.formattedNumber(lastDay.percent_active)} %</span>
+                            <span className="fine">{Utils.formattedNumber(lastCasesDay.percent_active)} %</span>
                         </div>
                     </Col>
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <div className="summary-box ">
-                            <span className="number">{Utils.formattedNumber(lastDay.total_deaths)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.total_deaths)}</span>
                             <br/>
                             <span className="description">deceased</span>
                             <br/>
-                            <span className="fine">{Utils.formattedNumber(lastDay.percent_deceased_closed)} % out of closed, {Utils.formattedNumber(lastDay.percent_deceased_total)} % out of total</span>
+                            <span className="fine">{Utils.formattedNumber(lastCasesDay.percent_deceased_closed)} % out of closed, {Utils.formattedNumber(lastCasesDay.percent_deceased_total)} % out of total</span>
                         </div>
                     </Col>
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <div className="summary-box ">
-                            <span className="number">{Utils.formattedNumber(lastDay.total_recovered)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.total_recovered)}</span>
                             <br/>
                             <span className="description">recovered</span>
                             <br/>
-                            <span className="fine">{Utils.formattedNumber(lastDay.percent_recovered_closed)} % out of closed, {Utils.formattedNumber(lastDay.percent_recovered_total)} % out of total</span>
+                            <span className="fine">{Utils.formattedNumber(lastCasesDay.percent_recovered_closed)} % out of closed, {Utils.formattedNumber(lastCasesDay.percent_recovered_total)} % out of total</span>
+                        </div>
+                    </Col>
+                    <Col sm={2}>
+                        <div className="summary-box ">
+                            <span className="number">{Utils.formattedNumber(lastVaccineDay.total_first_dose + lastVaccineDay.total_second_dose)}</span>
+                            <br/>
+                            <span className="description">vaccine doses</span>
+                            <br/>
+                            <span className="fine">{Utils.formattedNumber(lastVaccineDay.total_first_dose)} 1st dose, {Utils.formattedNumber(lastVaccineDay.total_second_dose)} 2nd dose</span>
                         </div>
                     </Col>
                 </Row>
@@ -176,14 +192,14 @@ export default class Romania extends Component {
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
-                            <span className="number">{Utils.formattedNumber(lastDay.new_cases_today)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.new_cases_today)}</span>
                             <br/>
                             <span className="description">confirmed new</span>
                         </div>
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <BarChart data={timelineData} style={{margin: "0 auto"}}>
+                            <BarChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -199,14 +215,14 @@ export default class Romania extends Component {
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
-                            <span className="number">{Utils.formattedNumber(lastDay.new_deaths_today)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.new_deaths_today)}</span>
                             <br/>
                             <span className="description">deceased new</span>
                         </div>
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <BarChart data={timelineData} style={{margin: "0 auto"}}>
+                            <BarChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -223,14 +239,14 @@ export default class Romania extends Component {
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
-                            <span className="number">{Utils.formattedNumber(lastDay.intensive_care_right_now)}</span>
+                            <span className="number">{Utils.formattedNumber(lastCasesDay.intensive_care_right_now)}</span>
                             <br/>
                             <span className="description">serious cases</span>
                         </div>
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <BarChart data={timelineData} style={{margin: "0 auto"}}>
+                            <BarChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -248,14 +264,14 @@ export default class Romania extends Component {
                     <Col sm={2}>
                         <div className="summary-box left">
                             <span
-                                className="number">{Utils.formattedNumber(lastDay.percent_positive_tests_today)}%</span>
+                                className="number">{Utils.formattedNumber(lastCasesDay.percent_positive_tests_today)}%</span>
                             <br/>
                             <span className="description">new positive cases</span>
                         </div>
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <ComposedChart data={timelineData} style={{margin: "0 auto"}}>
+                            <ComposedChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis yAxisId="left" orientation="left" domain={[0, 100]}/>
                                 <YAxis yAxisId="right" orientation="right" domain={["0, dataMax + 1000"]}/>
@@ -304,14 +320,14 @@ export default class Romania extends Component {
                     <Col sm={2}>
                         <div className="summary-box left">
 <span
-    className="number">{Utils.formattedNumber(lastDay.new_recovered_today)}</span>
+    className="number">{Utils.formattedNumber(lastCasesDay.new_recovered_today)}</span>
                             <br/>
                             <span className="description">new recoveries</span>
                         </div>
                     </Col>
                     <Col sm={10}>
                         <ResponsiveContainer height={250}>
-                            <BarChart data={timelineData} style={{margin: "0 auto"}}>
+                            <BarChart data={casesTimelineData} style={{margin: "0 auto"}}>
                                 <XAxis dataKey="reporting_date"/>
                                 <YAxis orientation="right"/>
                                 <Tooltip/>
@@ -326,9 +342,51 @@ export default class Romania extends Component {
                         </ResponsiveContainer>
                     </Col>
                 </Row>
+                <Row className="spaced-row">
+                    <Col sm={2}>
+                        <div className="summary-box left">
+                            <span
+                                className="number">{Utils.formattedNumber(lastVaccineDay.new_vaccine_doses_today)}</span>
+                            <br/>
+                            <span className="description">new vaccine doses</span>
+                        </div>
+                    </Col>
+                    <Col sm={10}>
+                        <ResponsiveContainer height={250}>
+                            <ComposedChart data={vaccineTimelineData} style={{margin: "0 auto"}}>
+                                <XAxis dataKey="reporting_date"/>
+                                <YAxis yAxisId="left" orientation="left" domain={[0, 100]}/>
+                                <YAxis yAxisId="right" orientation="right" domain={["0, dataMax + 1000"]}/>
+                                <Tooltip/>
+                                <Brush dataKey="reporting_date" travellerWidth={1} stroke={Utils.BRUSH_COLOR}
+                                       fill="none" height={20}/>
+                                <Bar name="Pfizer Biontech 1st dose" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="pfizer_biontech_first_dose"
+                                     stroke="none"
+                                     fillOpacity={0.5}
+                                     fill={Utils.TESTS_COLOR}/>
+                                <Bar name="Pfizer Biontech 2nd dose" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="pfizer_biontech_second_dose"
+                                     stroke="none"
+                                     fillOpacity={0.7}
+                                     fill={Utils.TESTS_COLOR}/>
+                                <Line name="total administered doses" type="monotone"
+                                      yAxisId="right"
+                                      dataKey="new_vaccine_doses_today"
+                                      stroke="none"
+                                      fillOpacity={0}
+                                      fill={Utils.ACTIVE_COLOR}/>
+                            </ComposedChart>
+                        </ResponsiveContainer>
+                    </Col>
+                </Row>
                 <hr/>
                 {/* Counties */}
-                {lastDay.county_data.map((county, index) => (
+                {lastCasesDay.county_data.map((county, index) => (
                     <Row className="spaced-row" key={index}>
                         <Col>
                             <div className="summary-box county-box left">
