@@ -1,12 +1,12 @@
 {
-  "infected": 706475,
-  "tested": 5268464,
-  "recovered": 645923,
-  "deceased": 17628,
+  "infected": 709194,
+  "tested": 5289874,
+  "recovered": 650189,
+  "deceased": 17722,
   "country": "Romania",
   "historyData": "https://api.apify.com/v2/datasets/n1XtXTelVG5dJhDhy/items?format=json&clean=1",
-  "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-22-ianuarie-2021-ora-13-00",
-  "lastUpdatedAtApify": "2021-01-22T13:10:00.000Z",
-  "lastUpdatedAtSource": "2021-01-22T13:00:00.000Z",
+  "sourceUrl": "https://stirioficiale.ro/informatii/buletin-de-presa-23-ianuarie-2021-ora-13-00",
+  "lastUpdatedAtApify": "2021-01-23T13:10:00.000Z",
+  "lastUpdatedAtSource": "2021-01-23T13:00:00.000Z",
   "README": "https://www.graphs.ro/resources.php"
 }
