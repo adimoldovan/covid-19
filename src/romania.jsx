@@ -179,11 +179,13 @@ export default class Romania extends Component {
                     </Col>
                     <Col sm={2}>
                         <div className="summary-box ">
-                            <span className="number">{Utils.formattedNumber(lastVaccineDay.total_first_dose + lastVaccineDay.total_second_dose)}</span>
+                            <span
+                                className="number">{Utils.formattedNumber(lastVaccineDay.total_first_dose + lastVaccineDay.total_second_dose)}</span>
                             <br/>
                             <span className="description">vaccine doses</span>
                             <br/>
-                            <span className="fine">{Utils.formattedNumber(lastVaccineDay.total_first_dose)} 1st dose, {Utils.formattedNumber(lastVaccineDay.total_second_dose)} 2nd dose</span>
+                            <span
+                                className="fine">{Utils.formattedNumber(lastVaccineDay.total_first_dose)} 1st dose, {Utils.formattedNumber(lastVaccineDay.total_second_dose)} 2nd dose</span>
                         </div>
                     </Col>
                 </Row>
@@ -239,7 +241,8 @@ export default class Romania extends Component {
                 <Row className="spaced-row">
                     <Col sm={2}>
                         <div className="summary-box left">
-                            <span className="number">{Utils.formattedNumber(lastCasesDay.intensive_care_right_now)}</span>
+                            <span
+                                className="number">{Utils.formattedNumber(lastCasesDay.intensive_care_right_now)}</span>
                             <br/>
                             <span className="description">serious cases</span>
                         </div>
@@ -299,6 +302,13 @@ export default class Romania extends Component {
                                      stroke="none"
                                      fillOpacity={0.7}
                                      fill={Utils.BRUSH_COLOR}/>
+                                <Bar name="rapid tests" type="monotone"
+                                     yAxisId="right"
+                                     stackId="a"
+                                     dataKey="rapid_tests"
+                                     stroke="none"
+                                     fillOpacity={0.9}
+                                     fill={Utils.TESTS_COLOR}/>
                                 <Bar name="previous tests reported today" type="monotone"
                                      yAxisId="right"
                                      stackId="a"
@@ -306,7 +316,7 @@ export default class Romania extends Component {
                                      stroke="none"
                                      fillOpacity={0.9}
                                      fill={Utils.BRUSH_COLOR}/>
-                                <Line name="total tests" type="monotone"
+                                <Line name="total PCR tests" type="monotone"
                                       yAxisId="right"
                                       dataKey="new_tests_today"
                                       stroke="none"
@@ -318,9 +328,8 @@ export default class Romania extends Component {
                 </Row>
                 <Row className="spaced-row">
                     <Col sm={2}>
-                        <div className="summary-box left">
-<span
-    className="number">{Utils.formattedNumber(lastCasesDay.new_recovered_today)}</span>
+                        <div className="summary-box left"><span
+                            className="number">{Utils.formattedNumber(lastCasesDay.new_recovered_today)}</span>
                             <br/>
                             <span className="description">new recoveries</span>
                         </div>
