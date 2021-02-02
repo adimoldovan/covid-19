@@ -1,6 +1,22 @@
 {
   "covid_romania_vaccination": [
     {
+      "reporting_date": "2021-01-31",
+      "total_first_dose": 479021,
+      "total_second_dose": 106197,
+      "pfizer_biontech_first_dose": 14127,
+      "pfizer_biontech_second_dose": 4892,
+      "reactions_minor_local_last_24_hours": 9,
+      "reactions_minor_general_last_24_hours": 68,
+      "reactions_minor_total_last_24_hours": 77,
+      "reactions_minor_local_total": 456,
+      "reactions_minor_general_total": 1358,
+      "reactions_minor_total": 2,
+      "reactions_severe_last_24_hours": 0,
+      "reactions_severe_total": 0,
+      "official_announcement_link": "https://vaccinare-covid.gov.ro/7411-2/"
+    },
+    {
       "reporting_date": "2021-01-30",
       "total_first_dose": 469786,
       "total_second_dose": 101305,
