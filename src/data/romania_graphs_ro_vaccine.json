@@ -1,6 +1,22 @@
 {
   "covid_romania_vaccination": [
     {
+      "reporting_date": "2021-02-03",
+      "total_first_dose": 468150,
+      "total_second_dose": 152026,
+      "pfizer_biontech_first_dose": 9793,
+      "pfizer_biontech_second_dose": 13677,
+      "reactions_minor_local_last_24_hours": 8,
+      "reactions_minor_general_last_24_hours": 66,
+      "reactions_minor_total_last_24_hours": 74,
+      "reactions_minor_local_total": 482,
+      "reactions_minor_general_total": 1548,
+      "reactions_minor_total": 2030,
+      "reactions_severe_last_24_hours": 0,
+      "reactions_severe_total": 0,
+      "official_announcement_link": "https://vaccinare-covid.gov.ro/actualizare-zilnica-03-02-evidenta-persoanelor-vaccinate-impotriva-covid-19/"
+    },
+    {
       "reporting_date": "2021-02-02",
       "total_first_dose": 472034,
       "total_second_dose": 138349,
