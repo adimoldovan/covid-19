@@ -17,7 +17,6 @@ import {
     YAxis
 } from 'recharts';
 import Utils from './utils';
-import Romania from "./romania";
 
 
 export default class Country extends Component {
@@ -28,10 +27,6 @@ export default class Country extends Component {
     }
 
     render() {
-        if (this.countryName === "Romania") {
-            return (<Romania/>)
-        }
-
         const data = DataService.getCountryData(this.countryName);
 
         const activeRate = (data.summary.active.total / data.summary.confirmed.total * 100).toFixed(1);
