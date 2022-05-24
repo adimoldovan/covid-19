@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "https://adimoldovan.github.io/covid-19/static/css/main.3ec399b8.chunk.css",
-    "main.js": "https://adimoldovan.github.io/covid-19/static/js/main.267f7f53.chunk.js",
-    "main.js.map": "https://adimoldovan.github.io/covid-19/static/js/main.267f7f53.chunk.js.map",
+    "main.js": "https://adimoldovan.github.io/covid-19/static/js/main.9c23f7e0.chunk.js",
+    "main.js.map": "https://adimoldovan.github.io/covid-19/static/js/main.9c23f7e0.chunk.js.map",
     "runtime-main.js": "https://adimoldovan.github.io/covid-19/static/js/runtime-main.0e7758b1.js",
     "runtime-main.js.map": "https://adimoldovan.github.io/covid-19/static/js/runtime-main.0e7758b1.js.map",
     "static/css/2.6fd8f67f.chunk.css": "https://adimoldovan.github.io/covid-19/static/css/2.6fd8f67f.chunk.css",
-    "static/js/2.ff6b45ed.chunk.js": "https://adimoldovan.github.io/covid-19/static/js/2.ff6b45ed.chunk.js",
-    "static/js/2.ff6b45ed.chunk.js.map": "https://adimoldovan.github.io/covid-19/static/js/2.ff6b45ed.chunk.js.map",
+    "static/js/2.1225d0a2.chunk.js": "https://adimoldovan.github.io/covid-19/static/js/2.1225d0a2.chunk.js",
+    "static/js/2.1225d0a2.chunk.js.map": "https://adimoldovan.github.io/covid-19/static/js/2.1225d0a2.chunk.js.map",
     "index.html": "https://adimoldovan.github.io/covid-19/index.html",
-    "precache-manifest.64fea324dcdce58743e7e4d1ff017ca2.js": "https://adimoldovan.github.io/covid-19/precache-manifest.64fea324dcdce58743e7e4d1ff017ca2.js",
+    "precache-manifest.4fae6ededaea77bc1c9c53a2616d18e0.js": "https://adimoldovan.github.io/covid-19/precache-manifest.4fae6ededaea77bc1c9c53a2616d18e0.js",
     "service-worker.js": "https://adimoldovan.github.io/covid-19/service-worker.js",
     "static/css/2.6fd8f67f.chunk.css.map": "https://adimoldovan.github.io/covid-19/static/css/2.6fd8f67f.chunk.css.map",
     "static/css/main.3ec399b8.chunk.css.map": "https://adimoldovan.github.io/covid-19/static/css/main.3ec399b8.chunk.css.map",
-    "static/js/2.ff6b45ed.chunk.js.LICENSE.txt": "https://adimoldovan.github.io/covid-19/static/js/2.ff6b45ed.chunk.js.LICENSE.txt"
+    "static/js/2.1225d0a2.chunk.js.LICENSE.txt": "https://adimoldovan.github.io/covid-19/static/js/2.1225d0a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e7758b1.js",
     "static/css/2.6fd8f67f.chunk.css",
-    "static/js/2.ff6b45ed.chunk.js",
+    "static/js/2.1225d0a2.chunk.js",
     "static/css/main.3ec399b8.chunk.css",
-    "static/js/main.267f7f53.chunk.js"
+    "static/js/main.9c23f7e0.chunk.js"
   ]
 }
