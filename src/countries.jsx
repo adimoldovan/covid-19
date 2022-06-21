@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import DataService from './data-service';
 import {Col, Container, Row} from 'react-bootstrap';
 import Utils from './utils';
-import {Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import ReactEcharts from 'echarts-for-react';
 import BootstrapTable from 'react-bootstrap-table-next';
 
@@ -22,11 +21,7 @@ export default class Countries extends Component {
         let world = data.find(c => c.name === 'World');
         data.pop(world);
 
-        let activeRate = (world.summary.active.total / world.summary.confirmed.total * 100).toFixed(1);
-        let recoveredRateTotal = (world.summary.recovered.total / world.summary.confirmed.total * 100).toFixed(1);
-        let recoveredRateClosed = (world.summary.recovered.total / world.summary.closed.total * 100).toFixed(1);
         let deathRateTotal = (world.summary.deaths.total / world.summary.confirmed.total * 100).toFixed(1);
-        let deathRateClosed = (world.summary.deaths.total / world.summary.closed.total * 100).toFixed(1);
 
         const countryNameDict = {
             'US': 'United States',
@@ -55,17 +50,6 @@ export default class Countries extends Component {
                 value: country.summary.confirmed.total1Mil
             };
             confirmedMapData.push(countryMapData);
-        });
-
-        const activeMapData = [];
-        data.forEach(function (country) {
-            let nameMatch = countryNameDict[country.name]
-            let translatedName = (nameMatch) ? nameMatch : country.name
-            let countryMapData = {
-                name: translatedName,
-                value: country.summary.active.total1Mil
-            };
-            activeMapData.push(countryMapData);
         });
 
         function getMapOptions(title, color, data) {
@@ -114,7 +98,6 @@ export default class Countries extends Component {
         }
 
         const confirmedMapOptions = getMapOptions('Confirmed cases / 1 mil. pop.', Utils.CONFIRMED_COLOR, confirmedMapData);
-        const activeMapOptions = getMapOptions('Active cases / 1 mil. pop.', Utils.ACTIVE_COLOR, activeMapData);
 
         function countryLink(countryName) {
             return <a href={"#/" + countryName} target="_blank" rel="noopener noreferrer">{countryName}</a>;
@@ -247,7 +230,7 @@ export default class Countries extends Component {
         return (
             <Container fluid>
                 <Row className="justify-content-between header">
-                    <Col className="text-left"><h1>COVID-19 dashboard</h1></Col>
+                    <Col className="text-left"><h1>COVID-19 worldwide</h1></Col>
                     <Col className="text-right"><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank"
                                                    rel="noopener noreferrer">data source</a></Col>
                 </Row>
@@ -261,61 +244,22 @@ export default class Countries extends Component {
                         </div>
                     </Col>
                     <Col sm={3}>
-                        <div className="summary-box">
-                            <span className="number">{Utils.formattedNumber(world.summary.active.total)}</span>
-                            <br/>
-                            <span className="description">active cases</span>
-                            <br/>
-                            <span className="fine">{Utils.formattedNumber(activeRate)} %</span>
-                        </div>
-                    </Col>
-                    <Col sm={3}>
                         <div className="summary-box ">
                             <span className="number">{Utils.formattedNumber(world.summary.deaths.total)}</span>
                             <br/>
                             <span className="description">deceased</span>
                             <br/>
                             <span
-                                className="fine">{Utils.formattedNumber(deathRateClosed)} % out of closed, {Utils.formattedNumber(deathRateTotal)} % out of total</span>
-                        </div>
-                    </Col>
-                    <Col sm={3}>
-                        <div className="summary-box ">
-                            <span className="number">{Utils.formattedNumber(world.summary.recovered.total)}</span>
-                            <br/>
-                            <span className="description">recovered</span>
-                            <br/>
-                            <span
-                                className="fine">{Utils.formattedNumber(recoveredRateClosed)} % out of closed, {Utils.formattedNumber(recoveredRateTotal)} % out of total</span>
+                                className="fine">{Utils.formattedNumber(deathRateTotal)} % out of confirmed cases</span>
                         </div>
                     </Col>
                 </Row>
                 <Row className="justify-content-between header">
-                    <Col sm={6}>
+                    <Col>
                         <ReactEcharts
                             option={confirmedMapOptions || {}}
                             className='react_for_echarts'/>
                     </Col>
-                    <Col sm={6}>
-                        <ReactEcharts
-                            option={activeMapOptions || {}}
-                            className='react_for_echarts'/>
-                    </Col>
-                </Row>
-                <Row className="justify-content-between header">
-                    <ResponsiveContainer height={250}>
-                        <BarChart width={730} height={250} data={world.timeline}
-                                  style={{margin: "0 auto"}}>
-                            <XAxis dataKey="date"/>
-                            <YAxis domain={[0, 'dataMax+1']}/>
-                            <CartesianGrid strokeDasharray="3 3"/>
-                            <Tooltip/>
-                            <Legend verticalAlign="bottom" height={36}/>
-                            <Bar name="daily confirmed" type="monotone" dataKey="confirmedNew"
-                                 stroke="none"
-                                 fill={Utils.CONFIRMED_COLOR}/>
-                        </BarChart>
-                    </ResponsiveContainer>
                 </Row>
                 <Container fluid id="countries">
                     <ToolkitProvider
