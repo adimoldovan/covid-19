@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://adimoldovan.github.io/covid-19/static/css/main.3ec399b8.chunk.css",
-    "main.js": "https://adimoldovan.github.io/covid-19/static/js/main.6656ee1e.chunk.js",
-    "main.js.map": "https://adimoldovan.github.io/covid-19/static/js/main.6656ee1e.chunk.js.map",
+    "main.js": "https://adimoldovan.github.io/covid-19/static/js/main.ae342bce.chunk.js",
+    "main.js.map": "https://adimoldovan.github.io/covid-19/static/js/main.ae342bce.chunk.js.map",
     "runtime-main.js": "https://adimoldovan.github.io/covid-19/static/js/runtime-main.0e7758b1.js",
     "runtime-main.js.map": "https://adimoldovan.github.io/covid-19/static/js/runtime-main.0e7758b1.js.map",
     "static/css/2.6fd8f67f.chunk.css": "https://adimoldovan.github.io/covid-19/static/css/2.6fd8f67f.chunk.css",
     "static/js/2.71162937.chunk.js": "https://adimoldovan.github.io/covid-19/static/js/2.71162937.chunk.js",
     "static/js/2.71162937.chunk.js.map": "https://adimoldovan.github.io/covid-19/static/js/2.71162937.chunk.js.map",
     "index.html": "https://adimoldovan.github.io/covid-19/index.html",
-    "precache-manifest.22a549dd2b515cdfd48577fd7a2d8ca5.js": "https://adimoldovan.github.io/covid-19/precache-manifest.22a549dd2b515cdfd48577fd7a2d8ca5.js",
+    "precache-manifest.d525b9c514bc0cbb0c7282534ed7b5e3.js": "https://adimoldovan.github.io/covid-19/precache-manifest.d525b9c514bc0cbb0c7282534ed7b5e3.js",
     "service-worker.js": "https://adimoldovan.github.io/covid-19/service-worker.js",
     "static/css/2.6fd8f67f.chunk.css.map": "https://adimoldovan.github.io/covid-19/static/css/2.6fd8f67f.chunk.css.map",
     "static/css/main.3ec399b8.chunk.css.map": "https://adimoldovan.github.io/covid-19/static/css/main.3ec399b8.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.6fd8f67f.chunk.css",
     "static/js/2.71162937.chunk.js",
     "static/css/main.3ec399b8.chunk.css",
-    "static/js/main.6656ee1e.chunk.js"
+    "static/js/main.ae342bce.chunk.js"
   ]
 }
