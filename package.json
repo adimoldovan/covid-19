@@ -21,7 +21,7 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^5.0.0",
     "source-map-explorer": "^2.5.0"
   },
   "scripts": {
