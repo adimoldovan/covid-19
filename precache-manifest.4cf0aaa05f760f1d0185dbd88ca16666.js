@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b64f7f0669068eb90b44ec9482e4db9",
+    "revision": "093e2f7d69674f0c734644e57c4cfd97",
     "url": "https://adimoldovan.github.io/covid-19/index.html"
   },
   {
-    "revision": "e32e6d037b5d0c1e40d9",
-    "url": "https://adimoldovan.github.io/covid-19/static/css/2.6fd8f67f.chunk.css"
+    "revision": "55c8b6f3879f379475de",
+    "url": "https://adimoldovan.github.io/covid-19/static/css/2.a02bfcf0.chunk.css"
   },
   {
     "revision": "c09148cbcfb7845ad687",
     "url": "https://adimoldovan.github.io/covid-19/static/css/main.3ec399b8.chunk.css"
   },
   {
-    "revision": "e32e6d037b5d0c1e40d9",
+    "revision": "55c8b6f3879f379475de",
     "url": "https://adimoldovan.github.io/covid-19/static/js/2.0851ea56.chunk.js"
   },
   {
