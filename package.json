@@ -8,7 +8,7 @@
   },
   "homepage": "https://adimoldovan.github.io/covid-19",
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.0.0",
     "echarts": "^4.8.0",
     "echarts-for-react": "^2.0.16",
     "react": "^16.13.1",
